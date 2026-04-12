@@ -1,0 +1,357 @@
+/* ==================================================
+   Page transition (SAFE DEFAULT)
+   - Página aparece mesmo se JS falhar
+================================================== */
+/* 2) Page enter animation (SAFE: default visível) */
+.page {
+  opacity: 1;
+  /* padrão aparece */
+  transform: none;
+  filter: none;
+}
+
+/* quando o JS marcar pronto, anima entrando */
+.page.is-ready {
+  animation: pageIn .45s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* opcional: saída */
+.page.is-leaving {
+  opacity: 0;
+  transform: translateY(-8px);
+  filter: blur(8px);
+  transition: opacity .25s ease, transform .25s ease, filter .25s ease;
+}
+
+
+/* ==================================================
+   BASE.CSS — Biblioteca Mahal (stable + responsive)
+================================================== */
+
+/* 1) Reset / Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text-primary, #e1e1e6);
+
+  /* FUNDO GLOBAL (resolve a faixa branca) */
+  background: radial-gradient(1200px 700px at 15% 10%, rgba(255, 117, 25, .14), transparent 60%),
+    radial-gradient(900px 600px at 85% 20%, rgba(106, 92, 255, .12), transparent 55%),
+    radial-gradient(900px 600px at 55% 90%, rgba(0, 255, 180, .06), transparent 60%),
+    linear-gradient(180deg, #0b0b0f 0%, #0f1016 60%, #0b0b0f 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* Links */
+a {
+  color: var(--orange, #ff6600);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+a:hover {
+  color: var(--orange-hover, #cc5200);
+}
+
+/* Imagens nunca estouram layout */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 2) Page enter animation (se você usa .page.is-ready) */
+.page {
+  opacity: 0;
+  transform: translateY(8px);
+  filter: blur(6px);
+  transition:
+    opacity .35s ease,
+    transform .35s ease,
+    filter .35s ease;
+  will-change: opacity, transform, filter;
+}
+
+.page.is-ready {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.page.is-leaving {
+  opacity: 0;
+  transform: translateY(-8px);
+  filter: blur(8px);
+}
+
+/* 3) Layout Base */
+:root {
+  /* Ajuste se seu sidebar mudar */
+  --sidebar-width: 240px;
+
+  /* Largura máxima do conteúdo */
+  --container-max: 1200px;
+
+  /* Espaços padrão */
+  --pad-desktop-x: 40px;
+  --pad-mobile-x: 14px;
+}
+
+/* Área principal: com sidebar no desktop */
+.main {
+  max-width: 1380px;          /* melhor usar valor fixo */
+  width: 100%;
+  margin: 0 auto;             /* 👈 ISSO centraliza */
+  padding: 14px var(--pad-desktop-x);
+  min-height: 100vh;
+  background: transparent;
+}
+
+
+/* Centraliza conteúdo nas seções (opcional) */
+.container {
+  width: min(var(--container-max), 100%);
+  margin: 0 auto;
+}
+
+/* 4) Tipografia / Seções */
+h1,
+h2,
+h3 {
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  color: #fff;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 1.2rem + 2vw, 2.6rem);
+}
+
+h2 {
+  font-size: clamp(1.2rem, 1rem + 1vw, 1.6rem);
+}
+
+h3 {
+  font-size: 1.05rem;
+}
+
+p {
+  margin: 0 0 12px 0;
+  color: var(--text-secondary, rgba(229, 231, 235, .78));
+  line-height: 1.7;
+}
+
+.section-title {
+  font-size: clamp(1.4rem, 1.1rem + 1vw, 2rem);
+  text-align: center;
+  color: #fff;
+  margin: 38px 0 16px;
+}
+
+.section-sub {
+  text-align: center;
+  color: rgba(229, 231, 235, .70);
+  margin: 0 0 28px;
+}
+
+/* 5) Buttons (não quebra os seus estilos existentes) */
+button {
+  font-family: inherit;
+}
+
+/* 6) Cards / Grid genérico (compatível com sua estrutura) */
+.cards {
+  width: min(var(--container-max), 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  padding: 10px 0 20px;
+}
+
+/* Ajuste tablets */
+@media (max-width: 1400px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Ajuste mobile */
+@media (max-width: 950px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: 16px;
+  padding: 18px;
+  position: relative;
+  text-align: center;
+
+  box-shadow: 0 14px 50px rgba(0, 0, 0, .35);
+  backdrop-filter: blur(10px);
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 117, 25, .28);
+  background: rgba(255, 255, 255, .05);
+}
+
+.card h4 {
+  color: var(--orange, #ff6600);
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: rgba(229, 231, 235, .72);
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+/* Imagens dentro de cards sem estourar e sem branco */
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .04);
+  object-fit: cover;
+}
+
+/* Badge para combos */
+.combo-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--orange, #ff6600);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: .78rem;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, .10);
+  backdrop-filter: blur(6px);
+}
+
+/* 7) FAQ */
+.faq {
+  width: min(900px, 100%);
+  margin: 50px auto;
+  padding: 0 2px;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid rgba(255, 255, 255, .10);
+  margin-bottom: 12px;
+  border-radius: 14px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.faq-question {
+  padding: 16px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  background: rgba(255, 117, 25, .14);
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  color: rgba(229, 231, 235, .80);
+  transition: all .28s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 240px;
+  padding: 16px 18px;
+}
+
+/* 8) Footer */
+footer {
+  margin-top: 60px;
+  padding: 30px 0 10px;
+  text-align: center;
+  font-size: .9rem;
+  color: rgba(229, 231, 235, .55);
+}
+
+footer a {
+  color: var(--orange, #ff6600);
+  font-weight: 600;
+}
+
+/* 9) Responsivo (mobile): remove sidebar gap + padding menor */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    /* melhor no mobile */
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 10px var(--pad-mobile-x);
+  }
+
+  .section-title {
+    margin-top: 28px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .card img {
+    border-radius: 12px;
+  }
+}
+
+/* 10) Pequenos ajustes para evitar “faixa branca” em elementos */
+section {
+  background: transparent;
+}
+
+/* Se alguma seção tiver background branco por padrão em outro CSS, isso ajuda */
+main,
+.main,
+.page {
+  background: transparent;
+}

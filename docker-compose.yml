@@ -1,0 +1,24 @@
+services:
+  php:
+    build:
+      context: ./www
+      dockerfile: Dockerfile
+    container_name: ${CONTAINER_PREFIX}_biblioteca
+    volumes:
+      - ./www:/var/www/html
+      - ./site.conf:/etc/apache2/sites-available/000-default.conf:ro
+    ports:
+      - "${WEBSITE_PORT}:80"
+    env_file:
+      - ./.env
+    environment:
+      TZ: America/Sao_Paulo
+      APP_ENV: ${APP_ENV:-production}
+    networks:
+      - backend_net
+    restart: unless-stopped
+
+networks:
+  backend_net:
+    external: true
+    name: ${BACKEND_NETWORK_NAME}

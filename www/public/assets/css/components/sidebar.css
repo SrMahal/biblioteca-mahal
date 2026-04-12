@@ -1,0 +1,163 @@
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebar .logo h2 {
+  margin-bottom: 40px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px 15px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background-color: var(--orange);
+  color: #fff;
+}
+
+/* ================================
+   Sidebar Responsiva (Drawer)
+================================ */
+
+/* Overlay (aparece no mobile quando abre) */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 998;
+}
+
+/* Sidebar base (já existe), só garantindo z-index alto */
+.sidebar {
+  z-index: 999;
+}
+
+/* Botão hamburger (mobile) */
+.btn-sidebar-toggle {
+  display: none; /* desktop escondido */
+  width: auto;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid #333;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.btn-sidebar-toggle:hover {
+  border-color: var(--orange);
+  transform: translateY(-1px);
+}
+
+/* Mobile: sidebar vira drawer */
+@media (max-width: 900px) {
+
+  /* Sidebar começa fechada */
+  .sidebar {
+    transform: translateX(-105%);
+    transition: transform 0.28s ease;
+    box-shadow: 12px 0 30px rgba(0,0,0,0.35);
+  }
+
+  /* Conteúdo ocupa tela inteira */
+  .main-content {
+    margin-left: 0;
+  }
+
+  /* Quando aberto */
+  body.sidebar-open .sidebar {
+    transform: translateX(0);
+  }
+
+  body.sidebar-open .sidebar-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Exibe botão hamburger no topo */
+  .btn-sidebar-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Topbar alinhada com botão */
+  .topbar {
+    justify-content: space-between; /* hamburger esquerda, sair direita */
+  }
+}
+
+/* Acessibilidade: reduz animações se usuário preferir */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar,
+  .sidebar-overlay {
+    transition: none !important;
+  }
+}
+@media (max-width: 900px) {
+  .sidebar {
+    width: min(86vw, 320px); /* ocupa bem no celular */
+  }
+}
+/* Botão flutuante que "anda" junto com a sidebar */
+.btn-sidebar-toggle.floating {
+  display: none; /* só no mobile */
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .btn-sidebar-toggle.floating {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 12px;
+    left: 12px;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+
+    background: rgba(32, 32, 36, 0.95);
+    border: 1px solid #333;
+
+    z-index: 1000; /* acima do overlay e da sidebar */
+    transition: transform 0.28s ease, border 0.2s ease;
+    backdrop-filter: blur(6px);
+  }
+
+  /* Quando a sidebar abre, o botão vai junto (gruda na borda direita da sidebar) */
+  body.sidebar-open .btn-sidebar-toggle.floating {
+    transform: translateX(min(86vw, 320px));
+  }
+
+  /* Overlay fica abaixo do botão */
+  .sidebar-overlay {
+    z-index: 998;
+  }
+
+  /* Sidebar abaixo do botão */
+  .sidebar {
+    z-index: 999;
+  }
+}

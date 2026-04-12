@@ -1,0 +1,24 @@
+RewriteEngine On
+
+Options -Indexes
+# ==========================
+# /videos -> carrega video.php (SEM REDIRECT)
+# ==========================
+RewriteRule ^videos/?$ /produtos/biblioteca/video-layout-03.php [L,QSA]
+RewriteRule ^simpatia/?$ /produtos/biblioteca/vsl_simpatia_video.php [L,QSA]
+RewriteRule ^ticket-founder/?$ /evento.php [L,QSA]
+
+# ==========================
+# Se arquivo ou pasta existir, entrega direto
+# ==========================
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# ==========================
+# Caso contrário, manda para o index.php (router)
+# ==========================
+RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]
+
+# /evento/SIMPATIA  => /checkout_evento?cupom=SIMPATIA
+RewriteRule ^evento/([A-Za-z0-9_-]{2,30})$ /checkout_evento?cupom=$1 [QSA,L]

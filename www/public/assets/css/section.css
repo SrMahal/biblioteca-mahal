@@ -1,0 +1,295 @@
+/* ===============================
+   HOW SECTION (Como Funciona)
+   - Responsiva e “premium”
+   - Não interfere no resto do site
+=============================== */
+.how{
+  width: 100%;
+  padding: 26px 0 10px;
+}
+
+.how__wrap{
+  margin: 0 auto;
+}
+
+.how__head{
+  text-align: left;
+  margin: 0 0 18px;
+}
+
+.how__kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  color: rgba(229,231,235,.82);
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.how__dot{
+  width: 10px; height: 10px;
+  border-radius: 999px;
+  background: rgba(0,255,180,.85);
+  box-shadow: 0 0 18px rgba(0,255,180,.28);
+}
+
+.how__title{
+  margin: 12px 0 10px;
+  color: #fff;
+  font-size: clamp(1.35rem, 1.05rem + 1.4vw, 2rem);
+  line-height: 1.15;
+}
+
+.how__subtitle{
+  margin: 0;
+  max-width: 70ch;
+  color: rgba(229,231,235,.74);
+  line-height: 1.7;
+}
+
+.how__grid{
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 18px;
+  align-items: start;
+  margin-top: 18px;
+}
+
+/* Left cards */
+.how__cards{
+  display: grid;
+  gap: 12px;
+}
+
+.howCard{
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 12px;
+  padding: 14px 14px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 14px 45px rgba(0,0,0,.28);
+  backdrop-filter: blur(10px);
+}
+
+.howCard__icon{
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 117, 25, .14);
+  border: 1px solid rgba(255,117,25,.18);
+  color: rgba(255,255,255,.92);
+}
+
+.howCard__content h3{
+  margin: 0 0 6px;
+  font-size: 1.02rem;
+  color: #fff;
+}
+
+.howCard__content p{
+  margin: 0;
+  color: rgba(229,231,235,.72);
+  line-height: 1.65;
+  font-size: .96rem;
+}
+
+/* Right panel */
+.how__right{
+  display: grid;
+  gap: 12px;
+}
+
+.howPanel{
+  border-radius: 18px;
+  padding: 16px 16px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 18px 60px rgba(0,0,0,.35);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+}
+
+.howPanel__badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  color: rgba(229,231,235,.78);
+  font-weight: 600;
+  font-size: .85rem;
+}
+
+.howPanel__badge .dot{
+  width: 8px; height: 8px;
+  border-radius: 999px;
+  background: rgba(255,117,25,.9);
+  box-shadow: 0 0 16px rgba(255,117,25,.25);
+}
+
+.howPanel__title{
+  margin: 10px 0 6px;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.howPanel__desc{
+  margin: 0 0 12px;
+  color: rgba(229,231,235,.70);
+  line-height: 1.65;
+}
+
+/* Flow list */
+.howFlow{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.howFlow__item{
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.howFlow__n{
+  width: 34px; height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: rgba(255,255,255,.92);
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+.howFlow__txt strong{
+  display: block;
+  color: #fff;
+  font-size: .98rem;
+  margin-bottom: 2px;
+}
+.howFlow__txt span{
+  color: rgba(229,231,235,.68);
+  font-size: .9rem;
+}
+
+/* Console */
+.howConsole{
+  margin-top: 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.35);
+  overflow: hidden;
+}
+
+.howConsole__top{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  color: rgba(255,255,255,.88);
+  font-weight: 700;
+  font-size: .92rem;
+}
+
+.howConsole__top .dot{
+  width: 9px; height: 9px;
+  border-radius: 999px;
+  display: inline-block;
+  opacity: .95;
+}
+.howConsole__top .dot.r{ background: #ff5f57; }
+.howConsole__top .dot.y{ background: #febc2e; }
+.howConsole__top .dot.g{ background: #28c840; }
+
+.howConsole__top .pill{
+  margin-left: auto;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(0,255,180,.12);
+  border: 1px solid rgba(0,255,180,.22);
+  color: rgba(190,255,235,.92);
+  font-weight: 700;
+  font-size: .78rem;
+}
+
+.howConsole__body{
+  padding: 10px 12px 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: .88rem;
+  color: rgba(229,231,235,.8);
+  line-height: 1.55;
+}
+.howConsole__body .line{ margin: 4px 0; }
+.howConsole__body .k{
+  color: rgba(255,117,25,.95);
+  font-weight: 800;
+}
+
+/* Note */
+.howNote{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(255,117,25,.10);
+  border: 1px solid rgba(255,117,25,.18);
+  color: rgba(255,255,255,.86);
+}
+.howNote i{
+  margin-top: 2px;
+  color: rgba(255,117,25,.95);
+}
+.howNote p{
+  margin: 0;
+  color: rgba(229,231,235,.78);
+  line-height: 1.65;
+}
+
+/* ===============================
+   Responsive
+=============================== */
+@media (max-width: 950px){
+  .how__wrap{
+    padding: 0 var(--pad-mobile-x, 14px);
+  }
+  .how__grid{
+    grid-template-columns: 1fr;
+  }
+  .how__head{
+    text-align: left;
+  }
+}
+
+@media (max-width: 520px){
+  .howCard{
+    grid-template-columns: 40px 1fr;
+    padding: 12px;
+  }
+  .howCard__icon{
+    width: 40px; height: 40px;
+    border-radius: 12px;
+  }
+  .howPanel{
+    padding: 14px;
+  }
+}

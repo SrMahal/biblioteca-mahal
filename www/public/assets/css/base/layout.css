@@ -1,0 +1,41 @@
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Layout Grid */
+.app-container {
+  display: flex;
+  width: 100%;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content Body */
+.content-body {
+  padding: 25px;
+  flex: 1;
+}
+/* Mobile layout adjustments */
+@media (max-width: 900px) {
+  .content-body {
+    padding: 16px;  /* antes 25 */
+  }
+
+  /* evita viewport ficar estranho com flex do body */
+  body {
+    display: block;
+  }
+
+  .app-container {
+    width: 100%;
+  }
+}

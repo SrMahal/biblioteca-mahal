@@ -1,0 +1,60 @@
+{
+  "name": "biblioteca-mahal",
+  "version": "1.0.0",
+  "description": "Biblioteca Mahal Desktop",
+  "main": "main.js",
+  "author": "Mahal",
+  "license": "ISC",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis"
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.3"
+  },
+  "devDependencies": {
+    "electron": "^41.1.1",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "pro.mahal.biblioteca",
+    "productName": "Biblioteca Mahal",
+    "directories": {
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "php",
+        "to": "php"
+      },
+      {
+        "from": "www",
+        "to": "www"
+      },
+      {
+        "from": ".env",
+        "to": ".env"
+      }
+    ],
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://biblioteca.mahal.pro/update"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}

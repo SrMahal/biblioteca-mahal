@@ -1,0 +1,108 @@
+.content-section {
+    padding: 32px;
+}
+
+.content-header-card,
+.content-card,
+.curso-local-card {
+    background: linear-gradient(180deg, rgba(20,20,24,.96), rgba(8,8,12,.98));
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 22px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.35);
+}
+
+.content-header-card {
+    padding: 28px;
+    margin-bottom: 22px;
+}
+
+.content-header-card h1 {
+    margin: 0 0 8px;
+    color: #fff;
+    font-size: 42px;
+    line-height: 1.1;
+}
+
+.content-header-card p {
+    margin: 0;
+    color: rgba(255,255,255,.72);
+}
+
+.content-card {
+    padding: 24px;
+}
+
+.cursos-local-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.curso-local-card h2 {
+    margin: 0 0 18px;
+    color: #fff;
+    font-size: 28px;
+}
+
+.curso-local-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: #ff6a00;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.curso-local-btn:hover {
+    filter: brightness(1.06);
+}
+
+.curso-back-link {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #ff8b33;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.curso-tree {
+    list-style: none;
+    margin: 0;
+    padding-left: 18px;
+}
+
+.curso-tree li {
+    margin: 8px 0;
+}
+
+.curso-tree summary {
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+}
+
+.curso-tree a {
+    color: rgba(255,255,255,.86);
+    text-decoration: none;
+}
+
+.curso-tree a:hover {
+    color: #ff8b33;
+}
+
+.curso-video-player {
+    width: 100%;
+    border-radius: 14px;
+    background: #000;
+}
+
+.curso-pdf-frame {
+    width: 100%;
+    min-height: 85vh;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px;
+    background: #111;
+}

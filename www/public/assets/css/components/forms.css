@@ -1,0 +1,50 @@
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 20px;
+  background-color: #121214;
+  border: 1px solid #333;
+  color: var(--text-primary);
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: var(--orange);
+}
+
+/* Date */
+input[type="date"] {
+  background-color: #121214;
+  border: 1px solid #333;
+  color: #e1e1e6;
+  padding: 12px;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  transition: border 0.3s;
+  -webkit-appearance: none;
+  appearance: none;
+  min-height: 45px;
+}
+
+input[type="date"]:focus {
+  border-color: var(--orange);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}

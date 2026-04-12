@@ -1,0 +1,12 @@
+:root {
+  --bg-dark: #121214;
+  --bg-card: #202024;
+  --text-primary: #e1e1e6;
+  --text-secondary: #a8a8b3;
+  --orange: #ff6600;
+  --orange-hover: #cc5200;
+  --sidebar-width: 250px;
+
+  /* força dark no datepicker */
+  color-scheme: dark;
+}

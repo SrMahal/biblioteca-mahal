@@ -1,0 +1,13 @@
+.topbar {
+  height: 60px;
+  background-color: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 30px;
+}
+@media (max-width: 900px) {
+  .topbar {
+    padding: 0 12px; /* antes 0 30px */
+  }
+}

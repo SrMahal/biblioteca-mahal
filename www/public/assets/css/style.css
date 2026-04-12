@@ -1,0 +1,269 @@
+:root {
+    --bg-dark: #121214;
+    --bg-card: #202024;
+    --text-primary: #e1e1e6;
+    --text-secondary: #a8a8b3;
+    --orange: #ff6600;
+    --orange-hover: #cc5200;
+    --sidebar-width: 250px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Layout Grid */
+.app-container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar .logo h2 {
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 12px 15px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background-color: var(--orange);
+    color: #fff;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    /* Espaço da sidebar fixa */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.topbar {
+    height: 60px;
+    background-color: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+}
+
+/* Content Body */
+.content-body {
+    padding: 25px;
+    flex: 1;
+}
+
+/* Cartões (Para usar nas suas views) */
+.card {
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+ul {
+    list-style: inside;
+    color: var(--text-secondary);
+}
+
+/* Utilitário para centralizar coisas na tela inteira (Login e Landing) */
+.center-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--bg-dark);
+}
+
+/* Estilo para Inputs de Formulário */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px;
+    background-color: #121214;
+    /* Mais escuro que o card */
+    border: 1px solid #333;
+    color: var(--text-primary);
+    border-radius: 4px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: var(--orange);
+}
+
+/* Estilo de Botão Padrão (Laranja) */
+button,
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--orange);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover,
+.btn-primary:hover {
+    background-color: var(--orange-hover);
+}
+
+/* Grid para a Landing Page */
+.landing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Responsivo */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.landing-card {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    text-align: center;
+    transition: transform 0.2s, border 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.landing-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--orange);
+}
+
+.landing-card ul {
+    list-style: none;
+    margin: 20px 0;
+    color: var(--text-secondary);
+}
+
+.landing-card li {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+}
+
+/* --- ADICIONAR NO FINAL DO STYLE.CSS --- */
+/* Estilo do Botão Sair no Header */
+.btn-logout {
+    width: auto;
+    /* Tira a largura 100% padrão dos botões */
+    background-color: transparent;
+    border: 1px solid #ff4444;
+    color: #ff4444;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #ff4444;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 68, 68, 0.2);
+}
+
+/* --- ESTILOS GLOBAIS DE DATA E HORA --- */
+/* Força o navegador a renderizar o POPUP do calendário em Dark Mode */
+:root {
+    color-scheme: dark;
+}
+
+/* 2. Estilo do Input */
+input[type="date"] {
+    background-color: #121214;
+    border: 1px solid #333;
+    color: #e1e1e6;
+    padding: 12px;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    transition: border 0.3s;
+    /* Remove estilos padrão do Webkit para aceitar o nosso */
+    -webkit-appearance: none;
+    appearance: none;
+    /* Garante altura mínima igual aos inputs de texto */
+    min-height: 45px;
+}
+
+input[type="date"]:focus {
+    border-color: var(--orange);
+}
+
+/* 3. Ajuste do Ícone (REMOVIDO O FILTER INVERT) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    /* filter: invert(1); <--- APAGAMOS ESSA LINHA */
+    cursor: pointer;
+    opacity: 0.8;
+    padding: 5px;
+    /* Aumenta a área de clique */
+    transition: 0.3s;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    /* Efeito visual ao passar o mouse */
+}

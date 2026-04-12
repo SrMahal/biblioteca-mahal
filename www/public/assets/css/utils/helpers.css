@@ -1,0 +1,15 @@
+/* Centralizar tela inteira (Login e Landing) */
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--bg-dark);
+}
+@media (max-width: 900px) {
+  .center-screen {
+    align-items: stretch;   /* ocupa largura total */
+    justify-content: flex-start;
+  }
+}

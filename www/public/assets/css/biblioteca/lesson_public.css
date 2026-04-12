@@ -1,0 +1,66 @@
+.bm-lesson-grid {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    width: min(1200px, 100%);
+    margin: 18px auto 0;
+}
+
+.bm-lesson-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.bm-lesson-aside {
+    width: 320px;
+}
+
+.bm-lesson-content {
+    margin-top: 18px;
+}
+
+.bm-lesson-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.video-embed {
+    position: relative;
+    width: 100%;
+    max-width: 980px;
+    aspect-ratio: 16 / 9;
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-file video {
+    width: 100%;
+    max-width: 980px;
+    border-radius: 12px;
+}
+
+.bm-timeline-item.is-active {
+    background: rgba(255, 255, 255, .08);
+    border-color: rgba(255, 255, 255, .18);
+    font-weight: 700;
+}
+
+@media (max-width:980px) {
+    .bm-lesson-grid {
+        flex-direction: column;
+    }
+
+    .bm-lesson-aside {
+        width: 100%;
+    }
+}
