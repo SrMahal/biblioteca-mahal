@@ -1,7 +1,6 @@
 .env
 node_modules/
 dist/
-build/
 vendor/
 www/vendor/
 www/storage/logs/

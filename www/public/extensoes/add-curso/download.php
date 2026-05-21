@@ -58,11 +58,11 @@ $catalogo = [
         'pasta_destino' => 'Curso de Linux'
     ],
     [
-        'id' => 'curso-cyber',
-        'titulo' => 'Curso de Cyber Security',
+        'id' => 'logica-programação',
+        'titulo' => 'Lógica de programação I',
         'categoria' => 'Segurança',
-        'descricao' => 'Curso exemplo para testar o instalador local.',
-        'download_url' => 'https://SEU-LINK-AQUI/curso-cyber.zip',
+        'descricao' => 'Lógica de programação I Os primeiros programas com Javascript e HTML.',
+        'download_url' => 'http://biblioteca.mahal.pro/logica- programacao.zip',
         'pasta_destino' => 'Curso de Cyber Security'
     ],
     [
