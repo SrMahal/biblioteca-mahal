@@ -1,4 +1,5 @@
 <?php
+
 // public/index.php
 
 // 0) Autoload primeiro (sem output!)
@@ -313,6 +314,10 @@ switch (true) {
         require __DIR__ . '/../src/Views/pages/missoes/show.php';
         break;
 
+
+    case ($path === '/game-biblio'):
+        require __DIR__ . '/../src/Views/pages/biblioteca3d.php';
+        break;
 
     case ($path === '/comprar'):
         require __DIR__ . '/../src/Views/pages/checkout/checkout_biblioteca.php';

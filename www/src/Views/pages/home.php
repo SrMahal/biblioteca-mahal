@@ -33,7 +33,7 @@
 
                         <div class="hero-actions">
                             <a class="btn-primary" href="https://discord.gg/6Rbpja5nAb" target="_blank" rel="noreferrer">
-                                Acessar Discord
+                                Jogar
                             </a>
                             <a class="btn-ghost" href="https://discord.gg/6Rbpja5nAb" target="_blank" rel="noreferrer">
                                 <i class="fa-brands fa-whatsapp"></i> Suporte

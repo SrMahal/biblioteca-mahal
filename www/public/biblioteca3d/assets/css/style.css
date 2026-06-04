@@ -1,0 +1,276 @@
+/*
+      CSS básico para o canvas ocupar a tela inteira.
+      O Three.js desenha tudo dentro do elemento <canvas>.
+    */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000000;
+            font-family: Arial, sans-serif;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+            cursor: grab;
+        }
+
+        canvas:active {
+            cursor: grabbing;
+        }
+
+        .hud {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 10;
+            max-width: 320px;
+            padding: 14px 16px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.027);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            color: #dbdbdb;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .hud strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        #loadingScreen {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: #000;
+            color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        #loadingScreen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loaderLogo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .loaderDots {
+            display: flex;
+            gap: 10px;
+        }
+
+        .loaderDots span {
+            width: 10px;
+            height: 10px;
+            background: #ff9900;
+            border-radius: 50%;
+            animation: pulseDot 1s infinite ease-in-out;
+        }
+
+        .loaderDots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loaderDots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes pulseDot {
+
+            0%,
+            100% {
+                transform: scale(0.7);
+                opacity: 0.35;
+            }
+
+            50% {
+                transform: scale(1.3);
+                opacity: 1;
+            }
+        }
+
+        /* POPUP COMEÇA ESCONDIDO */
+
+        #footerPopup {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 999;
+
+            opacity: 0;
+            transform: translateX(-80px);
+            pointer-events: none;
+
+            transition: all 0.7s ease;
+        }
+
+        /* QUANDO ENTRA */
+
+        #footerPopup.show {
+            opacity: 1;
+            transform: translateX(0);
+            pointer-events: auto;
+        }
+
+        /* QUANDO SAI */
+
+        #footerPopup.hide {
+            opacity: 0;
+            transform: translateX(-80px);
+            pointer-events: none;
+        }
+
+        /*
+========================================
+CARD DO POPUP
+========================================
+*/
+
+        .footerPopupCard {
+            position: relative;
+            z-index: 2;
+            /* card fica na frente da coruja */
+
+            width: 320px;
+            padding: 18px;
+            border-radius: 18px;
+
+            background: rgba(20, 20, 20, 0.92);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+
+            color: white;
+            backdrop-filter: blur(10px);
+
+            transform: translateX(0);
+            opacity: 1;
+            transition: 0.4s ease;
+        }
+
+        .footerPopupCard.hidden {
+            transform: translateX(-120%);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /*
+========================================
+TEXTO
+========================================
+*/
+
+        .footerPopupCard p {
+            margin: 0 0 14px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /*
+========================================
+BOTÕES
+========================================
+*/
+
+        .footerPopupButtons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .footerPopupButtons button {
+            border: 0;
+            padding: 10px 16px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        #understoodButton {
+            background: #2a2a2a;
+            color: white;
+        }
+
+        #helpButton {
+            background: #ff9900;
+            color: black;
+        }
+
+        /*
+========================================
+BOTÃO REABRIR (+)
+========================================
+*/
+
+        #reopenPopupButton {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 1000;
+
+            width: 46px;
+            height: 46px;
+            border: 0;
+            border-radius: 50%;
+
+            background: #ff9900;
+            color: black;
+
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+
+            display: none;
+        }
+
+        /*
+========================================
+CORUJA (FORA DO CARD)
+========================================
+*/
+
+        .popupOwl {
+            position: absolute;
+
+            top: -90px;
+            right: 20px;
+
+            width: 100px;
+            height: auto;
+
+            z-index: 1;
+            /* atrás do card */
+
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .popupOwl.hidden {
+            transform: translateX(-120%);
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.1s ease;
+        }
+
+        #mobileTerminalInput {
+            position: fixed;
+            left: -9999px;
+            opacity: 0;
+            pointer-events: none;
+        }

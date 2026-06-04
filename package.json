@@ -1,7 +1,7 @@
 {
   "name": "biblioteca-mahal",
-  "version": "1.0.0",
-  "description": "Biblioteca Mahal Desktop",
+  "version": "1.0.2",
+  "description": "Biblioteca Mahal",
   "main": "main.js",
   "author": "Mahal",
   "license": "ISC",
@@ -34,6 +34,10 @@
       {
         "from": "www",
         "to": "www"
+      },
+      {
+        "from": "vendor",
+        "to": "vendor"
       },
       {
         "from": ".env",

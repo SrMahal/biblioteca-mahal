@@ -1,7 +1,5 @@
 .env
 node_modules/
 dist/
-vendor/
-www/vendor/
 www/storage/logs/
 *.log
