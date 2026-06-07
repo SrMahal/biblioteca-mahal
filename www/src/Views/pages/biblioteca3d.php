@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Biblioteca Mahal</title>
-    <link rel="icon" href="/assets/img/logos/logo-biblioteca.png">
+    <link rel="icon" href="/biblioteca3d/assets/img/logos/logo-biblioteca.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/biblioteca3d/assets/css/style.css">
@@ -42,7 +42,7 @@
 
     <div id="footerPopup">
 
-        <img src="/assets/img/elementos/coruja.png" alt="Coruja" class="popupOwl">
+        <img src="/biblioteca3d/assets/img/elementos/coruja.png" alt="Coruja" class="popupOwl">
 
         <div class="footerPopupCard">
             <p>Bem vindo(a) a Versão Beta da biblioteca <br> Construida e versionada pela comunidade.</p>
@@ -56,7 +56,7 @@
 
     </div>
     <button id="reopenPopupButton"><i class="fa-solid fa-arrow-right-to-bracket"></i></button>
-    
+
     <div class="hud">
         <a href="/discord"><i class="fa-brands fa-discord"></i></a>
         <a href="/discord"><i class="fa-solid fa-book"></i></a>
@@ -66,7 +66,15 @@
         </button>
     </div>
 
-
+    <script type="importmap">
+        {
+        "imports": {
+            "three": "/biblioteca3d/vendor/three/build/three.module.min.js",
+            "three/webgpu": "/biblioteca3d/vendor/three/build/three.webgpu.min.js",
+            "three/addons/": "/biblioteca3d/vendor/three/examples/jsm/"
+        }
+        }
+    </script>
     <script type="module" src="/biblioteca3d/assets/js/threejs/main.js?v=1"></script>
 
 </body>

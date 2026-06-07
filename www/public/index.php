@@ -181,6 +181,14 @@ $path = parse_url($request, PHP_URL_PATH) ?: '/';
 $path = rtrim($path, '/');
 if ($path === '') $path = '/';
 
+// Serve arquivos estáticos do public
+$staticFile = __DIR__ . $path;
+
+if (is_file($staticFile)) {
+    return false;
+}
+
+
 // =============================================================
 // BLOCO 1: ROTAS DA API (JSON)
 // =============================================================

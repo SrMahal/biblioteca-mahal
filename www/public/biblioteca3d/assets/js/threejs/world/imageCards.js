@@ -1,6 +1,6 @@
 // world/imageCards.js
 
-import * as THREE from 'https://esm.sh/three@0.160.0';
+import * as THREE from "/biblioteca3d/vendor/three/build/three.module.min.js";
 
 function createImageCard({
     scene,
@@ -73,7 +73,7 @@ export function createImageCards({ scene, renderer }) {
         z: 1.5,
         rotationX: -Math.PI / 3,
         width: 18,
-        imageUrl: '/assets/img/logos/logo-mark-biblioteca.png',
+        imageUrl: '/biblioteca3d/assets/img/logos/logo-mark-biblioteca.png',
     });
 
     createImageCard({
@@ -84,7 +84,7 @@ export function createImageCards({ scene, renderer }) {
         z: -10,
         rotationX: -Math.PI / 3,
         width: 3.5,
-        imageUrl: '/assets/img/elementos/arrown-left-up.png',
+        imageUrl: '/biblioteca3d/assets/img/elementos/arrown-left-up.png',
     });
 
     createImageCard({
@@ -95,7 +95,7 @@ export function createImageCards({ scene, renderer }) {
         z: 0,
         rotationX: -Math.PI / 3,
         width: 5,
-        imageUrl: '/assets/img/elementos/arrown-left.png',
+        imageUrl: '/biblioteca3d/assets/img/elementos/arrown-left.png',
     });
 
     createImageCard({
@@ -106,7 +106,7 @@ export function createImageCards({ scene, renderer }) {
         z: 6,
         rotationX: -Math.PI / 3,
         width: 3.5,
-        imageUrl: '/assets/img/elementos/arrown-left-down.png',
+        imageUrl: '/biblioteca3d/assets/img/elementos/arrown-left-down.png',
     });
 
     createImageCard({
@@ -117,7 +117,7 @@ export function createImageCards({ scene, renderer }) {
         z: -8,
         rotationX: -Math.PI / 3,
         width: 3.5,
-        imageUrl: '/assets/img/elementos/arrown-rigth-up.png',
+        imageUrl: '/biblioteca3d/assets/img/elementos/arrown-rigth-up.png',
     });
 
     createImageCard({
@@ -128,7 +128,7 @@ export function createImageCards({ scene, renderer }) {
         z: 0,
         rotationX: -Math.PI / 3,
         width: 3.5,
-        imageUrl: '/assets/img/elementos/arrown-rigth.png',
+        imageUrl: '/biblioteca3d/assets/img/elementos/arrown-rigth.png',
     });
 
     createImageCard({
@@ -139,7 +139,7 @@ export function createImageCards({ scene, renderer }) {
         z: 6,
         rotationX: -Math.PI / 3,
         width: 3.5,
-        imageUrl: '/assets/img/elementos/arrown-right-down.png',
+        imageUrl: '/biblioteca3d/assets/img/elementos/arrown-right-down.png',
     });
 
     createImageCard({
@@ -150,7 +150,7 @@ export function createImageCards({ scene, renderer }) {
         z: 8.5,
         rotationX: -Math.PI / 2,
         width: 2.5,
-        imageUrl: '/assets/img/fotos/mahal.png',
+        imageUrl: '/biblioteca3d/assets/img/fotos/mahal.png',
         castShadow: false,
         receiveShadow: false
     });
@@ -163,7 +163,7 @@ export function createImageCards({ scene, renderer }) {
         z: 8.5,
         rotationX: -Math.PI / 2,
         width: 2.5,
-        imageUrl: '/assets/img/fotos/mario.png',
+        imageUrl: '/biblioteca3d/assets/img/fotos/mario.png',
         castShadow: false,
         receiveShadow: false
     });
