@@ -3,7 +3,8 @@ import * as THREE from "/biblioteca3d/vendor/three/build/three.module.min.js";
 export function createPlayerCamera({
     renderer,
     camera,
-    playerModel
+    playerModel,
+    mobileInput = null
 }) {
     let enabled = false;
 
@@ -14,7 +15,10 @@ export function createPlayerCamera({
         distance: 8,
         height: 3.2,
         lookHeight: 1.5,
+
         mouseSensitivity: 0.003,
+        mobileSensitivity: 0.009,
+
         positionSmooth: 0.045,
         minPitch: -0.75,
         maxPitch: 0.25,
@@ -69,6 +73,19 @@ export function createPlayerCamera({
         if (!playerModel) return;
 
         const targetObject = getTargetObject();
+        if (mobileInput) {
+            yaw -= mobileInput.lookX * settings.mobileSensitivity;
+            pitch -= mobileInput.lookY * settings.mobileSensitivity;
+
+            mobileInput.lookX = 0;
+            mobileInput.lookY = 0;
+
+            pitch = THREE.MathUtils.clamp(
+                pitch,
+                settings.minPitch,
+                settings.maxPitch
+            );
+        }
 
         if (!targetObject || !targetObject.position) return;
 

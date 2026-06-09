@@ -6,7 +6,8 @@ import { createPlayerPhysics } from './playerPhysics.js';
 export function createLocalPlayer({
     scene,
     camera,
-    colliders = []
+    colliders = [],
+    mobileInput = null
 }) {
     const playerState =
         createPlayerState("local");
@@ -28,7 +29,8 @@ export function createLocalPlayer({
             playerState,
             playerModel,
             camera,
-            playerPhysics
+            playerPhysics,
+            mobileInput
         });
 
     return {

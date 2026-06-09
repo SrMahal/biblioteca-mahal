@@ -1,5 +1,20 @@
 import * as THREE from "three";
 
+import {
+    joinWorld,
+    sendPlayerState
+} from "./network/socketClient.js";
+
+import {
+    setupRemotePlayers,
+    updateRemotePlayers,
+    getRemoteObjectById
+} from "./network/remotePlayers.js";
+
+import {
+    setupVoice
+} from "./network/voiceClient.js";
+
 import { createScene } from './core/scene.js';
 import { createRenderer } from './core/renderer.js';
 import { createWorldLights } from './world/lights.js';
@@ -15,6 +30,13 @@ import { createModels3D } from './world/model3d.js';
 import { createColliders } from './world/colliders.js';
 
 import { createControls } from './core/controls.js';
+import {
+    setupMobileControls,
+    showMobileControls,
+    hideMobileControls,
+    mobileInput
+} from "./mobile/mobileControls.js";
+
 import { setupResize } from './core/resize.js';
 import { startAnimationLoop } from './core/animationLoop.js';
 
@@ -25,9 +47,15 @@ import { setupComputerScreenInteraction } from './systems/computerScreenInteract
 
 import { createLocalPlayer } from './player/playerManager.js';
 import { createPlayerCamera } from './player/playerCamera.js';
+import { getPlayerIdentity } from "./network/gameIdentity.js";
+
+
 
 const scene = createScene();
 const renderer = createRenderer();
+
+setupMobileControls();
+hideMobileControls();
 
 const cameraData = createCamera();
 const camera = cameraData.camera;
@@ -35,6 +63,8 @@ const cameraSettings = cameraData.cameraSettings;
 const cameraTarget = cameraData.cameraTarget;
 
 let cameraDistance = cameraData.cameraDistance;
+
+
 
 createWorldLights(scene);
 
@@ -52,11 +82,22 @@ const colliders = createColliders({
         ...modelColliders
     ]
 });
+setupRemotePlayers(scene);
 
 const localPlayer = createLocalPlayer({
     scene,
     camera,
-    colliders
+    colliders,
+    mobileInput
+});
+
+const identity = await getPlayerIdentity();
+
+joinWorld({
+    worldId: "biblioteca-central",
+    userId: identity.id,
+    name: identity.name || "Jogador",
+    isGuest: identity.isGuest
 });
 
 const computerScreen = createComputerScreen({
@@ -110,15 +151,40 @@ const boardControls = createControls({
 const playerCamera = createPlayerCamera({
     renderer,
     camera,
-    playerModel: localPlayer.model
+    playerModel: localPlayer.model,
+    mobileInput
 });
 
 const playButton = document.getElementById("playButton");
 
-playButton.addEventListener("click", () => {
+let voiceStarted = false;
+
+let isPlayerMode = false;
+
+playButton.addEventListener("click", async () => {
+    if (isPlayerMode) {
+        returnToBoardMode();
+        return;
+    }
+
+    isPlayerMode = true;
+
     boardControls.setEnabled(false);
     playerCamera.setEnabled(true);
-    playButton.style.display = "none";
+
+    playButton.textContent = "ESC";
+    playButton.style.display = "block";
+
+    showMobileControls();
+
+    if (!voiceStarted) {
+        await setupVoice({
+            camera,
+            getRemoteObjectById
+        });
+
+        voiceStarted = true;
+    }
 });
 
 let isReturningToBoard = false;
@@ -131,7 +197,11 @@ function returnToBoardMode() {
     playerCamera.setEnabled(false);
     boardControls.setEnabled(false);
 
+    isPlayerMode = false;
+    playButton.textContent = "Play";
     playButton.style.display = "block";
+
+    hideMobileControls();
 
     const startPosition = camera.position.clone();
     const startTarget = cameraTarget.clone();
@@ -205,13 +275,41 @@ setupResize({
 setupPopup();
 setupLoadingScreen();
 
+let lastNetworkUpdate = 0;
+
 startAnimationLoop({
     renderer,
     scene,
     camera,
 
-    update: (deltaTime) => {
+    update(deltaTime) {
+
         localPlayer.controller.update(deltaTime);
+
         playerCamera.update(deltaTime);
+
+        updateRemotePlayers(deltaTime);
+
+        lastNetworkUpdate += deltaTime;
+
+        if (lastNetworkUpdate > 0.05) {
+
+            sendPlayerState({
+                worldId: "biblioteca-central",
+                userId: identity.id,
+                name: identity.name || "Jogador",
+                isGuest: identity.isGuest,
+
+                x: localPlayer.state.position.x,
+                y: localPlayer.state.position.y,
+                z: localPlayer.state.position.z,
+
+                rotationY: localPlayer.state.rotation.y,
+
+                animation: localPlayer.state.currentAnimation || "Idle"
+            });
+
+            lastNetworkUpdate = 0;
+        }
     }
 });

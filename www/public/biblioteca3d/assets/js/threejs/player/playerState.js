@@ -3,7 +3,7 @@ export function createPlayerState(id = "local") {
         id,
         position: {
             x: 0,
-            y: 0,
+            y: 5,
             z: 5
         },
         rotation: {

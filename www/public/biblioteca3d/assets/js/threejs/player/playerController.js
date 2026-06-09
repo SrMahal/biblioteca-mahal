@@ -4,7 +4,8 @@ export function createPlayerController({
     playerState,
     playerModel,
     camera,
-    playerPhysics
+    playerPhysics,
+    mobileInput = null
 }) {
     const keys = {
         w: false,
@@ -27,45 +28,37 @@ export function createPlayerController({
     const up =
         new THREE.Vector3(0, 1, 0);
 
-    window.addEventListener(
-        "keydown",
-        (event) => {
-            const key =
-                event.key.toLowerCase();
+    window.addEventListener("keydown", (event) => {
+        const key = event.key.toLowerCase();
 
-            if (key === "shift") {
-                keys.shift = true;
-            }
-
-            if (key === " ") {
-                keys.space = true;
-            }
-
-            if (key in keys) {
-                keys[key] = true;
-            }
+        if (key === "shift") {
+            keys.shift = true;
         }
-    );
 
-    window.addEventListener(
-        "keyup",
-        (event) => {
-            const key =
-                event.key.toLowerCase();
-
-            if (key === "shift") {
-                keys.shift = false;
-            }
-
-            if (key === " ") {
-                keys.space = false;
-            }
-
-            if (key in keys) {
-                keys[key] = false;
-            }
+        if (key === " ") {
+            keys.space = true;
         }
-    );
+
+        if (key in keys) {
+            keys[key] = true;
+        }
+    });
+
+    window.addEventListener("keyup", (event) => {
+        const key = event.key.toLowerCase();
+
+        if (key === "shift") {
+            keys.shift = false;
+        }
+
+        if (key === " ") {
+            keys.space = false;
+        }
+
+        if (key in keys) {
+            keys[key] = false;
+        }
+    });
 
     function update(deltaTime) {
         const previousPosition = {
@@ -82,48 +75,51 @@ export function createPlayerController({
                 ? runSpeed
                 : walkSpeed;
 
-        moveDirection.set(
-            0,
-            0,
-            0
-        );
+        moveDirection.set(0, 0, 0);
 
-        camera.getWorldDirection(
-            cameraForward
-        );
+        camera.getWorldDirection(cameraForward);
 
         cameraForward.y = 0;
         cameraForward.normalize();
 
         cameraRight
-            .crossVectors(
-                cameraForward,
-                up
-            )
+            .crossVectors(cameraForward, up)
             .normalize();
 
+        // Teclado
         if (keys.w) {
-            moveDirection.add(
-                cameraForward
-            );
+            moveDirection.add(cameraForward);
         }
 
         if (keys.s) {
-            moveDirection.sub(
-                cameraForward
-            );
+            moveDirection.sub(cameraForward);
         }
 
         if (keys.a) {
-            moveDirection.sub(
-                cameraRight
-            );
+            moveDirection.sub(cameraRight);
         }
 
         if (keys.d) {
-            moveDirection.add(
-                cameraRight
-            );
+            moveDirection.add(cameraRight);
+        }
+
+        // Mobile joystick
+        if (mobileInput && mobileInput.active) {
+            if (mobileInput.moveY < -0.15) {
+                moveDirection.add(cameraForward);
+            }
+
+            if (mobileInput.moveY > 0.15) {
+                moveDirection.sub(cameraForward);
+            }
+
+            if (mobileInput.moveX < -0.15) {
+                moveDirection.sub(cameraRight);
+            }
+
+            if (mobileInput.moveX > 0.15) {
+                moveDirection.add(cameraRight);
+            }
         }
 
         playerState.isMoving =
@@ -165,15 +161,11 @@ export function createPlayerController({
             playerState.rotation.y;
 
         if (!playerPhysics.getIsGrounded()) {
-            playerModel.playAnimation?.("Jump");
+            setAnimation("Jump");
         } else if (playerState.isMoving) {
-            playerModel.playAnimation?.(
-                keys.shift
-                    ? "Run"
-                    : "Walk"
-            );
+            setAnimation(keys.shift ? "Run" : "Walk");
         } else {
-            playerModel.playAnimation?.("Idle");
+            setAnimation("Idle");
         }
 
         playerPhysics.update(
@@ -184,6 +176,11 @@ export function createPlayerController({
         playerModel.update?.(
             deltaTime
         );
+    }
+
+    function setAnimation(name) {
+        playerState.currentAnimation = name;
+        playerModel.playAnimation?.(name);
     }
 
     return {

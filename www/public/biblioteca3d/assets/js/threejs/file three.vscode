@@ -1,0 +1,2483 @@
+┣ 📂.vscode
+┃ ┗ 📜settings.json
+┣ 📂build
+┃ ┗ 📜icon.ico
+┣ 📂dist
+┃ ┣ 📂win-unpacked
+┃ ┃ ┣ 📂locales
+┃ ┃ ┃ ┣ 📜af.pak
+┃ ┃ ┃ ┣ 📜am.pak
+┃ ┃ ┃ ┣ 📜ar.pak
+┃ ┃ ┃ ┣ 📜bg.pak
+┃ ┃ ┃ ┣ 📜bn.pak
+┃ ┃ ┃ ┣ 📜ca.pak
+┃ ┃ ┃ ┣ 📜cs.pak
+┃ ┃ ┃ ┣ 📜da.pak
+┃ ┃ ┃ ┣ 📜de.pak
+┃ ┃ ┃ ┣ 📜el.pak
+┃ ┃ ┃ ┣ 📜en-GB.pak
+┃ ┃ ┃ ┣ 📜en-US.pak
+┃ ┃ ┃ ┣ 📜es-419.pak
+┃ ┃ ┃ ┣ 📜es.pak
+┃ ┃ ┃ ┣ 📜et.pak
+┃ ┃ ┃ ┣ 📜fa.pak
+┃ ┃ ┃ ┣ 📜fi.pak
+┃ ┃ ┃ ┣ 📜fil.pak
+┃ ┃ ┃ ┣ 📜fr.pak
+┃ ┃ ┃ ┣ 📜gu.pak
+┃ ┃ ┃ ┣ 📜he.pak
+┃ ┃ ┃ ┣ 📜hi.pak
+┃ ┃ ┃ ┣ 📜hr.pak
+┃ ┃ ┃ ┣ 📜hu.pak
+┃ ┃ ┃ ┣ 📜id.pak
+┃ ┃ ┃ ┣ 📜it.pak
+┃ ┃ ┃ ┣ 📜ja.pak
+┃ ┃ ┃ ┣ 📜kn.pak
+┃ ┃ ┃ ┣ 📜ko.pak
+┃ ┃ ┃ ┣ 📜lt.pak
+┃ ┃ ┃ ┣ 📜lv.pak
+┃ ┃ ┃ ┣ 📜ml.pak
+┃ ┃ ┃ ┣ 📜mr.pak
+┃ ┃ ┃ ┣ 📜ms.pak
+┃ ┃ ┃ ┣ 📜nb.pak
+┃ ┃ ┃ ┣ 📜nl.pak
+┃ ┃ ┃ ┣ 📜pl.pak
+┃ ┃ ┃ ┣ 📜pt-BR.pak
+┃ ┃ ┃ ┣ 📜pt-PT.pak
+┃ ┃ ┃ ┣ 📜ro.pak
+┃ ┃ ┃ ┣ 📜ru.pak
+┃ ┃ ┃ ┣ 📜sk.pak
+┃ ┃ ┃ ┣ 📜sl.pak
+┃ ┃ ┃ ┣ 📜sr.pak
+┃ ┃ ┃ ┣ 📜sv.pak
+┃ ┃ ┃ ┣ 📜sw.pak
+┃ ┃ ┃ ┣ 📜ta.pak
+┃ ┃ ┃ ┣ 📜te.pak
+┃ ┃ ┃ ┣ 📜th.pak
+┃ ┃ ┃ ┣ 📜tr.pak
+┃ ┃ ┃ ┣ 📜uk.pak
+┃ ┃ ┃ ┣ 📜ur.pak
+┃ ┃ ┃ ┣ 📜vi.pak
+┃ ┃ ┃ ┣ 📜zh-CN.pak
+┃ ┃ ┃ ┗ 📜zh-TW.pak
+┃ ┃ ┣ 📂resources
+┃ ┃ ┃ ┣ 📂php
+┃ ┃ ┃ ┃ ┣ 📂dev
+┃ ┃ ┃ ┃ ┃ ┗ 📜php8ts.lib
+┃ ┃ ┃ ┃ ┣ 📂ext
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_bz2.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_com_dotnet.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_curl.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_dba.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_dl_test.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_enchant.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_exif.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_ffi.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_fileinfo.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_ftp.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_gd.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_gettext.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_gmp.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_imap.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_intl.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_ldap.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_mbstring.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_mysqli.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_oci8_19.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_odbc.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_opcache.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_openssl.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_pdo_firebird.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_pdo_mysql.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_pdo_oci.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_pdo_odbc.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_pdo_pgsql.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_pdo_sqlite.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_pgsql.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_shmop.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_snmp.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_soap.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_sockets.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_sodium.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_sqlite3.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_sysvshm.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_tidy.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_xsl.dll
+┃ ┃ ┃ ┃ ┃ ┣ 📜php_zend_test.dll
+┃ ┃ ┃ ┃ ┃ ┗ 📜php_zip.dll
+┃ ┃ ┃ ┃ ┣ 📂extras
+┃ ┃ ┃ ┃ ┃ ┗ 📂ssl
+┃ ┃ ┃ ┃ ┃   ┣ 📜legacy.dll
+┃ ┃ ┃ ┃ ┃   ┗ 📜openssl.cnf
+┃ ┃ ┃ ┃ ┣ 📂lib
+┃ ┃ ┃ ┃ ┃ ┗ 📂enchant
+┃ ┃ ┃ ┃ ┃   ┗ 📜libenchant2_hunspell.dll
+┃ ┃ ┃ ┃ ┣ 📜cacert.pem
+┃ ┃ ┃ ┃ ┣ 📜deplister.exe
+┃ ┃ ┃ ┃ ┣ 📜glib-2.dll
+┃ ┃ ┃ ┃ ┣ 📜gmodule-2.dll
+┃ ┃ ┃ ┃ ┣ 📜icudt71.dll
+┃ ┃ ┃ ┃ ┣ 📜icuin71.dll
+┃ ┃ ┃ ┃ ┣ 📜icuio71.dll
+┃ ┃ ┃ ┃ ┣ 📜icuuc71.dll
+┃ ┃ ┃ ┃ ┣ 📜libcrypto-3-x64.dll
+┃ ┃ ┃ ┃ ┣ 📜libenchant2.dll
+┃ ┃ ┃ ┃ ┣ 📜libpq.dll
+┃ ┃ ┃ ┃ ┣ 📜libsasl.dll
+┃ ┃ ┃ ┃ ┣ 📜libsodium.dll
+┃ ┃ ┃ ┃ ┣ 📜libsqlite3.dll
+┃ ┃ ┃ ┃ ┣ 📜libssh2.dll
+┃ ┃ ┃ ┃ ┣ 📜libssl-3-x64.dll
+┃ ┃ ┃ ┃ ┣ 📜license.txt
+┃ ┃ ┃ ┃ ┣ 📜news.txt
+┃ ┃ ┃ ┃ ┣ 📜nghttp2.dll
+┃ ┃ ┃ ┃ ┣ 📜phar.phar.bat
+┃ ┃ ┃ ┃ ┣ 📜pharcommand.phar
+┃ ┃ ┃ ┃ ┣ 📜php_bz2.dll
+┃ ┃ ┃ ┃ ┣ 📜php_com_dotnet.dll
+┃ ┃ ┃ ┃ ┣ 📜php_curl.dll
+┃ ┃ ┃ ┃ ┣ 📜php_dba.dll
+┃ ┃ ┃ ┃ ┣ 📜php_dl_test.dll
+┃ ┃ ┃ ┃ ┣ 📜php_enchant.dll
+┃ ┃ ┃ ┃ ┣ 📜php_exif.dll
+┃ ┃ ┃ ┃ ┣ 📜php_ffi.dll
+┃ ┃ ┃ ┃ ┣ 📜php_fileinfo.dll
+┃ ┃ ┃ ┃ ┣ 📜php_ftp.dll
+┃ ┃ ┃ ┃ ┣ 📜php_gd.dll
+┃ ┃ ┃ ┃ ┣ 📜php_gettext.dll
+┃ ┃ ┃ ┃ ┣ 📜php_gmp.dll
+┃ ┃ ┃ ┃ ┣ 📜php_imap.dll
+┃ ┃ ┃ ┃ ┣ 📜php_intl.dll
+┃ ┃ ┃ ┃ ┣ 📜php_ldap.dll
+┃ ┃ ┃ ┃ ┣ 📜php_mbstring.dll
+┃ ┃ ┃ ┃ ┣ 📜php_mysqli.dll
+┃ ┃ ┃ ┃ ┣ 📜php_oci8_19.dll
+┃ ┃ ┃ ┃ ┣ 📜php_odbc.dll
+┃ ┃ ┃ ┃ ┣ 📜php_opcache.dll
+┃ ┃ ┃ ┃ ┣ 📜php_openssl.dll
+┃ ┃ ┃ ┃ ┣ 📜php_pdo_firebird.dll
+┃ ┃ ┃ ┃ ┣ 📜php_pdo_mysql.dll
+┃ ┃ ┃ ┃ ┣ 📜php_pdo_oci.dll
+┃ ┃ ┃ ┃ ┣ 📜php_pdo_odbc.dll
+┃ ┃ ┃ ┃ ┣ 📜php_pdo_pgsql.dll
+┃ ┃ ┃ ┃ ┣ 📜php_pdo_sqlite.dll
+┃ ┃ ┃ ┃ ┣ 📜php_pgsql.dll
+┃ ┃ ┃ ┃ ┣ 📜php_shmop.dll
+┃ ┃ ┃ ┃ ┣ 📜php_snmp.dll
+┃ ┃ ┃ ┃ ┣ 📜php_soap.dll
+┃ ┃ ┃ ┃ ┣ 📜php_sockets.dll
+┃ ┃ ┃ ┃ ┣ 📜php_sodium.dll
+┃ ┃ ┃ ┃ ┣ 📜php_sqlite3.dll
+┃ ┃ ┃ ┃ ┣ 📜php_sysvshm.dll
+┃ ┃ ┃ ┃ ┣ 📜php_tidy.dll
+┃ ┃ ┃ ┃ ┣ 📜php_xsl.dll
+┃ ┃ ┃ ┃ ┣ 📜php_zend_test.dll
+┃ ┃ ┃ ┃ ┣ 📜php_zip.dll
+┃ ┃ ┃ ┃ ┣ 📜php-cgi.exe
+┃ ┃ ┃ ┃ ┣ 📜php-win.exe
+┃ ┃ ┃ ┃ ┣ 📜php.exe
+┃ ┃ ┃ ┃ ┣ 📜php.ini
+┃ ┃ ┃ ┃ ┣ 📜php.ini-development
+┃ ┃ ┃ ┃ ┣ 📜php.ini-production
+┃ ┃ ┃ ┃ ┣ 📜php8apache2_4.dll
+┃ ┃ ┃ ┃ ┣ 📜php8embed.lib
+┃ ┃ ┃ ┃ ┣ 📜php8phpdbg.dll
+┃ ┃ ┃ ┃ ┣ 📜php8ts.dll
+┃ ┃ ┃ ┃ ┣ 📜phpdbg.exe
+┃ ┃ ┃ ┃ ┣ 📜readme-redist-bins.txt
+┃ ┃ ┃ ┃ ┣ 📜README.md
+┃ ┃ ┃ ┃ ┗ 📜snapshot.txt
+┃ ┃ ┃ ┣ 📂www
+┃ ┃ ┃ ┃ ┣ 📂public
+┃ ┃ ┃ ┃ ┃ ┣ 📂assets
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂base
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜layout.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜reset.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜tokens.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜typography.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂biblioteca
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜content_public.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜lesson_public.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂checkout
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜checkout.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂components
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜buttons.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜card.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜forms.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜sidebar.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜topbar.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂missoes
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜missoes.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂pages
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜cursos-local.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜home.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜landing.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂utils
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜helpers.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜base.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜biblioteca.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜main.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜oferta.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜section_oferta.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜section.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜style.css
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂img
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂logos
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜logo-bilbioteca.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂pages
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂biblioteca
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜banner_docker_servidor.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜banner_n8n_2.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜banner_n8n.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜banner_vibecede_red.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜default-user.png
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂biblioteca
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜common.js
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜course_public.js
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜courses_index.js
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜lesson_public.js
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜module_public.js
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📜track_public.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂checkout
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜checkout_biblioteca.js
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜checkout_evento_afiliado.js
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📜checkout_evento.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂missoes
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜missoes_index.js
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📜missoes_show.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂pages
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📜home-3d.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜auth.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜biblioteca.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜checkout_afiliado.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜checkout_biblioteca copy.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜checkout_evento copy 2.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜checkout_evento copy.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜checkout.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜home.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜instructor_track_edit.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜login.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜main.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜nova_senha.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜perfil.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜register.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜reset_password.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜reset_request.js
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜servicos.js
+┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜sidebar.js
+┃ ┃ ┃ ┃ ┃ ┣ 📂biblioteca3d
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂assets
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜customContextMenu.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜style.css
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂img
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂elementos
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜arrown-left-down.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜arrown-left-up.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜arrown-left.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜arrown-right-down.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜arrown-rigth-up.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜arrown-rigth.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜coruja.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂fotos
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜fran.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜hackeretico.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜mahal.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜mario.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜saf.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜simpatia.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂logos
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜logo-biblioteca.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜logo-mark-biblioteca.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂pages
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂biblioteca
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜banner_docker_servidor.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜banner_n8n_2.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜banner_n8n.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜banner_vibecede_red.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜dev.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜instro.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜sec.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜default-user.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂js
+┃ ┃ ┃ ┃ ┃ ┃ ┃   ┗ 📂threejs
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┣ 📂core
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜animationLoop.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜camera.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜cameraModes.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜controls.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜customContextMenu.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜renderer.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜resize.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┗ 📜scene.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┣ 📂model3d
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜avatar.glb
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜drive-2-mahal.glb
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜drive-mahal.glb
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜drive.glb
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜notebook_p1.glb
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜notebook.glb
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜office_desk.glb
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜retro_computer.glb
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜scene.gltf
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜ssd.glb
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜ssd1.glb
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜ssh.glb
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┗ 📜ssh2.glb
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┣ 📂player
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜playerCamera.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜playerController.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜playerManager.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜playerModel.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜playerPhysics.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┗ 📜playerState.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┣ 📂systems
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┗ 📜computerScreenInteraction.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┣ 📂ui
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜loadingScreen.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┗ 📜popup.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┣ 📂world
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜colliders.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜computerScreen.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜cubes.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜floor.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜imageCards.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜lights.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜model3d.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜models.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜mouseLight.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜notes.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┃ ┗ 📜textBlocks.js
+┃ ┃ ┃ ┃ ┃ ┃ ┃     ┗ 📜main.js
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂html-bkp
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜board copy.html
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜board.html
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂vendor
+┃ ┃ ┃ ┃ ┃ ┃   ┗ 📂three
+┃ ┃ ┃ ┃ ┃ ┃     ┣ 📂build
+┃ ┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜three.core.min.js
+┃ ┃ ┃ ┃ ┃ ┃     ┃ ┗ 📜three.module.min.js
+┃ ┃ ┃ ┃ ┃ ┃     ┗ 📂examples
+┃ ┃ ┃ ┃ ┃ ┃       ┗ 📂jsm
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂animation
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜AnimationClipCreator.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜CCDIKSolver.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂capabilities
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜WebGL.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜WebGPU.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂controls
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ArcballControls.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜DragControls.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜FirstPersonControls.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜FlyControls.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜MapControls.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜OrbitControls.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜PointerLockControls.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TrackballControls.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜TransformControls.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂csm
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜CSM.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜CSMFrustum.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜CSMHelper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜CSMShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜CSMShadowNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂curves
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜CurveExtras.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜NURBSCurve.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜NURBSSurface.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜NURBSUtils.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜NURBSVolume.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂effects
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜AnaglyphEffect.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜AsciiEffect.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜OutlineEffect.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ParallaxBarrierEffect.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜StereoEffect.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂environments
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ColorEnvironment.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜DebugEnvironment.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜RoomEnvironment.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂exporters
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜DRACOExporter.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜EXRExporter.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜GLTFExporter.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜KTX2Exporter.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜OBJExporter.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜PLYExporter.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜STLExporter.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜USDZExporter.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂geometries
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜BoxLineGeometry.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ConvexGeometry.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜DecalGeometry.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ParametricFunctions.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ParametricGeometry.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜RoundedBoxGeometry.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TeapotGeometry.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜TextGeometry.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂gpgpu
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜BitonicSort.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂helpers
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜AnimationPathHelper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LightProbeGridHelper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LightProbeHelper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LightProbeHelperGPU.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜OctreeHelper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜PositionalAudioHelper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜RapierHelper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜RectAreaLightHelper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TextureHelper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TextureHelperGPU.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜VertexNormalsHelper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜VertexTangentsHelper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜ViewHelper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂inspector
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂extensions
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📂tsl-graph
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜TSLGraphEditor.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┃ ┗ 📜TSLGraphLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜extensions.json
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂tabs
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Console.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Memory.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Parameters.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Performance.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Settings.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Timeline.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜Viewer.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂ui
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Graph.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Item.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜List.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Profiler.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Style.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Tab.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜utils.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜Values.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Extension.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Inspector.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜RendererInspector.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂interaction
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜InteractionManager.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂interactive
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜HTMLMesh.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜InteractiveGroup.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SelectionBox.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜SelectionHelper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂libs
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂basis
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜basis_transcoder.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜basis_transcoder.wasm
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂draco
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📂gltf
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜draco_decoder.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜draco_decoder.wasm
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜draco_encoder.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┃ ┗ 📜draco_wasm_wrapper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜draco_decoder.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜draco_decoder.wasm
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜draco_encoder.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜draco_wasm_wrapper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂rhino3dm
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜rhino3dm.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜rhino3dm.module.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜rhino3dm.wasm
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ammo.wasm.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ammo.wasm.wasm
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜chevrotain.module.min.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜demuxer_mp4.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ecsy.module.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜fflate.module.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ktx-parse.module.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜lil-gui.module.min.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜lottie_canvas.module.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜meshopt_decoder.module.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜mikktspace.module.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜motion-controllers.module.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜opentype.module.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜potpack.module.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜stats.module.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜surfaceNet.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜tween.module.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜utif.module.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜zstddec.module.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂lighting
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜DynamicLighting.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LightProbeGrid.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜TiledLighting.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂lights
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LightProbeGenerator.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜RectAreaLightTexturesLib.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜RectAreaLightUniformsLib.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂lines
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂webgpu
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Line2.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜LineSegments2.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜Wireframe.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Line2.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LineGeometry.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LineMaterial.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LineSegments2.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LineSegmentsGeometry.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Wireframe.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜WireframeGeometry2.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂loaders
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂collada
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜ColladaComposer.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜ColladaParser.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂lwo
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜IFFParser.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜LWO2Parser.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜LWO3Parser.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂usd
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜USDAParser.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜USDComposer.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜USDCParser.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜3DMLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜3MFLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜AMFLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜BVHLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ColladaLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜DDSLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜DRACOLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜EXRLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜FBXLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜FontLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜GCodeLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜GLTFLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜HDRCubeTextureLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜HDRLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜IESLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜KMZLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜KTX2Loader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜KTXLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LDrawLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LottieLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LUT3dlLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LUTCubeLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LUTImageLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LWOLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜MaterialXLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜MD2Loader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜MDDLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜MTLLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜NRRDLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜OBJLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜PCDLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜PDBLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜PLYLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜PVRLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜RGBELoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜STLLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SVGLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TDSLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TGALoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TIFFLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TTFLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜UltraHDRLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜USDLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜USDZLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜VOXLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜VRMLLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜VTKLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜XYZLoader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂materials
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LDrawConditionalLineMaterial.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LDrawConditionalLineNodeMaterial.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜WoodNodeMaterial.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂math
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Capsule.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ColorConverter.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ColorSpaces.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ConvexHull.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ImprovedNoise.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Lut.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜MeshSurfaceSampler.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜OBB.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Octree.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜SimplexNoise.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂misc
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ConvexObjectBreaker.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜GPUComputationRenderer.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Gyroscope.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜MD2Character.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜MD2CharacterComplex.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜MorphAnimMesh.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜MorphBlendMesh.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ProgressiveLightMap.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ProgressiveLightMapGPU.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜RollerCoaster.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TubePainter.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Volume.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜VolumeSlice.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂modifiers
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜CurveModifier.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜CurveModifierGPU.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜EdgeSplitModifier.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SimplifyModifier.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜TessellateModifier.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂objects
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜GroundedSkybox.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Lensflare.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LensflareMesh.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜MarchingCubes.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Reflector.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ReflectorForSSRPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Refractor.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ShadowMesh.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Sky.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SkyMesh.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Water.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Water2.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Water2Mesh.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜WaterMesh.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂offscreen
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜jank.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜offscreen.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜scene.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂physics
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜AmmoPhysics.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜JoltPhysics.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜RapierPhysics.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂postprocessing
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜AfterimagePass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜BloomPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜BokehPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ClearPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜CubeTexturePass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜DotScreenPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜EffectComposer.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜FilmPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜FXAAPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜GlitchPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜GTAOPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜HalftonePass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LUTPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜MaskPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜OutlinePass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜OutputPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Pass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜RenderPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜RenderPixelatedPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜RenderTransitionPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SAOPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SavePass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ShaderPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SMAAPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SSAARenderPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SSAOPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SSRPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TAARenderPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TexturePass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜UnrealBloomPass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂renderers
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜CSS2DRenderer.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜CSS3DRenderer.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Projector.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜SVGRenderer.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂shaders
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ACESFilmicToneMappingShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜AfterimageShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜BasicShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜BleachBypassShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜BlendShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜BokehShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜BokehShader2.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜BrightnessContrastShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ColorCorrectionShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ColorifyShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ConvolutionShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜CopyShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜DepthLimitedBlurShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜DigitalGlitch.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜DOFMipMapShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜DotScreenShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ExposureShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜FilmShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜FocusShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜FreiChenShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜FXAAShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜GammaCorrectionShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜GTAOShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜HalftoneShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜HorizontalBlurShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜HorizontalTiltShiftShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜HueSaturationShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜KaleidoShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LuminosityHighPassShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LuminosityShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜MirrorShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜NormalMapShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜OutputShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜PoissonDenoiseShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜RGBShiftShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SAOShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SepiaShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SMAAShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SobelOperatorShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SSAOShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SSRShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SubsurfaceScatteringShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TechnicolorShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ToonShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TriangleBlurShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜UnpackDepthRGBAShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜VelocityShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜VerticalBlurShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜VerticalTiltShiftShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜VignetteShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜VolumeShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜WaterRefractionShader.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂textures
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜FlakesTexture.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂transpiler
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜AST.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜GLSLDecoder.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Linker.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ShaderToyDecoder.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Transpiler.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TranspilerUtils.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜TSLEncoder.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜WGSLEncoder.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂tsl
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂display
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜AfterImageNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜AnaglyphPassNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜AnamorphicNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜BilateralBlurNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜BleachBypass.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜BloomNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜boxBlur.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜ChromaticAberrationNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜CRT.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜DenoiseNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜depthAwareBlend.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜DepthOfFieldNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜DotScreenNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜FilmNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜FSR1Node.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜FXAANode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜GaussianBlurNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜GodraysNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜GTAONode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜hashBlur.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜LensflareNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Lut3DNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜MotionBlur.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜OutlineNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜ParallaxBarrierPassNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜PixelationPassNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜radialBlur.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜RetroPassNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜RGBShiftNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Sepia.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜Shape.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜SharpenNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜SMAANode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜SobelOperatorNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜SSAAPassNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜SSGINode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜SSRNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜SSSNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜StereoCompositePassNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜StereoPassNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜TAAUNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜TRAANode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜TransitionNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂lighting
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📂data
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜AmbientLightDataNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜DirectionalLightDataNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜HemisphereLightDataNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜PointLightDataNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┃ ┗ 📜SpotLightDataNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜DynamicLightsNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜TiledLightsNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂math
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜Bayer.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂shadows
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┣ 📜TileShadowNode.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜TileShadowNodeHelper.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📂utils
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┃ ┗ 📜Raymarching.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜WebGLNodesHandler.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂utils
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜BufferGeometryUtils.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜CameraUtils.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ColorUtils.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜GeometryCompressionUtils.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜GeometryUtils.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜LDrawUtils.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SceneOptimizer.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SceneUtils.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ShadowMapViewer.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ShadowMapViewerGPU.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SkeletonUtils.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜SortUtils.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜UVsDebug.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜WebGLTextureUtils.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜WebGPUTextureUtils.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜WorkerPool.js
+┃ ┃ ┃ ┃ ┃ ┃         ┣ 📂webxr
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜ARButton.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜OculusHandModel.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜OculusHandPointerModel.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜Text2D.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜VRButton.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜XRButton.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜XRControllerModelFactory.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜XREstimatedLight.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜XRHandMeshModel.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜XRHandModelFactory.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┣ 📜XRHandPrimitiveModel.js
+┃ ┃ ┃ ┃ ┃ ┃         ┃ ┗ 📜XRPlanes.js
+┃ ┃ ┃ ┃ ┃ ┃         ┗ 📜Addons.js
+┃ ┃ ┃ ┃ ┃ ┣ 📂extensoes
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂add-curso
+┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜download.php
+┃ ┃ ┃ ┃ ┃ ┣ 📂uploads
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂1
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜avatar_6989fccaa7f4e.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜banner_6989fccaa86c7.png
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂14
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜avatar_69921ca154f11.jpg
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂2
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜avatar_698a962e30dc2.jpg
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜avatar_ee83b5ea8626d633549b03a163156591.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜banner_698a962e314ce.gif
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜banner_c1e7c6aab2045b0f74cc7a1f6a67a0c2.png
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂3
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜avatar_6989261d5b29a.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜banner_6989261d5b5fe.png
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂4
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜avatar_698f53f82e077.jpg
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜banner_698f53f82ef55.gif
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂5
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜avatar_698926af049c2.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜banner_698926af052e6.png
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂61
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜avatar_6999ff8054156.jpeg
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂78
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜banner_69ac780894758.ico
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂79
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜banner_69ac4374770fa.ico
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜banner_69ac44196500b.ico
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜banner_69ac782a8dd05.png
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜banner_69ac78a11917a.ico
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜.htaccess
+┃ ┃ ┃ ┃ ┃ ┣ 📜.htaccess
+┃ ┃ ┃ ┃ ┃ ┗ 📜index.php
+┃ ┃ ┃ ┃ ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┣ 📂Config
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜Database.php
+┃ ┃ ┃ ┃ ┃ ┣ 📂Controllers
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂Concerns
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜LibraryBackendAccess.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂CursoControllers
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜CursosController.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AuthController.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CheckoutController.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HomeController.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LibraryApiController.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ModuleController.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜PasswordResetController.php
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜UserController.php
+┃ ┃ ┃ ┃ ┃ ┣ 📂Middleware
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜AuthMiddleware.php
+┃ ┃ ┃ ┃ ┃ ┣ 📂Models
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜User.php
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜UserProfile.php
+┃ ┃ ┃ ┃ ┃ ┣ 📂Support
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜DebugLog.php
+┃ ┃ ┃ ┃ ┃ ┗ 📂Views
+┃ ┃ ┃ ┃ ┃   ┣ 📂layouts
+┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜footer.php
+┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜header.php
+┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜main.php
+┃ ┃ ┃ ┃ ┃   ┃ ┗ 📜sidebar.php
+┃ ┃ ┃ ┃ ┃   ┗ 📂pages
+┃ ┃ ┃ ┃ ┃     ┣ 📂bibliotecaCursos
+┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜file.php
+┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜index.php
+┃ ┃ ┃ ┃ ┃     ┃ ┗ 📜show.php
+┃ ┃ ┃ ┃ ┃     ┣ 📂missoes
+┃ ┃ ┃ ┃ ┃     ┃ ┣ 📜index.php
+┃ ┃ ┃ ┃ ┃     ┃ ┗ 📜show.php
+┃ ┃ ┃ ┃ ┃     ┣ 📜404.php
+┃ ┃ ┃ ┃ ┃     ┣ 📜biblioteca3d.php
+┃ ┃ ┃ ┃ ┃     ┣ 📜cursos.php
+┃ ┃ ┃ ┃ ┃     ┣ 📜home.php
+┃ ┃ ┃ ┃ ┃     ┣ 📜landing.php
+┃ ┃ ┃ ┃ ┃     ┣ 📜login.php
+┃ ┃ ┃ ┃ ┃     ┣ 📜missoes.php
+┃ ┃ ┃ ┃ ┃     ┣ 📜nova_senha.php
+┃ ┃ ┃ ┃ ┃     ┣ 📜perfil.php
+┃ ┃ ┃ ┃ ┃     ┣ 📜register.php
+┃ ┃ ┃ ┃ ┃     ┣ 📜reset_password.php
+┃ ┃ ┃ ┃ ┃     ┗ 📜reset_request.php
+┃ ┃ ┃ ┃ ┣ 📂vendor
+┃ ┃ ┃ ┃ ┃ ┣ 📂composer
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜autoload_classmap.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜autoload_files.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜autoload_namespaces.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜autoload_psr4.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜autoload_real.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜autoload_static.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ClassLoader.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜installed.json
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜installed.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜InstalledVersions.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜platform_check.php
+┃ ┃ ┃ ┃ ┃ ┣ 📂firebase
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂php-jwt
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜BeforeValidException.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜CachedKeySet.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜ExpiredException.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜JWK.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜JWT.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜JWTExceptionWithPayloadInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜Key.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📜SignatureInvalidException.php
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜CHANGELOG.md
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┣ 📂graham-campbell
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂result-type
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜Error.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜Result.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📜Success.php
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┣ 📂guzzlehttp
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂guzzle
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂Cookie
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CookieJar.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CookieJarInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜FileCookieJar.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜SessionCookieJar.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜SetCookie.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂Exception
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜BadResponseException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ClientException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ConnectException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜GuzzleException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜InvalidArgumentException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜RequestException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ServerException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜TooManyRedirectsException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜TransferException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂Handler
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurlFactory.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurlFactoryInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurlHandler.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurlMultiHandler.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜EasyHandle.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HeaderProcessor.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MockHandler.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Proxy.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜StreamHandler.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜BodySummarizer.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜BodySummarizerInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Client.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ClientInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ClientTrait.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜functions_include.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜functions.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HandlerStack.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MessageFormatter.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MessageFormatterInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Middleware.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Pool.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜PrepareBodyMiddleware.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜RedirectMiddleware.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜RequestOptions.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜RetryMiddleware.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜TransferStats.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜Utils.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CHANGELOG.md
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜UPGRADING.md
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂promises
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜AggregateException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CancellationException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Coroutine.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Create.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Each.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜EachPromise.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜FulfilledPromise.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Is.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Promise.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜PromiseInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜PromisorInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜RejectedPromise.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜RejectionException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜TaskQueue.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜TaskQueueInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜Utils.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CHANGELOG.md
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂psr7
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📂Exception
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┗ 📜MalformedUriException.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜AppendStream.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜BufferStream.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜CachingStream.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜DroppingStream.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜FnStream.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜Header.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜HttpFactory.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜InflateStream.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜LazyOpenStream.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜LimitStream.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜Message.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜MessageTrait.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜MimeType.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜MultipartStream.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜NoSeekStream.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜PumpStream.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜Query.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜Request.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜Response.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜Rfc7230.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜ServerRequest.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜Stream.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜StreamDecoratorTrait.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜StreamWrapper.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜UploadedFile.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜Uri.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜UriComparator.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜UriNormalizer.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜UriResolver.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📜Utils.php
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜CHANGELOG.md
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┣ 📂phpoption
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂phpoption
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📂PhpOption
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┣ 📜LazyOption.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┣ 📜None.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┣ 📜Option.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┗ 📜Some.php
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┣ 📂psr
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂http-client
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ClientExceptionInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ClientInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜NetworkExceptionInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜RequestExceptionInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CHANGELOG.md
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂http-factory
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜RequestFactoryInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ResponseFactoryInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ServerRequestFactoryInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜StreamFactoryInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜UploadedFileFactoryInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜UriFactoryInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂http-message
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂docs
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜PSR7-Interfaces.md
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📜PSR7-Usage.md
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜MessageInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜RequestInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜ResponseInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜ServerRequestInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜StreamInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜UploadedFileInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📜UriInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜CHANGELOG.md
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┣ 📂ralouphie
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂getallheaders
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📜getallheaders.php
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┣ 📂symfony
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂deprecation-contracts
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CHANGELOG.md
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜function.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂polyfill-ctype
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜bootstrap.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜bootstrap80.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Ctype.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂polyfill-mbstring
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂Resources
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂unidata
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜caseFolding.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜lowerCase.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜titleCaseRegexp.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜upperCase.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜bootstrap.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜bootstrap80.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Mbstring.php
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂polyfill-php80
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂Resources
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📂stubs
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┣ 📜Attribute.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┣ 📜PhpToken.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┣ 📜Stringable.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┣ 📜UnhandledMatchError.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┗ 📜ValueError.php
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜bootstrap.php
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜Php80.php
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜PhpToken.php
+┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┣ 📂vimeo
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂vimeo-api
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📂Vimeo
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┣ 📂Exceptions
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┃ ┣ 📜ExceptionInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┃ ┣ 📜VimeoException.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┃ ┣ 📜VimeoRequestException.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┃ ┗ 📜VimeoUploadException.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┣ 📂Upload
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┃ ┗ 📜TusClient.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┗ 📜Vimeo.php
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂tests
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📂Vimeo
+┃ ┃ ┃ ┃ ┃ ┃   ┃   ┗ 📜VimeoTest.php
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜.gitattributes
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜.gitignore
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜.styleci.yml
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜.travis.yml
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜autoload.php
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜CHANGELOG.md
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜composer.phar
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜CONTRIBUTING.md
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜phpunit.xml
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜psalm.xml
+┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜README.md
+┃ ┃ ┃ ┃ ┃ ┣ 📂vlucas
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂phpdotenv
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📂Exception
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜ExceptionInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜InvalidEncodingException.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜InvalidFileException.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜InvalidPathException.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┗ 📜ValidationException.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📂Loader
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜Loader.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜LoaderInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┗ 📜Resolver.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📂Parser
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜Entry.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜EntryParser.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜Lexer.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜Lines.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜Parser.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜ParserInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┗ 📜Value.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📂Repository
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📂Adapter
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜AdapterInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜ApacheAdapter.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜ArrayAdapter.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜EnvConstAdapter.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜GuardedWriter.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜ImmutableWriter.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜MultiReader.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜MultiWriter.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜PutenvAdapter.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜ReaderInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜ReplacingWriter.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜ServerConstAdapter.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┗ 📜WriterInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜AdapterRepository.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜RepositoryBuilder.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┗ 📜RepositoryInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📂Store
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📂File
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜Paths.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┃ ┗ 📜Reader.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜FileStore.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜StoreBuilder.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜StoreInterface.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┗ 📜StringStore.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📂Util
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┣ 📜Regex.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┃ ┗ 📜Str.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┣ 📜Dotenv.php
+┃ ┃ ┃ ┃ ┃ ┃   ┃ ┗ 📜Validator.php
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜LICENSE
+┃ ┃ ┃ ┃ ┃ ┗ 📜autoload.php
+┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┣ 📜composer.lock
+┃ ┃ ┃ ┃ ┗ 📜Dockerfile
+┃ ┃ ┃ ┣ 📜app-update.yml
+┃ ┃ ┃ ┣ 📜app.asar
+┃ ┃ ┃ ┗ 📜elevate.exe
+┃ ┃ ┣ 📜Biblioteca Mahal.exe
+┃ ┃ ┣ 📜chrome_100_percent.pak
+┃ ┃ ┣ 📜chrome_200_percent.pak
+┃ ┃ ┣ 📜d3dcompiler_47.dll
+┃ ┃ ┣ 📜dxcompiler.dll
+┃ ┃ ┣ 📜dxil.dll
+┃ ┃ ┣ 📜ffmpeg.dll
+┃ ┃ ┣ 📜icudtl.dat
+┃ ┃ ┣ 📜libEGL.dll
+┃ ┃ ┣ 📜libGLESv2.dll
+┃ ┃ ┣ 📜LICENSE.electron.txt
+┃ ┃ ┣ 📜LICENSES.chromium.html
+┃ ┃ ┣ 📜resources.pak
+┃ ┃ ┣ 📜snapshot_blob.bin
+┃ ┃ ┣ 📜v8_context_snapshot.bin
+┃ ┃ ┣ 📜vk_swiftshader_icd.json
+┃ ┃ ┣ 📜vk_swiftshader.dll
+┃ ┃ ┗ 📜vulkan-1.dll
+┃ ┣ 📜Biblioteca Mahal Setup 1.0.0.exe
+┃ ┣ 📜Biblioteca Mahal Setup 1.0.0.exe.blockmap
+┃ ┣ 📜Biblioteca Mahal Setup 1.0.2.exe
+┃ ┣ 📜Biblioteca Mahal Setup 1.0.2.exe.blockmap
+┃ ┣ 📜Biblioteca Mahal Setup 1.0.3.exe
+┃ ┣ 📜Biblioteca Mahal Setup 1.0.3.exe.blockmap
+┃ ┣ 📜builder-debug.yml
+┃ ┣ 📜builder-effective-config.yaml
+┃ ┗ 📜latest.yml
+┣ 📂php
+┃ ┣ 📂dev
+┃ ┃ ┗ 📜php8ts.lib
+┃ ┣ 📂ext
+┃ ┃ ┣ 📜php_bz2.dll
+┃ ┃ ┣ 📜php_com_dotnet.dll
+┃ ┃ ┣ 📜php_curl.dll
+┃ ┃ ┣ 📜php_dba.dll
+┃ ┃ ┣ 📜php_dl_test.dll
+┃ ┃ ┣ 📜php_enchant.dll
+┃ ┃ ┣ 📜php_exif.dll
+┃ ┃ ┣ 📜php_ffi.dll
+┃ ┃ ┣ 📜php_fileinfo.dll
+┃ ┃ ┣ 📜php_ftp.dll
+┃ ┃ ┣ 📜php_gd.dll
+┃ ┃ ┣ 📜php_gettext.dll
+┃ ┃ ┣ 📜php_gmp.dll
+┃ ┃ ┣ 📜php_imap.dll
+┃ ┃ ┣ 📜php_intl.dll
+┃ ┃ ┣ 📜php_ldap.dll
+┃ ┃ ┣ 📜php_mbstring.dll
+┃ ┃ ┣ 📜php_mysqli.dll
+┃ ┃ ┣ 📜php_oci8_19.dll
+┃ ┃ ┣ 📜php_odbc.dll
+┃ ┃ ┣ 📜php_opcache.dll
+┃ ┃ ┣ 📜php_openssl.dll
+┃ ┃ ┣ 📜php_pdo_firebird.dll
+┃ ┃ ┣ 📜php_pdo_mysql.dll
+┃ ┃ ┣ 📜php_pdo_oci.dll
+┃ ┃ ┣ 📜php_pdo_odbc.dll
+┃ ┃ ┣ 📜php_pdo_pgsql.dll
+┃ ┃ ┣ 📜php_pdo_sqlite.dll
+┃ ┃ ┣ 📜php_pgsql.dll
+┃ ┃ ┣ 📜php_shmop.dll
+┃ ┃ ┣ 📜php_snmp.dll
+┃ ┃ ┣ 📜php_soap.dll
+┃ ┃ ┣ 📜php_sockets.dll
+┃ ┃ ┣ 📜php_sodium.dll
+┃ ┃ ┣ 📜php_sqlite3.dll
+┃ ┃ ┣ 📜php_sysvshm.dll
+┃ ┃ ┣ 📜php_tidy.dll
+┃ ┃ ┣ 📜php_xsl.dll
+┃ ┃ ┣ 📜php_zend_test.dll
+┃ ┃ ┗ 📜php_zip.dll
+┃ ┣ 📂extras
+┃ ┃ ┗ 📂ssl
+┃ ┃   ┣ 📜legacy.dll
+┃ ┃   ┗ 📜openssl.cnf
+┃ ┣ 📂lib
+┃ ┃ ┗ 📂enchant
+┃ ┃   ┗ 📜libenchant2_hunspell.dll
+┃ ┣ 📜cacert.pem
+┃ ┣ 📜deplister.exe
+┃ ┣ 📜glib-2.dll
+┃ ┣ 📜gmodule-2.dll
+┃ ┣ 📜icudt71.dll
+┃ ┣ 📜icuin71.dll
+┃ ┣ 📜icuio71.dll
+┃ ┣ 📜icuuc71.dll
+┃ ┣ 📜libcrypto-3-x64.dll
+┃ ┣ 📜libenchant2.dll
+┃ ┣ 📜libpq.dll
+┃ ┣ 📜libsasl.dll
+┃ ┣ 📜libsodium.dll
+┃ ┣ 📜libsqlite3.dll
+┃ ┣ 📜libssh2.dll
+┃ ┣ 📜libssl-3-x64.dll
+┃ ┣ 📜license.txt
+┃ ┣ 📜news.txt
+┃ ┣ 📜nghttp2.dll
+┃ ┣ 📜phar.phar.bat
+┃ ┣ 📜pharcommand.phar
+┃ ┣ 📜php_bz2.dll
+┃ ┣ 📜php_com_dotnet.dll
+┃ ┣ 📜php_curl.dll
+┃ ┣ 📜php_dba.dll
+┃ ┣ 📜php_dl_test.dll
+┃ ┣ 📜php_enchant.dll
+┃ ┣ 📜php_exif.dll
+┃ ┣ 📜php_ffi.dll
+┃ ┣ 📜php_fileinfo.dll
+┃ ┣ 📜php_ftp.dll
+┃ ┣ 📜php_gd.dll
+┃ ┣ 📜php_gettext.dll
+┃ ┣ 📜php_gmp.dll
+┃ ┣ 📜php_imap.dll
+┃ ┣ 📜php_intl.dll
+┃ ┣ 📜php_ldap.dll
+┃ ┣ 📜php_mbstring.dll
+┃ ┣ 📜php_mysqli.dll
+┃ ┣ 📜php_oci8_19.dll
+┃ ┣ 📜php_odbc.dll
+┃ ┣ 📜php_opcache.dll
+┃ ┣ 📜php_openssl.dll
+┃ ┣ 📜php_pdo_firebird.dll
+┃ ┣ 📜php_pdo_mysql.dll
+┃ ┣ 📜php_pdo_oci.dll
+┃ ┣ 📜php_pdo_odbc.dll
+┃ ┣ 📜php_pdo_pgsql.dll
+┃ ┣ 📜php_pdo_sqlite.dll
+┃ ┣ 📜php_pgsql.dll
+┃ ┣ 📜php_shmop.dll
+┃ ┣ 📜php_snmp.dll
+┃ ┣ 📜php_soap.dll
+┃ ┣ 📜php_sockets.dll
+┃ ┣ 📜php_sodium.dll
+┃ ┣ 📜php_sqlite3.dll
+┃ ┣ 📜php_sysvshm.dll
+┃ ┣ 📜php_tidy.dll
+┃ ┣ 📜php_xsl.dll
+┃ ┣ 📜php_zend_test.dll
+┃ ┣ 📜php_zip.dll
+┃ ┣ 📜php-cgi.exe
+┃ ┣ 📜php-win.exe
+┃ ┣ 📜php.exe
+┃ ┣ 📜php.ini
+┃ ┣ 📜php.ini-development
+┃ ┣ 📜php.ini-production
+┃ ┣ 📜php8apache2_4.dll
+┃ ┣ 📜php8embed.lib
+┃ ┣ 📜php8phpdbg.dll
+┃ ┣ 📜php8ts.dll
+┃ ┣ 📜phpdbg.exe
+┃ ┣ 📜readme-redist-bins.txt
+┃ ┣ 📜README.md
+┃ ┗ 📜snapshot.txt
+┣ 📂temp-threejs
+┃ ┗ 📜package.json
+┣ 📂www
+┃ ┣ 📂public
+┃ ┃ ┣ 📂assets
+┃ ┃ ┃ ┣ 📂css
+┃ ┃ ┃ ┃ ┣ 📂base
+┃ ┃ ┃ ┃ ┃ ┣ 📜layout.css
+┃ ┃ ┃ ┃ ┃ ┣ 📜reset.css
+┃ ┃ ┃ ┃ ┃ ┣ 📜tokens.css
+┃ ┃ ┃ ┃ ┃ ┗ 📜typography.css
+┃ ┃ ┃ ┃ ┣ 📂biblioteca
+┃ ┃ ┃ ┃ ┃ ┣ 📜content_public.css
+┃ ┃ ┃ ┃ ┃ ┗ 📜lesson_public.css
+┃ ┃ ┃ ┃ ┣ 📂checkout
+┃ ┃ ┃ ┃ ┃ ┗ 📜checkout.css
+┃ ┃ ┃ ┃ ┣ 📂components
+┃ ┃ ┃ ┃ ┃ ┣ 📜buttons.css
+┃ ┃ ┃ ┃ ┃ ┣ 📜card.css
+┃ ┃ ┃ ┃ ┃ ┣ 📜forms.css
+┃ ┃ ┃ ┃ ┃ ┣ 📜sidebar.css
+┃ ┃ ┃ ┃ ┃ ┗ 📜topbar.css
+┃ ┃ ┃ ┃ ┣ 📂missoes
+┃ ┃ ┃ ┃ ┃ ┗ 📜missoes.css
+┃ ┃ ┃ ┃ ┣ 📂pages
+┃ ┃ ┃ ┃ ┃ ┣ 📜cursos-local.css
+┃ ┃ ┃ ┃ ┃ ┣ 📜home.css
+┃ ┃ ┃ ┃ ┃ ┗ 📜landing.css
+┃ ┃ ┃ ┃ ┣ 📂utils
+┃ ┃ ┃ ┃ ┃ ┗ 📜helpers.css
+┃ ┃ ┃ ┃ ┣ 📜base.css
+┃ ┃ ┃ ┃ ┣ 📜biblioteca.css
+┃ ┃ ┃ ┃ ┣ 📜main.css
+┃ ┃ ┃ ┃ ┣ 📜oferta.css
+┃ ┃ ┃ ┃ ┣ 📜section_oferta.css
+┃ ┃ ┃ ┃ ┣ 📜section.css
+┃ ┃ ┃ ┃ ┗ 📜style.css
+┃ ┃ ┃ ┣ 📂img
+┃ ┃ ┃ ┃ ┣ 📂logos
+┃ ┃ ┃ ┃ ┃ ┗ 📜logo-bilbioteca.png
+┃ ┃ ┃ ┃ ┣ 📂pages
+┃ ┃ ┃ ┃ ┃ ┗ 📂biblioteca
+┃ ┃ ┃ ┃ ┃   ┣ 📜banner_docker_servidor.png
+┃ ┃ ┃ ┃ ┃   ┣ 📜banner_n8n_2.png
+┃ ┃ ┃ ┃ ┃   ┣ 📜banner_n8n.png
+┃ ┃ ┃ ┃ ┃   ┗ 📜banner_vibecede_red.png
+┃ ┃ ┃ ┃ ┗ 📜default-user.png
+┃ ┃ ┃ ┗ 📂js
+┃ ┃ ┃   ┣ 📂biblioteca
+┃ ┃ ┃   ┃ ┣ 📜common.js
+┃ ┃ ┃   ┃ ┣ 📜course_public.js
+┃ ┃ ┃   ┃ ┣ 📜courses_index.js
+┃ ┃ ┃   ┃ ┣ 📜lesson_public.js
+┃ ┃ ┃   ┃ ┣ 📜module_public.js
+┃ ┃ ┃   ┃ ┗ 📜track_public.js
+┃ ┃ ┃   ┣ 📂checkout
+┃ ┃ ┃   ┃ ┣ 📜checkout_biblioteca.js
+┃ ┃ ┃   ┃ ┣ 📜checkout_evento_afiliado.js
+┃ ┃ ┃   ┃ ┗ 📜checkout_evento.js
+┃ ┃ ┃   ┣ 📂missoes
+┃ ┃ ┃   ┃ ┣ 📜missoes_index.js
+┃ ┃ ┃   ┃ ┗ 📜missoes_show.js
+┃ ┃ ┃   ┣ 📂pages
+┃ ┃ ┃   ┃ ┗ 📜home-3d.js
+┃ ┃ ┃   ┣ 📜auth.js
+┃ ┃ ┃   ┣ 📜biblioteca.js
+┃ ┃ ┃   ┣ 📜checkout_afiliado.js
+┃ ┃ ┃   ┣ 📜checkout_biblioteca copy.js
+┃ ┃ ┃   ┣ 📜checkout_evento copy 2.js
+┃ ┃ ┃   ┣ 📜checkout_evento copy.js
+┃ ┃ ┃   ┣ 📜checkout.js
+┃ ┃ ┃   ┣ 📜home.js
+┃ ┃ ┃   ┣ 📜instructor_track_edit.js
+┃ ┃ ┃   ┣ 📜login.js
+┃ ┃ ┃   ┣ 📜main.js
+┃ ┃ ┃   ┣ 📜nova_senha.js
+┃ ┃ ┃   ┣ 📜perfil.js
+┃ ┃ ┃   ┣ 📜register.js
+┃ ┃ ┃   ┣ 📜reset_password.js
+┃ ┃ ┃   ┣ 📜reset_request.js
+┃ ┃ ┃   ┣ 📜servicos.js
+┃ ┃ ┃   ┗ 📜sidebar.js
+┃ ┃ ┣ 📂biblioteca3d
+┃ ┃ ┃ ┣ 📂assets
+┃ ┃ ┃ ┃ ┣ 📂css
+┃ ┃ ┃ ┃ ┃ ┣ 📜customContextMenu.css
+┃ ┃ ┃ ┃ ┃ ┗ 📜style.css
+┃ ┃ ┃ ┃ ┣ 📂img
+┃ ┃ ┃ ┃ ┃ ┣ 📂elementos
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜arrown-left-down.png
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜arrown-left-up.png
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜arrown-left.png
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜arrown-right-down.png
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜arrown-rigth-up.png
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜arrown-rigth.png
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜coruja.png
+┃ ┃ ┃ ┃ ┃ ┣ 📂fotos
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜fran.png
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜hackeretico.png
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜mahal.png
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜mario.png
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜saf.png
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜simpatia.png
+┃ ┃ ┃ ┃ ┃ ┣ 📂logos
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜logo-biblioteca.png
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜logo-mark-biblioteca.png
+┃ ┃ ┃ ┃ ┃ ┣ 📂pages
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📂biblioteca
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜banner_docker_servidor.png
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜banner_n8n_2.png
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜banner_n8n.png
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜banner_vibecede_red.png
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜dev.png
+┃ ┃ ┃ ┃ ┃ ┃   ┣ 📜instro.png
+┃ ┃ ┃ ┃ ┃ ┃   ┗ 📜sec.png
+┃ ┃ ┃ ┃ ┃ ┗ 📜default-user.png
+┃ ┃ ┃ ┃ ┗ 📂js
+┃ ┃ ┃ ┃   ┗ 📂threejs
+┃ ┃ ┃ ┃     ┣ 📂core
+┃ ┃ ┃ ┃     ┃ ┣ 📜animationLoop.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜camera.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜cameraModes.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜controls.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜customContextMenu.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜renderer.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜resize.js
+┃ ┃ ┃ ┃     ┃ ┗ 📜scene.js
+┃ ┃ ┃ ┃     ┣ 📂model3d
+┃ ┃ ┃ ┃     ┃ ┣ 📜avatar.glb
+┃ ┃ ┃ ┃     ┃ ┣ 📜drive-2-mahal.glb
+┃ ┃ ┃ ┃     ┃ ┣ 📜drive-mahal.glb
+┃ ┃ ┃ ┃     ┃ ┣ 📜drive.glb
+┃ ┃ ┃ ┃     ┃ ┣ 📜notebook_p1.glb
+┃ ┃ ┃ ┃     ┃ ┣ 📜notebook.glb
+┃ ┃ ┃ ┃     ┃ ┣ 📜office_desk.glb
+┃ ┃ ┃ ┃     ┃ ┣ 📜retro_computer.glb
+┃ ┃ ┃ ┃     ┃ ┣ 📜scene.gltf
+┃ ┃ ┃ ┃     ┃ ┣ 📜ssd.glb
+┃ ┃ ┃ ┃     ┃ ┣ 📜ssd1.glb
+┃ ┃ ┃ ┃     ┃ ┣ 📜ssh.glb
+┃ ┃ ┃ ┃     ┃ ┗ 📜ssh2.glb
+┃ ┃ ┃ ┃     ┣ 📂player
+┃ ┃ ┃ ┃     ┃ ┣ 📜playerCamera.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜playerController.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜playerManager.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜playerModel.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜playerPhysics.js
+┃ ┃ ┃ ┃     ┃ ┗ 📜playerState.js
+┃ ┃ ┃ ┃     ┣ 📂popup
+┃ ┃ ┃ ┃     ┣ 📂systems
+┃ ┃ ┃ ┃     ┃ ┗ 📜computerScreenInteraction.js
+┃ ┃ ┃ ┃     ┣ 📂ui
+┃ ┃ ┃ ┃     ┃ ┣ 📜loadingScreen.js
+┃ ┃ ┃ ┃     ┃ ┗ 📜popup.js
+┃ ┃ ┃ ┃     ┣ 📂utils
+┃ ┃ ┃ ┃     ┣ 📂world
+┃ ┃ ┃ ┃     ┃ ┣ 📜colliders.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜computerScreen.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜cubes.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜floor.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜imageCards.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜lights.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜model3d.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜models.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜mouseLight.js
+┃ ┃ ┃ ┃     ┃ ┣ 📜notes.js
+┃ ┃ ┃ ┃     ┃ ┗ 📜textBlocks.js
+┃ ┃ ┃ ┃     ┗ 📜main.js
+┃ ┃ ┃ ┣ 📂html-bkp
+┃ ┃ ┃ ┃ ┣ 📜board copy.html
+┃ ┃ ┃ ┃ ┗ 📜board.html
+┃ ┃ ┃ ┗ 📂vendor
+┃ ┃ ┃   ┗ 📂three
+┃ ┃ ┃     ┣ 📂build
+┃ ┃ ┃     ┃ ┣ 📜three.core.min.js
+┃ ┃ ┃     ┃ ┗ 📜three.module.min.js
+┃ ┃ ┃     ┗ 📂examples
+┃ ┃ ┃       ┗ 📂jsm
+┃ ┃ ┃         ┣ 📂animation
+┃ ┃ ┃         ┃ ┣ 📜AnimationClipCreator.js
+┃ ┃ ┃         ┃ ┗ 📜CCDIKSolver.js
+┃ ┃ ┃         ┣ 📂capabilities
+┃ ┃ ┃         ┃ ┣ 📜WebGL.js
+┃ ┃ ┃         ┃ ┗ 📜WebGPU.js
+┃ ┃ ┃         ┣ 📂controls
+┃ ┃ ┃         ┃ ┣ 📜ArcballControls.js
+┃ ┃ ┃         ┃ ┣ 📜DragControls.js
+┃ ┃ ┃         ┃ ┣ 📜FirstPersonControls.js
+┃ ┃ ┃         ┃ ┣ 📜FlyControls.js
+┃ ┃ ┃         ┃ ┣ 📜MapControls.js
+┃ ┃ ┃         ┃ ┣ 📜OrbitControls.js
+┃ ┃ ┃         ┃ ┣ 📜PointerLockControls.js
+┃ ┃ ┃         ┃ ┣ 📜TrackballControls.js
+┃ ┃ ┃         ┃ ┗ 📜TransformControls.js
+┃ ┃ ┃         ┣ 📂csm
+┃ ┃ ┃         ┃ ┣ 📜CSM.js
+┃ ┃ ┃         ┃ ┣ 📜CSMFrustum.js
+┃ ┃ ┃         ┃ ┣ 📜CSMHelper.js
+┃ ┃ ┃         ┃ ┣ 📜CSMShader.js
+┃ ┃ ┃         ┃ ┗ 📜CSMShadowNode.js
+┃ ┃ ┃         ┣ 📂curves
+┃ ┃ ┃         ┃ ┣ 📜CurveExtras.js
+┃ ┃ ┃         ┃ ┣ 📜NURBSCurve.js
+┃ ┃ ┃         ┃ ┣ 📜NURBSSurface.js
+┃ ┃ ┃         ┃ ┣ 📜NURBSUtils.js
+┃ ┃ ┃         ┃ ┗ 📜NURBSVolume.js
+┃ ┃ ┃         ┣ 📂effects
+┃ ┃ ┃         ┃ ┣ 📜AnaglyphEffect.js
+┃ ┃ ┃         ┃ ┣ 📜AsciiEffect.js
+┃ ┃ ┃         ┃ ┣ 📜OutlineEffect.js
+┃ ┃ ┃         ┃ ┣ 📜ParallaxBarrierEffect.js
+┃ ┃ ┃         ┃ ┗ 📜StereoEffect.js
+┃ ┃ ┃         ┣ 📂environments
+┃ ┃ ┃         ┃ ┣ 📜ColorEnvironment.js
+┃ ┃ ┃         ┃ ┣ 📜DebugEnvironment.js
+┃ ┃ ┃         ┃ ┗ 📜RoomEnvironment.js
+┃ ┃ ┃         ┣ 📂exporters
+┃ ┃ ┃         ┃ ┣ 📜DRACOExporter.js
+┃ ┃ ┃         ┃ ┣ 📜EXRExporter.js
+┃ ┃ ┃         ┃ ┣ 📜GLTFExporter.js
+┃ ┃ ┃         ┃ ┣ 📜KTX2Exporter.js
+┃ ┃ ┃         ┃ ┣ 📜OBJExporter.js
+┃ ┃ ┃         ┃ ┣ 📜PLYExporter.js
+┃ ┃ ┃         ┃ ┣ 📜STLExporter.js
+┃ ┃ ┃         ┃ ┗ 📜USDZExporter.js
+┃ ┃ ┃         ┣ 📂geometries
+┃ ┃ ┃         ┃ ┣ 📜BoxLineGeometry.js
+┃ ┃ ┃         ┃ ┣ 📜ConvexGeometry.js
+┃ ┃ ┃         ┃ ┣ 📜DecalGeometry.js
+┃ ┃ ┃         ┃ ┣ 📜ParametricFunctions.js
+┃ ┃ ┃         ┃ ┣ 📜ParametricGeometry.js
+┃ ┃ ┃         ┃ ┣ 📜RoundedBoxGeometry.js
+┃ ┃ ┃         ┃ ┣ 📜TeapotGeometry.js
+┃ ┃ ┃         ┃ ┗ 📜TextGeometry.js
+┃ ┃ ┃         ┣ 📂gpgpu
+┃ ┃ ┃         ┃ ┗ 📜BitonicSort.js
+┃ ┃ ┃         ┣ 📂helpers
+┃ ┃ ┃         ┃ ┣ 📜AnimationPathHelper.js
+┃ ┃ ┃         ┃ ┣ 📜LightProbeGridHelper.js
+┃ ┃ ┃         ┃ ┣ 📜LightProbeHelper.js
+┃ ┃ ┃         ┃ ┣ 📜LightProbeHelperGPU.js
+┃ ┃ ┃         ┃ ┣ 📜OctreeHelper.js
+┃ ┃ ┃         ┃ ┣ 📜PositionalAudioHelper.js
+┃ ┃ ┃         ┃ ┣ 📜RapierHelper.js
+┃ ┃ ┃         ┃ ┣ 📜RectAreaLightHelper.js
+┃ ┃ ┃         ┃ ┣ 📜TextureHelper.js
+┃ ┃ ┃         ┃ ┣ 📜TextureHelperGPU.js
+┃ ┃ ┃         ┃ ┣ 📜VertexNormalsHelper.js
+┃ ┃ ┃         ┃ ┣ 📜VertexTangentsHelper.js
+┃ ┃ ┃         ┃ ┗ 📜ViewHelper.js
+┃ ┃ ┃         ┣ 📂inspector
+┃ ┃ ┃         ┃ ┣ 📂extensions
+┃ ┃ ┃         ┃ ┃ ┣ 📂tsl-graph
+┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜TSLGraphEditor.js
+┃ ┃ ┃         ┃ ┃ ┃ ┗ 📜TSLGraphLoader.js
+┃ ┃ ┃         ┃ ┃ ┗ 📜extensions.json
+┃ ┃ ┃         ┃ ┣ 📂tabs
+┃ ┃ ┃         ┃ ┃ ┣ 📜Console.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜Memory.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜Parameters.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜Performance.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜Settings.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜Timeline.js
+┃ ┃ ┃         ┃ ┃ ┗ 📜Viewer.js
+┃ ┃ ┃         ┃ ┣ 📂ui
+┃ ┃ ┃         ┃ ┃ ┣ 📜Graph.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜Item.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜List.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜Profiler.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜Style.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜Tab.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜utils.js
+┃ ┃ ┃         ┃ ┃ ┗ 📜Values.js
+┃ ┃ ┃         ┃ ┣ 📜Extension.js
+┃ ┃ ┃         ┃ ┣ 📜Inspector.js
+┃ ┃ ┃         ┃ ┗ 📜RendererInspector.js
+┃ ┃ ┃         ┣ 📂interaction
+┃ ┃ ┃         ┃ ┗ 📜InteractionManager.js
+┃ ┃ ┃         ┣ 📂interactive
+┃ ┃ ┃         ┃ ┣ 📜HTMLMesh.js
+┃ ┃ ┃         ┃ ┣ 📜InteractiveGroup.js
+┃ ┃ ┃         ┃ ┣ 📜SelectionBox.js
+┃ ┃ ┃         ┃ ┗ 📜SelectionHelper.js
+┃ ┃ ┃         ┣ 📂libs
+┃ ┃ ┃         ┃ ┣ 📂basis
+┃ ┃ ┃         ┃ ┃ ┣ 📜basis_transcoder.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜basis_transcoder.wasm
+┃ ┃ ┃         ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃         ┃ ┣ 📂draco
+┃ ┃ ┃         ┃ ┃ ┣ 📂gltf
+┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜draco_decoder.js
+┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜draco_decoder.wasm
+┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜draco_encoder.js
+┃ ┃ ┃         ┃ ┃ ┃ ┗ 📜draco_wasm_wrapper.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜draco_decoder.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜draco_decoder.wasm
+┃ ┃ ┃         ┃ ┃ ┣ 📜draco_encoder.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜draco_wasm_wrapper.js
+┃ ┃ ┃         ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃         ┃ ┣ 📂rhino3dm
+┃ ┃ ┃         ┃ ┃ ┣ 📜rhino3dm.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜rhino3dm.module.js
+┃ ┃ ┃         ┃ ┃ ┗ 📜rhino3dm.wasm
+┃ ┃ ┃         ┃ ┣ 📜ammo.wasm.js
+┃ ┃ ┃         ┃ ┣ 📜ammo.wasm.wasm
+┃ ┃ ┃         ┃ ┣ 📜chevrotain.module.min.js
+┃ ┃ ┃         ┃ ┣ 📜demuxer_mp4.js
+┃ ┃ ┃         ┃ ┣ 📜ecsy.module.js
+┃ ┃ ┃         ┃ ┣ 📜fflate.module.js
+┃ ┃ ┃         ┃ ┣ 📜ktx-parse.module.js
+┃ ┃ ┃         ┃ ┣ 📜lil-gui.module.min.js
+┃ ┃ ┃         ┃ ┣ 📜lottie_canvas.module.js
+┃ ┃ ┃         ┃ ┣ 📜meshopt_decoder.module.js
+┃ ┃ ┃         ┃ ┣ 📜mikktspace.module.js
+┃ ┃ ┃         ┃ ┣ 📜motion-controllers.module.js
+┃ ┃ ┃         ┃ ┣ 📜opentype.module.js
+┃ ┃ ┃         ┃ ┣ 📜potpack.module.js
+┃ ┃ ┃         ┃ ┣ 📜stats.module.js
+┃ ┃ ┃         ┃ ┣ 📜surfaceNet.js
+┃ ┃ ┃         ┃ ┣ 📜tween.module.js
+┃ ┃ ┃         ┃ ┣ 📜utif.module.js
+┃ ┃ ┃         ┃ ┗ 📜zstddec.module.js
+┃ ┃ ┃         ┣ 📂lighting
+┃ ┃ ┃         ┃ ┣ 📜DynamicLighting.js
+┃ ┃ ┃         ┃ ┣ 📜LightProbeGrid.js
+┃ ┃ ┃         ┃ ┗ 📜TiledLighting.js
+┃ ┃ ┃         ┣ 📂lights
+┃ ┃ ┃         ┃ ┣ 📜LightProbeGenerator.js
+┃ ┃ ┃         ┃ ┣ 📜RectAreaLightTexturesLib.js
+┃ ┃ ┃         ┃ ┗ 📜RectAreaLightUniformsLib.js
+┃ ┃ ┃         ┣ 📂lines
+┃ ┃ ┃         ┃ ┣ 📂webgpu
+┃ ┃ ┃         ┃ ┃ ┣ 📜Line2.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜LineSegments2.js
+┃ ┃ ┃         ┃ ┃ ┗ 📜Wireframe.js
+┃ ┃ ┃         ┃ ┣ 📜Line2.js
+┃ ┃ ┃         ┃ ┣ 📜LineGeometry.js
+┃ ┃ ┃         ┃ ┣ 📜LineMaterial.js
+┃ ┃ ┃         ┃ ┣ 📜LineSegments2.js
+┃ ┃ ┃         ┃ ┣ 📜LineSegmentsGeometry.js
+┃ ┃ ┃         ┃ ┣ 📜Wireframe.js
+┃ ┃ ┃         ┃ ┗ 📜WireframeGeometry2.js
+┃ ┃ ┃         ┣ 📂loaders
+┃ ┃ ┃         ┃ ┣ 📂collada
+┃ ┃ ┃         ┃ ┃ ┣ 📜ColladaComposer.js
+┃ ┃ ┃         ┃ ┃ ┗ 📜ColladaParser.js
+┃ ┃ ┃         ┃ ┣ 📂lwo
+┃ ┃ ┃         ┃ ┃ ┣ 📜IFFParser.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜LWO2Parser.js
+┃ ┃ ┃         ┃ ┃ ┗ 📜LWO3Parser.js
+┃ ┃ ┃         ┃ ┣ 📂usd
+┃ ┃ ┃         ┃ ┃ ┣ 📜USDAParser.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜USDComposer.js
+┃ ┃ ┃         ┃ ┃ ┗ 📜USDCParser.js
+┃ ┃ ┃         ┃ ┣ 📜3DMLoader.js
+┃ ┃ ┃         ┃ ┣ 📜3MFLoader.js
+┃ ┃ ┃         ┃ ┣ 📜AMFLoader.js
+┃ ┃ ┃         ┃ ┣ 📜BVHLoader.js
+┃ ┃ ┃         ┃ ┣ 📜ColladaLoader.js
+┃ ┃ ┃         ┃ ┣ 📜DDSLoader.js
+┃ ┃ ┃         ┃ ┣ 📜DRACOLoader.js
+┃ ┃ ┃         ┃ ┣ 📜EXRLoader.js
+┃ ┃ ┃         ┃ ┣ 📜FBXLoader.js
+┃ ┃ ┃         ┃ ┣ 📜FontLoader.js
+┃ ┃ ┃         ┃ ┣ 📜GCodeLoader.js
+┃ ┃ ┃         ┃ ┣ 📜GLTFLoader.js
+┃ ┃ ┃         ┃ ┣ 📜HDRCubeTextureLoader.js
+┃ ┃ ┃         ┃ ┣ 📜HDRLoader.js
+┃ ┃ ┃         ┃ ┣ 📜IESLoader.js
+┃ ┃ ┃         ┃ ┣ 📜KMZLoader.js
+┃ ┃ ┃         ┃ ┣ 📜KTX2Loader.js
+┃ ┃ ┃         ┃ ┣ 📜KTXLoader.js
+┃ ┃ ┃         ┃ ┣ 📜LDrawLoader.js
+┃ ┃ ┃         ┃ ┣ 📜LottieLoader.js
+┃ ┃ ┃         ┃ ┣ 📜LUT3dlLoader.js
+┃ ┃ ┃         ┃ ┣ 📜LUTCubeLoader.js
+┃ ┃ ┃         ┃ ┣ 📜LUTImageLoader.js
+┃ ┃ ┃         ┃ ┣ 📜LWOLoader.js
+┃ ┃ ┃         ┃ ┣ 📜MaterialXLoader.js
+┃ ┃ ┃         ┃ ┣ 📜MD2Loader.js
+┃ ┃ ┃         ┃ ┣ 📜MDDLoader.js
+┃ ┃ ┃         ┃ ┣ 📜MTLLoader.js
+┃ ┃ ┃         ┃ ┣ 📜NRRDLoader.js
+┃ ┃ ┃         ┃ ┣ 📜OBJLoader.js
+┃ ┃ ┃         ┃ ┣ 📜PCDLoader.js
+┃ ┃ ┃         ┃ ┣ 📜PDBLoader.js
+┃ ┃ ┃         ┃ ┣ 📜PLYLoader.js
+┃ ┃ ┃         ┃ ┣ 📜PVRLoader.js
+┃ ┃ ┃         ┃ ┣ 📜RGBELoader.js
+┃ ┃ ┃         ┃ ┣ 📜STLLoader.js
+┃ ┃ ┃         ┃ ┣ 📜SVGLoader.js
+┃ ┃ ┃         ┃ ┣ 📜TDSLoader.js
+┃ ┃ ┃         ┃ ┣ 📜TGALoader.js
+┃ ┃ ┃         ┃ ┣ 📜TIFFLoader.js
+┃ ┃ ┃         ┃ ┣ 📜TTFLoader.js
+┃ ┃ ┃         ┃ ┣ 📜UltraHDRLoader.js
+┃ ┃ ┃         ┃ ┣ 📜USDLoader.js
+┃ ┃ ┃         ┃ ┣ 📜USDZLoader.js
+┃ ┃ ┃         ┃ ┣ 📜VOXLoader.js
+┃ ┃ ┃         ┃ ┣ 📜VRMLLoader.js
+┃ ┃ ┃         ┃ ┣ 📜VTKLoader.js
+┃ ┃ ┃         ┃ ┗ 📜XYZLoader.js
+┃ ┃ ┃         ┣ 📂materials
+┃ ┃ ┃         ┃ ┣ 📜LDrawConditionalLineMaterial.js
+┃ ┃ ┃         ┃ ┣ 📜LDrawConditionalLineNodeMaterial.js
+┃ ┃ ┃         ┃ ┗ 📜WoodNodeMaterial.js
+┃ ┃ ┃         ┣ 📂math
+┃ ┃ ┃         ┃ ┣ 📜Capsule.js
+┃ ┃ ┃         ┃ ┣ 📜ColorConverter.js
+┃ ┃ ┃         ┃ ┣ 📜ColorSpaces.js
+┃ ┃ ┃         ┃ ┣ 📜ConvexHull.js
+┃ ┃ ┃         ┃ ┣ 📜ImprovedNoise.js
+┃ ┃ ┃         ┃ ┣ 📜Lut.js
+┃ ┃ ┃         ┃ ┣ 📜MeshSurfaceSampler.js
+┃ ┃ ┃         ┃ ┣ 📜OBB.js
+┃ ┃ ┃         ┃ ┣ 📜Octree.js
+┃ ┃ ┃         ┃ ┗ 📜SimplexNoise.js
+┃ ┃ ┃         ┣ 📂misc
+┃ ┃ ┃         ┃ ┣ 📜ConvexObjectBreaker.js
+┃ ┃ ┃         ┃ ┣ 📜GPUComputationRenderer.js
+┃ ┃ ┃         ┃ ┣ 📜Gyroscope.js
+┃ ┃ ┃         ┃ ┣ 📜MD2Character.js
+┃ ┃ ┃         ┃ ┣ 📜MD2CharacterComplex.js
+┃ ┃ ┃         ┃ ┣ 📜MorphAnimMesh.js
+┃ ┃ ┃         ┃ ┣ 📜MorphBlendMesh.js
+┃ ┃ ┃         ┃ ┣ 📜ProgressiveLightMap.js
+┃ ┃ ┃         ┃ ┣ 📜ProgressiveLightMapGPU.js
+┃ ┃ ┃         ┃ ┣ 📜RollerCoaster.js
+┃ ┃ ┃         ┃ ┣ 📜TubePainter.js
+┃ ┃ ┃         ┃ ┣ 📜Volume.js
+┃ ┃ ┃         ┃ ┗ 📜VolumeSlice.js
+┃ ┃ ┃         ┣ 📂modifiers
+┃ ┃ ┃         ┃ ┣ 📜CurveModifier.js
+┃ ┃ ┃         ┃ ┣ 📜CurveModifierGPU.js
+┃ ┃ ┃         ┃ ┣ 📜EdgeSplitModifier.js
+┃ ┃ ┃         ┃ ┣ 📜SimplifyModifier.js
+┃ ┃ ┃         ┃ ┗ 📜TessellateModifier.js
+┃ ┃ ┃         ┣ 📂objects
+┃ ┃ ┃         ┃ ┣ 📜GroundedSkybox.js
+┃ ┃ ┃         ┃ ┣ 📜Lensflare.js
+┃ ┃ ┃         ┃ ┣ 📜LensflareMesh.js
+┃ ┃ ┃         ┃ ┣ 📜MarchingCubes.js
+┃ ┃ ┃         ┃ ┣ 📜Reflector.js
+┃ ┃ ┃         ┃ ┣ 📜ReflectorForSSRPass.js
+┃ ┃ ┃         ┃ ┣ 📜Refractor.js
+┃ ┃ ┃         ┃ ┣ 📜ShadowMesh.js
+┃ ┃ ┃         ┃ ┣ 📜Sky.js
+┃ ┃ ┃         ┃ ┣ 📜SkyMesh.js
+┃ ┃ ┃         ┃ ┣ 📜Water.js
+┃ ┃ ┃         ┃ ┣ 📜Water2.js
+┃ ┃ ┃         ┃ ┣ 📜Water2Mesh.js
+┃ ┃ ┃         ┃ ┗ 📜WaterMesh.js
+┃ ┃ ┃         ┣ 📂offscreen
+┃ ┃ ┃         ┃ ┣ 📜jank.js
+┃ ┃ ┃         ┃ ┣ 📜offscreen.js
+┃ ┃ ┃         ┃ ┗ 📜scene.js
+┃ ┃ ┃         ┣ 📂physics
+┃ ┃ ┃         ┃ ┣ 📜AmmoPhysics.js
+┃ ┃ ┃         ┃ ┣ 📜JoltPhysics.js
+┃ ┃ ┃         ┃ ┗ 📜RapierPhysics.js
+┃ ┃ ┃         ┣ 📂postprocessing
+┃ ┃ ┃         ┃ ┣ 📜AfterimagePass.js
+┃ ┃ ┃         ┃ ┣ 📜BloomPass.js
+┃ ┃ ┃         ┃ ┣ 📜BokehPass.js
+┃ ┃ ┃         ┃ ┣ 📜ClearPass.js
+┃ ┃ ┃         ┃ ┣ 📜CubeTexturePass.js
+┃ ┃ ┃         ┃ ┣ 📜DotScreenPass.js
+┃ ┃ ┃         ┃ ┣ 📜EffectComposer.js
+┃ ┃ ┃         ┃ ┣ 📜FilmPass.js
+┃ ┃ ┃         ┃ ┣ 📜FXAAPass.js
+┃ ┃ ┃         ┃ ┣ 📜GlitchPass.js
+┃ ┃ ┃         ┃ ┣ 📜GTAOPass.js
+┃ ┃ ┃         ┃ ┣ 📜HalftonePass.js
+┃ ┃ ┃         ┃ ┣ 📜LUTPass.js
+┃ ┃ ┃         ┃ ┣ 📜MaskPass.js
+┃ ┃ ┃         ┃ ┣ 📜OutlinePass.js
+┃ ┃ ┃         ┃ ┣ 📜OutputPass.js
+┃ ┃ ┃         ┃ ┣ 📜Pass.js
+┃ ┃ ┃         ┃ ┣ 📜RenderPass.js
+┃ ┃ ┃         ┃ ┣ 📜RenderPixelatedPass.js
+┃ ┃ ┃         ┃ ┣ 📜RenderTransitionPass.js
+┃ ┃ ┃         ┃ ┣ 📜SAOPass.js
+┃ ┃ ┃         ┃ ┣ 📜SavePass.js
+┃ ┃ ┃         ┃ ┣ 📜ShaderPass.js
+┃ ┃ ┃         ┃ ┣ 📜SMAAPass.js
+┃ ┃ ┃         ┃ ┣ 📜SSAARenderPass.js
+┃ ┃ ┃         ┃ ┣ 📜SSAOPass.js
+┃ ┃ ┃         ┃ ┣ 📜SSRPass.js
+┃ ┃ ┃         ┃ ┣ 📜TAARenderPass.js
+┃ ┃ ┃         ┃ ┣ 📜TexturePass.js
+┃ ┃ ┃         ┃ ┗ 📜UnrealBloomPass.js
+┃ ┃ ┃         ┣ 📂renderers
+┃ ┃ ┃         ┃ ┣ 📜CSS2DRenderer.js
+┃ ┃ ┃         ┃ ┣ 📜CSS3DRenderer.js
+┃ ┃ ┃         ┃ ┣ 📜Projector.js
+┃ ┃ ┃         ┃ ┗ 📜SVGRenderer.js
+┃ ┃ ┃         ┣ 📂shaders
+┃ ┃ ┃         ┃ ┣ 📜ACESFilmicToneMappingShader.js
+┃ ┃ ┃         ┃ ┣ 📜AfterimageShader.js
+┃ ┃ ┃         ┃ ┣ 📜BasicShader.js
+┃ ┃ ┃         ┃ ┣ 📜BleachBypassShader.js
+┃ ┃ ┃         ┃ ┣ 📜BlendShader.js
+┃ ┃ ┃         ┃ ┣ 📜BokehShader.js
+┃ ┃ ┃         ┃ ┣ 📜BokehShader2.js
+┃ ┃ ┃         ┃ ┣ 📜BrightnessContrastShader.js
+┃ ┃ ┃         ┃ ┣ 📜ColorCorrectionShader.js
+┃ ┃ ┃         ┃ ┣ 📜ColorifyShader.js
+┃ ┃ ┃         ┃ ┣ 📜ConvolutionShader.js
+┃ ┃ ┃         ┃ ┣ 📜CopyShader.js
+┃ ┃ ┃         ┃ ┣ 📜DepthLimitedBlurShader.js
+┃ ┃ ┃         ┃ ┣ 📜DigitalGlitch.js
+┃ ┃ ┃         ┃ ┣ 📜DOFMipMapShader.js
+┃ ┃ ┃         ┃ ┣ 📜DotScreenShader.js
+┃ ┃ ┃         ┃ ┣ 📜ExposureShader.js
+┃ ┃ ┃         ┃ ┣ 📜FilmShader.js
+┃ ┃ ┃         ┃ ┣ 📜FocusShader.js
+┃ ┃ ┃         ┃ ┣ 📜FreiChenShader.js
+┃ ┃ ┃         ┃ ┣ 📜FXAAShader.js
+┃ ┃ ┃         ┃ ┣ 📜GammaCorrectionShader.js
+┃ ┃ ┃         ┃ ┣ 📜GTAOShader.js
+┃ ┃ ┃         ┃ ┣ 📜HalftoneShader.js
+┃ ┃ ┃         ┃ ┣ 📜HorizontalBlurShader.js
+┃ ┃ ┃         ┃ ┣ 📜HorizontalTiltShiftShader.js
+┃ ┃ ┃         ┃ ┣ 📜HueSaturationShader.js
+┃ ┃ ┃         ┃ ┣ 📜KaleidoShader.js
+┃ ┃ ┃         ┃ ┣ 📜LuminosityHighPassShader.js
+┃ ┃ ┃         ┃ ┣ 📜LuminosityShader.js
+┃ ┃ ┃         ┃ ┣ 📜MirrorShader.js
+┃ ┃ ┃         ┃ ┣ 📜NormalMapShader.js
+┃ ┃ ┃         ┃ ┣ 📜OutputShader.js
+┃ ┃ ┃         ┃ ┣ 📜PoissonDenoiseShader.js
+┃ ┃ ┃         ┃ ┣ 📜RGBShiftShader.js
+┃ ┃ ┃         ┃ ┣ 📜SAOShader.js
+┃ ┃ ┃         ┃ ┣ 📜SepiaShader.js
+┃ ┃ ┃         ┃ ┣ 📜SMAAShader.js
+┃ ┃ ┃         ┃ ┣ 📜SobelOperatorShader.js
+┃ ┃ ┃         ┃ ┣ 📜SSAOShader.js
+┃ ┃ ┃         ┃ ┣ 📜SSRShader.js
+┃ ┃ ┃         ┃ ┣ 📜SubsurfaceScatteringShader.js
+┃ ┃ ┃         ┃ ┣ 📜TechnicolorShader.js
+┃ ┃ ┃         ┃ ┣ 📜ToonShader.js
+┃ ┃ ┃         ┃ ┣ 📜TriangleBlurShader.js
+┃ ┃ ┃         ┃ ┣ 📜UnpackDepthRGBAShader.js
+┃ ┃ ┃         ┃ ┣ 📜VelocityShader.js
+┃ ┃ ┃         ┃ ┣ 📜VerticalBlurShader.js
+┃ ┃ ┃         ┃ ┣ 📜VerticalTiltShiftShader.js
+┃ ┃ ┃         ┃ ┣ 📜VignetteShader.js
+┃ ┃ ┃         ┃ ┣ 📜VolumeShader.js
+┃ ┃ ┃         ┃ ┗ 📜WaterRefractionShader.js
+┃ ┃ ┃         ┣ 📂textures
+┃ ┃ ┃         ┃ ┗ 📜FlakesTexture.js
+┃ ┃ ┃         ┣ 📂transpiler
+┃ ┃ ┃         ┃ ┣ 📜AST.js
+┃ ┃ ┃         ┃ ┣ 📜GLSLDecoder.js
+┃ ┃ ┃         ┃ ┣ 📜Linker.js
+┃ ┃ ┃         ┃ ┣ 📜ShaderToyDecoder.js
+┃ ┃ ┃         ┃ ┣ 📜Transpiler.js
+┃ ┃ ┃         ┃ ┣ 📜TranspilerUtils.js
+┃ ┃ ┃         ┃ ┣ 📜TSLEncoder.js
+┃ ┃ ┃         ┃ ┗ 📜WGSLEncoder.js
+┃ ┃ ┃         ┣ 📂tsl
+┃ ┃ ┃         ┃ ┣ 📂display
+┃ ┃ ┃         ┃ ┃ ┣ 📜AfterImageNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜AnaglyphPassNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜AnamorphicNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜BilateralBlurNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜BleachBypass.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜BloomNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜boxBlur.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜ChromaticAberrationNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜CRT.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜DenoiseNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜depthAwareBlend.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜DepthOfFieldNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜DotScreenNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜FilmNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜FSR1Node.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜FXAANode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜GaussianBlurNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜GodraysNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜GTAONode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜hashBlur.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜LensflareNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜Lut3DNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜MotionBlur.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜OutlineNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜ParallaxBarrierPassNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜PixelationPassNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜radialBlur.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜RetroPassNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜RGBShiftNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜Sepia.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜Shape.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜SharpenNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜SMAANode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜SobelOperatorNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜SSAAPassNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜SSGINode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜SSRNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜SSSNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜StereoCompositePassNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜StereoPassNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜TAAUNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜TRAANode.js
+┃ ┃ ┃         ┃ ┃ ┗ 📜TransitionNode.js
+┃ ┃ ┃         ┃ ┣ 📂lighting
+┃ ┃ ┃         ┃ ┃ ┣ 📂data
+┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜AmbientLightDataNode.js
+┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜DirectionalLightDataNode.js
+┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜HemisphereLightDataNode.js
+┃ ┃ ┃         ┃ ┃ ┃ ┣ 📜PointLightDataNode.js
+┃ ┃ ┃         ┃ ┃ ┃ ┗ 📜SpotLightDataNode.js
+┃ ┃ ┃         ┃ ┃ ┣ 📜DynamicLightsNode.js
+┃ ┃ ┃         ┃ ┃ ┗ 📜TiledLightsNode.js
+┃ ┃ ┃         ┃ ┣ 📂math
+┃ ┃ ┃         ┃ ┃ ┗ 📜Bayer.js
+┃ ┃ ┃         ┃ ┣ 📂shadows
+┃ ┃ ┃         ┃ ┃ ┣ 📜TileShadowNode.js
+┃ ┃ ┃         ┃ ┃ ┗ 📜TileShadowNodeHelper.js
+┃ ┃ ┃         ┃ ┣ 📂utils
+┃ ┃ ┃         ┃ ┃ ┗ 📜Raymarching.js
+┃ ┃ ┃         ┃ ┗ 📜WebGLNodesHandler.js
+┃ ┃ ┃         ┣ 📂utils
+┃ ┃ ┃         ┃ ┣ 📜BufferGeometryUtils.js
+┃ ┃ ┃         ┃ ┣ 📜CameraUtils.js
+┃ ┃ ┃         ┃ ┣ 📜ColorUtils.js
+┃ ┃ ┃         ┃ ┣ 📜GeometryCompressionUtils.js
+┃ ┃ ┃         ┃ ┣ 📜GeometryUtils.js
+┃ ┃ ┃         ┃ ┣ 📜LDrawUtils.js
+┃ ┃ ┃         ┃ ┣ 📜SceneOptimizer.js
+┃ ┃ ┃         ┃ ┣ 📜SceneUtils.js
+┃ ┃ ┃         ┃ ┣ 📜ShadowMapViewer.js
+┃ ┃ ┃         ┃ ┣ 📜ShadowMapViewerGPU.js
+┃ ┃ ┃         ┃ ┣ 📜SkeletonUtils.js
+┃ ┃ ┃         ┃ ┣ 📜SortUtils.js
+┃ ┃ ┃         ┃ ┣ 📜UVsDebug.js
+┃ ┃ ┃         ┃ ┣ 📜WebGLTextureUtils.js
+┃ ┃ ┃         ┃ ┣ 📜WebGPUTextureUtils.js
+┃ ┃ ┃         ┃ ┗ 📜WorkerPool.js
+┃ ┃ ┃         ┣ 📂webxr
+┃ ┃ ┃         ┃ ┣ 📜ARButton.js
+┃ ┃ ┃         ┃ ┣ 📜OculusHandModel.js
+┃ ┃ ┃         ┃ ┣ 📜OculusHandPointerModel.js
+┃ ┃ ┃         ┃ ┣ 📜Text2D.js
+┃ ┃ ┃         ┃ ┣ 📜VRButton.js
+┃ ┃ ┃         ┃ ┣ 📜XRButton.js
+┃ ┃ ┃         ┃ ┣ 📜XRControllerModelFactory.js
+┃ ┃ ┃         ┃ ┣ 📜XREstimatedLight.js
+┃ ┃ ┃         ┃ ┣ 📜XRHandMeshModel.js
+┃ ┃ ┃         ┃ ┣ 📜XRHandModelFactory.js
+┃ ┃ ┃         ┃ ┣ 📜XRHandPrimitiveModel.js
+┃ ┃ ┃         ┃ ┗ 📜XRPlanes.js
+┃ ┃ ┃         ┗ 📜Addons.js
+┃ ┃ ┣ 📂extensoes
+┃ ┃ ┃ ┗ 📂add-curso
+┃ ┃ ┃   ┗ 📜download.php
+┃ ┃ ┣ 📂uploads
+┃ ┃ ┃ ┣ 📂1
+┃ ┃ ┃ ┃ ┣ 📜avatar_6989fccaa7f4e.png
+┃ ┃ ┃ ┃ ┗ 📜banner_6989fccaa86c7.png
+┃ ┃ ┃ ┣ 📂14
+┃ ┃ ┃ ┃ ┗ 📜avatar_69921ca154f11.jpg
+┃ ┃ ┃ ┣ 📂2
+┃ ┃ ┃ ┃ ┣ 📜avatar_698a962e30dc2.jpg
+┃ ┃ ┃ ┃ ┣ 📜avatar_ee83b5ea8626d633549b03a163156591.png
+┃ ┃ ┃ ┃ ┣ 📜banner_698a962e314ce.gif
+┃ ┃ ┃ ┃ ┗ 📜banner_c1e7c6aab2045b0f74cc7a1f6a67a0c2.png
+┃ ┃ ┃ ┣ 📂3
+┃ ┃ ┃ ┃ ┣ 📜avatar_6989261d5b29a.png
+┃ ┃ ┃ ┃ ┗ 📜banner_6989261d5b5fe.png
+┃ ┃ ┃ ┣ 📂4
+┃ ┃ ┃ ┃ ┣ 📜avatar_698f53f82e077.jpg
+┃ ┃ ┃ ┃ ┗ 📜banner_698f53f82ef55.gif
+┃ ┃ ┃ ┣ 📂5
+┃ ┃ ┃ ┃ ┣ 📜avatar_698926af049c2.png
+┃ ┃ ┃ ┃ ┗ 📜banner_698926af052e6.png
+┃ ┃ ┃ ┣ 📂61
+┃ ┃ ┃ ┃ ┗ 📜avatar_6999ff8054156.jpeg
+┃ ┃ ┃ ┣ 📂78
+┃ ┃ ┃ ┃ ┗ 📜banner_69ac780894758.ico
+┃ ┃ ┃ ┣ 📂79
+┃ ┃ ┃ ┃ ┣ 📜banner_69ac4374770fa.ico
+┃ ┃ ┃ ┃ ┣ 📜banner_69ac44196500b.ico
+┃ ┃ ┃ ┃ ┣ 📜banner_69ac782a8dd05.png
+┃ ┃ ┃ ┃ ┗ 📜banner_69ac78a11917a.ico
+┃ ┃ ┃ ┗ 📜.htaccess
+┃ ┃ ┣ 📜.htaccess
+┃ ┃ ┗ 📜index.php
+┃ ┣ 📂src
+┃ ┃ ┣ 📂Config
+┃ ┃ ┃ ┗ 📜Database.php
+┃ ┃ ┣ 📂Controllers
+┃ ┃ ┃ ┣ 📂Concerns
+┃ ┃ ┃ ┃ ┗ 📜LibraryBackendAccess.php
+┃ ┃ ┃ ┣ 📂CursoControllers
+┃ ┃ ┃ ┃ ┗ 📜CursosController.php
+┃ ┃ ┃ ┣ 📜AuthController.php
+┃ ┃ ┃ ┣ 📜CheckoutController.php
+┃ ┃ ┃ ┣ 📜HomeController.php
+┃ ┃ ┃ ┣ 📜LibraryApiController.php
+┃ ┃ ┃ ┣ 📜ModuleController.php
+┃ ┃ ┃ ┣ 📜PasswordResetController.php
+┃ ┃ ┃ ┗ 📜UserController.php
+┃ ┃ ┣ 📂Middleware
+┃ ┃ ┃ ┗ 📜AuthMiddleware.php
+┃ ┃ ┣ 📂Models
+┃ ┃ ┃ ┣ 📜User.php
+┃ ┃ ┃ ┗ 📜UserProfile.php
+┃ ┃ ┣ 📂Support
+┃ ┃ ┃ ┗ 📜DebugLog.php
+┃ ┃ ┗ 📂Views
+┃ ┃   ┣ 📂layouts
+┃ ┃   ┃ ┣ 📜footer.php
+┃ ┃   ┃ ┣ 📜header.php
+┃ ┃   ┃ ┣ 📜main.php
+┃ ┃   ┃ ┗ 📜sidebar.php
+┃ ┃   ┗ 📂pages
+┃ ┃     ┣ 📂bibliotecaCursos
+┃ ┃     ┃ ┣ 📜file.php
+┃ ┃     ┃ ┣ 📜index.php
+┃ ┃     ┃ ┗ 📜show.php
+┃ ┃     ┣ 📂missoes
+┃ ┃     ┃ ┣ 📜index.php
+┃ ┃     ┃ ┗ 📜show.php
+┃ ┃     ┣ 📜404.php
+┃ ┃     ┣ 📜biblioteca3d.php
+┃ ┃     ┣ 📜cursos.php
+┃ ┃     ┣ 📜home.php
+┃ ┃     ┣ 📜landing.php
+┃ ┃     ┣ 📜login.php
+┃ ┃     ┣ 📜missoes.php
+┃ ┃     ┣ 📜nova_senha.php
+┃ ┃     ┣ 📜perfil.php
+┃ ┃     ┣ 📜register.php
+┃ ┃     ┣ 📜reset_password.php
+┃ ┃     ┗ 📜reset_request.php
+┃ ┣ 📂vendor
+┃ ┃ ┣ 📂composer
+┃ ┃ ┃ ┣ 📜autoload_classmap.php
+┃ ┃ ┃ ┣ 📜autoload_files.php
+┃ ┃ ┃ ┣ 📜autoload_namespaces.php
+┃ ┃ ┃ ┣ 📜autoload_psr4.php
+┃ ┃ ┃ ┣ 📜autoload_real.php
+┃ ┃ ┃ ┣ 📜autoload_static.php
+┃ ┃ ┃ ┣ 📜ClassLoader.php
+┃ ┃ ┃ ┣ 📜installed.json
+┃ ┃ ┃ ┣ 📜installed.php
+┃ ┃ ┃ ┣ 📜InstalledVersions.php
+┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┗ 📜platform_check.php
+┃ ┃ ┣ 📂firebase
+┃ ┃ ┃ ┗ 📂php-jwt
+┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃   ┃ ┣ 📜BeforeValidException.php
+┃ ┃ ┃   ┃ ┣ 📜CachedKeySet.php
+┃ ┃ ┃   ┃ ┣ 📜ExpiredException.php
+┃ ┃ ┃   ┃ ┣ 📜JWK.php
+┃ ┃ ┃   ┃ ┣ 📜JWT.php
+┃ ┃ ┃   ┃ ┣ 📜JWTExceptionWithPayloadInterface.php
+┃ ┃ ┃   ┃ ┣ 📜Key.php
+┃ ┃ ┃   ┃ ┗ 📜SignatureInvalidException.php
+┃ ┃ ┃   ┣ 📜CHANGELOG.md
+┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃   ┣ 📜LICENSE
+┃ ┃ ┃   ┗ 📜README.md
+┃ ┃ ┣ 📂graham-campbell
+┃ ┃ ┃ ┗ 📂result-type
+┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃   ┃ ┣ 📜Error.php
+┃ ┃ ┃   ┃ ┣ 📜Result.php
+┃ ┃ ┃   ┃ ┗ 📜Success.php
+┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃   ┗ 📜LICENSE
+┃ ┃ ┣ 📂guzzlehttp
+┃ ┃ ┃ ┣ 📂guzzle
+┃ ┃ ┃ ┃ ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┣ 📂Cookie
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CookieJar.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CookieJarInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜FileCookieJar.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜SessionCookieJar.php
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜SetCookie.php
+┃ ┃ ┃ ┃ ┃ ┣ 📂Exception
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜BadResponseException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ClientException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ConnectException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜GuzzleException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜InvalidArgumentException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜RequestException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜ServerException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜TooManyRedirectsException.php
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜TransferException.php
+┃ ┃ ┃ ┃ ┃ ┣ 📂Handler
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurlFactory.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurlFactoryInterface.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurlHandler.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CurlMultiHandler.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜EasyHandle.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜HeaderProcessor.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MockHandler.php
+┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Proxy.php
+┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜StreamHandler.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜BodySummarizer.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜BodySummarizerInterface.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜Client.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜ClientInterface.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜ClientTrait.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜functions_include.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜functions.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜HandlerStack.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜MessageFormatter.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜MessageFormatterInterface.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜Middleware.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜Pool.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜PrepareBodyMiddleware.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜RedirectMiddleware.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜RequestOptions.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜RetryMiddleware.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜TransferStats.php
+┃ ┃ ┃ ┃ ┃ ┗ 📜Utils.php
+┃ ┃ ┃ ┃ ┣ 📜CHANGELOG.md
+┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┣ 📜README.md
+┃ ┃ ┃ ┃ ┗ 📜UPGRADING.md
+┃ ┃ ┃ ┣ 📂promises
+┃ ┃ ┃ ┃ ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┣ 📜AggregateException.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜CancellationException.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜Coroutine.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜Create.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜Each.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜EachPromise.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜FulfilledPromise.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜Is.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜Promise.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜PromiseInterface.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜PromisorInterface.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜RejectedPromise.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜RejectionException.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜TaskQueue.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜TaskQueueInterface.php
+┃ ┃ ┃ ┃ ┃ ┗ 📜Utils.php
+┃ ┃ ┃ ┃ ┣ 📜CHANGELOG.md
+┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃ ┗ 📂psr7
+┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃   ┃ ┣ 📂Exception
+┃ ┃ ┃   ┃ ┃ ┗ 📜MalformedUriException.php
+┃ ┃ ┃   ┃ ┣ 📜AppendStream.php
+┃ ┃ ┃   ┃ ┣ 📜BufferStream.php
+┃ ┃ ┃   ┃ ┣ 📜CachingStream.php
+┃ ┃ ┃   ┃ ┣ 📜DroppingStream.php
+┃ ┃ ┃   ┃ ┣ 📜FnStream.php
+┃ ┃ ┃   ┃ ┣ 📜Header.php
+┃ ┃ ┃   ┃ ┣ 📜HttpFactory.php
+┃ ┃ ┃   ┃ ┣ 📜InflateStream.php
+┃ ┃ ┃   ┃ ┣ 📜LazyOpenStream.php
+┃ ┃ ┃   ┃ ┣ 📜LimitStream.php
+┃ ┃ ┃   ┃ ┣ 📜Message.php
+┃ ┃ ┃   ┃ ┣ 📜MessageTrait.php
+┃ ┃ ┃   ┃ ┣ 📜MimeType.php
+┃ ┃ ┃   ┃ ┣ 📜MultipartStream.php
+┃ ┃ ┃   ┃ ┣ 📜NoSeekStream.php
+┃ ┃ ┃   ┃ ┣ 📜PumpStream.php
+┃ ┃ ┃   ┃ ┣ 📜Query.php
+┃ ┃ ┃   ┃ ┣ 📜Request.php
+┃ ┃ ┃   ┃ ┣ 📜Response.php
+┃ ┃ ┃   ┃ ┣ 📜Rfc7230.php
+┃ ┃ ┃   ┃ ┣ 📜ServerRequest.php
+┃ ┃ ┃   ┃ ┣ 📜Stream.php
+┃ ┃ ┃   ┃ ┣ 📜StreamDecoratorTrait.php
+┃ ┃ ┃   ┃ ┣ 📜StreamWrapper.php
+┃ ┃ ┃   ┃ ┣ 📜UploadedFile.php
+┃ ┃ ┃   ┃ ┣ 📜Uri.php
+┃ ┃ ┃   ┃ ┣ 📜UriComparator.php
+┃ ┃ ┃   ┃ ┣ 📜UriNormalizer.php
+┃ ┃ ┃   ┃ ┣ 📜UriResolver.php
+┃ ┃ ┃   ┃ ┗ 📜Utils.php
+┃ ┃ ┃   ┣ 📜CHANGELOG.md
+┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃   ┣ 📜LICENSE
+┃ ┃ ┃   ┗ 📜README.md
+┃ ┃ ┣ 📂phpoption
+┃ ┃ ┃ ┗ 📂phpoption
+┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃   ┃ ┗ 📂PhpOption
+┃ ┃ ┃   ┃   ┣ 📜LazyOption.php
+┃ ┃ ┃   ┃   ┣ 📜None.php
+┃ ┃ ┃   ┃   ┣ 📜Option.php
+┃ ┃ ┃   ┃   ┗ 📜Some.php
+┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃   ┗ 📜LICENSE
+┃ ┃ ┣ 📂psr
+┃ ┃ ┃ ┣ 📂http-client
+┃ ┃ ┃ ┃ ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┣ 📜ClientExceptionInterface.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜ClientInterface.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜NetworkExceptionInterface.php
+┃ ┃ ┃ ┃ ┃ ┗ 📜RequestExceptionInterface.php
+┃ ┃ ┃ ┃ ┣ 📜CHANGELOG.md
+┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃ ┣ 📂http-factory
+┃ ┃ ┃ ┃ ┣ 📂src
+┃ ┃ ┃ ┃ ┃ ┣ 📜RequestFactoryInterface.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜ResponseFactoryInterface.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜ServerRequestFactoryInterface.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜StreamFactoryInterface.php
+┃ ┃ ┃ ┃ ┃ ┣ 📜UploadedFileFactoryInterface.php
+┃ ┃ ┃ ┃ ┃ ┗ 📜UriFactoryInterface.php
+┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃ ┗ 📂http-message
+┃ ┃ ┃   ┣ 📂docs
+┃ ┃ ┃   ┃ ┣ 📜PSR7-Interfaces.md
+┃ ┃ ┃   ┃ ┗ 📜PSR7-Usage.md
+┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃   ┃ ┣ 📜MessageInterface.php
+┃ ┃ ┃   ┃ ┣ 📜RequestInterface.php
+┃ ┃ ┃   ┃ ┣ 📜ResponseInterface.php
+┃ ┃ ┃   ┃ ┣ 📜ServerRequestInterface.php
+┃ ┃ ┃   ┃ ┣ 📜StreamInterface.php
+┃ ┃ ┃   ┃ ┣ 📜UploadedFileInterface.php
+┃ ┃ ┃   ┃ ┗ 📜UriInterface.php
+┃ ┃ ┃   ┣ 📜CHANGELOG.md
+┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃   ┣ 📜LICENSE
+┃ ┃ ┃   ┗ 📜README.md
+┃ ┃ ┣ 📂ralouphie
+┃ ┃ ┃ ┗ 📂getallheaders
+┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃   ┃ ┗ 📜getallheaders.php
+┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃   ┣ 📜LICENSE
+┃ ┃ ┃   ┗ 📜README.md
+┃ ┃ ┣ 📂symfony
+┃ ┃ ┃ ┣ 📂deprecation-contracts
+┃ ┃ ┃ ┃ ┣ 📜CHANGELOG.md
+┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┣ 📜function.php
+┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃ ┣ 📂polyfill-ctype
+┃ ┃ ┃ ┃ ┣ 📜bootstrap.php
+┃ ┃ ┃ ┃ ┣ 📜bootstrap80.php
+┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┣ 📜Ctype.php
+┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃ ┣ 📂polyfill-mbstring
+┃ ┃ ┃ ┃ ┣ 📂Resources
+┃ ┃ ┃ ┃ ┃ ┗ 📂unidata
+┃ ┃ ┃ ┃ ┃   ┣ 📜caseFolding.php
+┃ ┃ ┃ ┃ ┃   ┣ 📜lowerCase.php
+┃ ┃ ┃ ┃ ┃   ┣ 📜titleCaseRegexp.php
+┃ ┃ ┃ ┃ ┃   ┗ 📜upperCase.php
+┃ ┃ ┃ ┃ ┣ 📜bootstrap.php
+┃ ┃ ┃ ┃ ┣ 📜bootstrap80.php
+┃ ┃ ┃ ┃ ┣ 📜composer.json
+┃ ┃ ┃ ┃ ┣ 📜LICENSE
+┃ ┃ ┃ ┃ ┣ 📜Mbstring.php
+┃ ┃ ┃ ┃ ┗ 📜README.md
+┃ ┃ ┃ ┗ 📂polyfill-php80
+┃ ┃ ┃   ┣ 📂Resources
+┃ ┃ ┃   ┃ ┗ 📂stubs
+┃ ┃ ┃   ┃   ┣ 📜Attribute.php
+┃ ┃ ┃   ┃   ┣ 📜PhpToken.php
+┃ ┃ ┃   ┃   ┣ 📜Stringable.php
+┃ ┃ ┃   ┃   ┣ 📜UnhandledMatchError.php
+┃ ┃ ┃   ┃   ┗ 📜ValueError.php
+┃ ┃ ┃   ┣ 📜bootstrap.php
+┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃   ┣ 📜LICENSE
+┃ ┃ ┃   ┣ 📜Php80.php
+┃ ┃ ┃   ┣ 📜PhpToken.php
+┃ ┃ ┃   ┗ 📜README.md
+┃ ┃ ┣ 📂vimeo
+┃ ┃ ┃ ┗ 📂vimeo-api
+┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃   ┃ ┗ 📂Vimeo
+┃ ┃ ┃   ┃   ┣ 📂Exceptions
+┃ ┃ ┃   ┃   ┃ ┣ 📜ExceptionInterface.php
+┃ ┃ ┃   ┃   ┃ ┣ 📜VimeoException.php
+┃ ┃ ┃   ┃   ┃ ┣ 📜VimeoRequestException.php
+┃ ┃ ┃   ┃   ┃ ┗ 📜VimeoUploadException.php
+┃ ┃ ┃   ┃   ┣ 📂Upload
+┃ ┃ ┃   ┃   ┃ ┗ 📜TusClient.php
+┃ ┃ ┃   ┃   ┗ 📜Vimeo.php
+┃ ┃ ┃   ┣ 📂tests
+┃ ┃ ┃   ┃ ┗ 📂Vimeo
+┃ ┃ ┃   ┃   ┗ 📜VimeoTest.php
+┃ ┃ ┃   ┣ 📜.gitattributes
+┃ ┃ ┃   ┣ 📜.gitignore
+┃ ┃ ┃   ┣ 📜.styleci.yml
+┃ ┃ ┃   ┣ 📜.travis.yml
+┃ ┃ ┃   ┣ 📜autoload.php
+┃ ┃ ┃   ┣ 📜CHANGELOG.md
+┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃   ┣ 📜composer.phar
+┃ ┃ ┃   ┣ 📜CONTRIBUTING.md
+┃ ┃ ┃   ┣ 📜LICENSE
+┃ ┃ ┃   ┣ 📜phpunit.xml
+┃ ┃ ┃   ┣ 📜psalm.xml
+┃ ┃ ┃   ┗ 📜README.md
+┃ ┃ ┣ 📂vlucas
+┃ ┃ ┃ ┗ 📂phpdotenv
+┃ ┃ ┃   ┣ 📂src
+┃ ┃ ┃   ┃ ┣ 📂Exception
+┃ ┃ ┃   ┃ ┃ ┣ 📜ExceptionInterface.php
+┃ ┃ ┃   ┃ ┃ ┣ 📜InvalidEncodingException.php
+┃ ┃ ┃   ┃ ┃ ┣ 📜InvalidFileException.php
+┃ ┃ ┃   ┃ ┃ ┣ 📜InvalidPathException.php
+┃ ┃ ┃   ┃ ┃ ┗ 📜ValidationException.php
+┃ ┃ ┃   ┃ ┣ 📂Loader
+┃ ┃ ┃   ┃ ┃ ┣ 📜Loader.php
+┃ ┃ ┃   ┃ ┃ ┣ 📜LoaderInterface.php
+┃ ┃ ┃   ┃ ┃ ┗ 📜Resolver.php
+┃ ┃ ┃   ┃ ┣ 📂Parser
+┃ ┃ ┃   ┃ ┃ ┣ 📜Entry.php
+┃ ┃ ┃   ┃ ┃ ┣ 📜EntryParser.php
+┃ ┃ ┃   ┃ ┃ ┣ 📜Lexer.php
+┃ ┃ ┃   ┃ ┃ ┣ 📜Lines.php
+┃ ┃ ┃   ┃ ┃ ┣ 📜Parser.php
+┃ ┃ ┃   ┃ ┃ ┣ 📜ParserInterface.php
+┃ ┃ ┃   ┃ ┃ ┗ 📜Value.php
+┃ ┃ ┃   ┃ ┣ 📂Repository
+┃ ┃ ┃   ┃ ┃ ┣ 📂Adapter
+┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜AdapterInterface.php
+┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜ApacheAdapter.php
+┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜ArrayAdapter.php
+┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜EnvConstAdapter.php
+┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜GuardedWriter.php
+┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜ImmutableWriter.php
+┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜MultiReader.php
+┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜MultiWriter.php
+┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜PutenvAdapter.php
+┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜ReaderInterface.php
+┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜ReplacingWriter.php
+┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜ServerConstAdapter.php
+┃ ┃ ┃   ┃ ┃ ┃ ┗ 📜WriterInterface.php
+┃ ┃ ┃   ┃ ┃ ┣ 📜AdapterRepository.php
+┃ ┃ ┃   ┃ ┃ ┣ 📜RepositoryBuilder.php
+┃ ┃ ┃   ┃ ┃ ┗ 📜RepositoryInterface.php
+┃ ┃ ┃   ┃ ┣ 📂Store
+┃ ┃ ┃   ┃ ┃ ┣ 📂File
+┃ ┃ ┃   ┃ ┃ ┃ ┣ 📜Paths.php
+┃ ┃ ┃   ┃ ┃ ┃ ┗ 📜Reader.php
+┃ ┃ ┃   ┃ ┃ ┣ 📜FileStore.php
+┃ ┃ ┃   ┃ ┃ ┣ 📜StoreBuilder.php
+┃ ┃ ┃   ┃ ┃ ┣ 📜StoreInterface.php
+┃ ┃ ┃   ┃ ┃ ┗ 📜StringStore.php
+┃ ┃ ┃   ┃ ┣ 📂Util
+┃ ┃ ┃   ┃ ┃ ┣ 📜Regex.php
+┃ ┃ ┃   ┃ ┃ ┗ 📜Str.php
+┃ ┃ ┃   ┃ ┣ 📜Dotenv.php
+┃ ┃ ┃   ┃ ┗ 📜Validator.php
+┃ ┃ ┃   ┣ 📜composer.json
+┃ ┃ ┃   ┗ 📜LICENSE
+┃ ┃ ┗ 📜autoload.php
+┃ ┣ 📜composer.json
+┃ ┣ 📜composer.lock
+┃ ┗ 📜Dockerfile
+┣ 📜.env.example
+┣ 📜.gitignore
+┣ 📜docker-compose.yml
+┣ 📜Dockerfile
+┣ 📜main.js
+┣ 📜package.json
+┣ 📜README.md
+┗ 📜site.conf

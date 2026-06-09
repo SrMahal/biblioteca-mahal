@@ -6,16 +6,14 @@ export function startAnimationLoop({
     camera,
     update = null
 }) {
+
     const clock = new THREE.Clock();
 
     function animate() {
 
-        requestAnimationFrame(
-            animate
-        );
+        requestAnimationFrame(animate);
 
-        const deltaTime =
-            clock.getDelta();
+        const deltaTime = clock.getDelta();
 
         if (update) {
             update(deltaTime);

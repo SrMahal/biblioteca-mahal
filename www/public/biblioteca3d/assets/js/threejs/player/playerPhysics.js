@@ -67,9 +67,7 @@ export function createPlayerPhysics({
             rayDirection
         );
 
-        downRay.far =
-            settings.playerHeight +
-            settings.groundCheckOffset;
+        downRay.far = 20;
 
         const hits =
             downRay.intersectObjects(
@@ -155,6 +153,19 @@ export function createPlayerPhysics({
         deltaTime,
         previousPosition = null
     ) {
+        deltaTime = Math.min(deltaTime, 0.033);
+
+        if (!colliders.length) {
+            return;
+        }
+
+        if (playerState.position.y < -10) {
+            playerState.position.x = 0;
+            playerState.position.y = 5;
+            playerState.position.z = 5;
+            velocity.set(0, 0, 0);
+        }
+
         velocity.y +=
             settings.gravity * deltaTime;
 
@@ -175,6 +186,7 @@ export function createPlayerPhysics({
             playerState.position.y,
             playerState.position.z
         );
+
         debugBox.position.set(
             playerState.position.x,
             playerState.position.y +
