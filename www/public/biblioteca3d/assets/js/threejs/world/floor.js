@@ -1,34 +1,39 @@
-import * as THREE from "/biblioteca3d/vendor/three/build/three.module.min.js";
+import * as THREE from "three";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 export function createFloor(scene) {
+    const group = new THREE.Group();
+    group.userData.type = "floor";
 
-    const boardSize = 240;
+    scene.add(group);
 
-    const floorGeometry = new THREE.PlaneGeometry(
-        boardSize,
-        boardSize
+    const loader = new GLTFLoader();
+
+    loader.load(
+        "/biblioteca3d/assets/js/threejs/model3d/terrain.glb",
+
+        (gltf) => {
+            const terrain = gltf.scene;
+
+            terrain.traverse((child) => {
+                if (child.isMesh) {
+                    child.receiveShadow = true;
+                    child.castShadow = false;
+                    child.userData.type = "floor";
+                }
+            });
+
+            group.add(terrain);
+
+            console.log("Terreno visual carregado");
+        },
+
+        undefined,
+
+        (error) => {
+            console.error("Erro ao carregar terreno:", error);
+        }
     );
 
-    const floorMaterial = new THREE.MeshStandardMaterial({
-        color: 0x222222,
-        roughness: 0.9,
-        metalness: 0,
-    });
-
-    const floor = new THREE.Mesh(
-        floorGeometry,
-        floorMaterial
-    );
-
-    floor.receiveShadow = true;
-
-    floor.rotation.x = -Math.PI / 2;
-
-    floor.position.y = 0;
-
-    floor.userData.type = "floor";
-
-    scene.add(floor);
-
-    return floor;
+    return group;
 }

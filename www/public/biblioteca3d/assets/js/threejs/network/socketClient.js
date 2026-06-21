@@ -10,14 +10,34 @@ export function joinWorld(data) {
     socket.emit("join-world", data);
 }
 
-export function sendPlayerState(data) {
-    socket.emit("player-state", data);
+export function sendPlayerInput({
+    worldId = "biblioteca-central",
+    input
+}) {
+    socket.emit("player-input", {
+        worldId,
+        input
+    });
+}
+
+export function onServerState(callback) {
+    socket.on("server-state", callback);
+}
+
+export function sendGlobalChatMessage(message) {
+    socket.emit("global-chat-message", {
+        message
+    });
+}
+
+export function onGlobalChatMessage(callback) {
+    socket.on("global-chat-message", callback);
 }
 
 socket.on("connect", () => {
     console.log("Conectado ao servidor:", socket.id);
 });
 
-socket.on("connected", (data) => {
-    console.log("Servidor respondeu:", data);
+socket.on("world-config", (data) => {
+    console.log("Configuração do mundo:", data);
 });

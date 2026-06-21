@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Biblioteca Mahal</title>
     <link rel="icon" href="/biblioteca3d/assets/img/logos/logo-biblioteca.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -58,9 +60,6 @@
     <button id="reopenPopupButton"><i class="fa-solid fa-arrow-right-to-bracket"></i></button>
 
     <div class="hud">
-        <a href="/discord"><i class="fa-brands fa-discord"></i></a>
-        <a href="/discord"><i class="fa-solid fa-book"></i></a>
-        <a href="/discord"><i class="fa-brands fa-github"></i></a>
         <button id="playButton" class="play-button">
             Play
         </button>

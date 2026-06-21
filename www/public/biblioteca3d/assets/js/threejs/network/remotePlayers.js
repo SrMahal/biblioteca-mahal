@@ -44,8 +44,14 @@ function createNameLabel(name) {
     ctx.textBaseline = "middle";
 
     ctx.fillStyle = "rgba(0, 0, 0, 0.65)";
-    ctx.roundRect?.(96, 28, 320, 72, 18);
-    ctx.fill();
+
+    if (ctx.roundRect) {
+        ctx.beginPath();
+        ctx.roundRect(96, 28, 320, 72, 18);
+        ctx.fill();
+    } else {
+        ctx.fillRect(96, 28, 320, 72);
+    }
 
     ctx.fillStyle = "#ffffff";
     ctx.fillText(name || "Jogador", 256, 64);
@@ -60,13 +66,8 @@ function createNameLabel(name) {
 
     const sprite = new THREE.Sprite(material);
     sprite.scale.set(3.2, 0.8, 1);
-
-    // Sobe ou desce o nome aqui:
     sprite.position.set(0, 3.4, 0);
-
     sprite.renderOrder = 999;
-
-    // Começa escondido
     sprite.visible = showNames;
 
     return sprite;
@@ -100,7 +101,11 @@ function makeClipByFrames(originalClip, name, startFrame, endFrame, fps = 24) {
         }
     });
 
-    return new THREE.AnimationClip(name, endTime - startTime, tracks);
+    return new THREE.AnimationClip(
+        name,
+        endTime - startTime,
+        tracks
+    );
 }
 
 function playRemoteAnimation(remote, name) {
@@ -112,6 +117,7 @@ function playRemoteAnimation(remote, name) {
     }
 
     const action = remote.actions[name];
+
     action.reset();
     action.enabled = true;
     action.setEffectiveWeight(1);
@@ -122,11 +128,33 @@ function playRemoteAnimation(remote, name) {
     remote.currentAction = action;
 }
 
-function createRemoteAvatar(scene, data) {
+function normalizePlayerData(data) {
+    const position = data.position || {};
+    const rotation = data.rotation || {};
+
+    return {
+        id: data.id,
+        userId: data.userId || null,
+        name: data.name || "Jogador",
+        isGuest: !!data.isGuest,
+
+        x: Number(position.x ?? data.x ?? 0),
+        y: Number(position.y ?? data.y ?? 0),
+        z: Number(position.z ?? data.z ?? 0),
+
+        rotationY: Number(rotation.y ?? data.rotationY ?? 0),
+
+        animation: data.animation || "Idle"
+    };
+}
+
+function createRemoteAvatar(scene, rawData) {
+    const data = normalizePlayerData(rawData);
+
     const group = new THREE.Group();
 
     group.position.set(data.x, data.y, data.z);
-    group.rotation.y = data.rotationY || 0;
+    group.rotation.y = (data.rotationY || 0) + Math.PI;
 
     scene.add(group);
 
@@ -141,7 +169,13 @@ function createRemoteAvatar(scene, data) {
         mixer: null,
         actions: {},
         currentAction: null,
-        targetPosition: new THREE.Vector3(data.x, data.y, data.z),
+
+        targetPosition: new THREE.Vector3(
+            data.x,
+            data.y,
+            data.z
+        ),
+
         targetRotationY: data.rotationY || 0
     };
 
@@ -199,21 +233,67 @@ function createRemoteAvatar(scene, data) {
     return remote;
 }
 
+function updateRemoteFromServer(scene, rawData) {
+    const data = normalizePlayerData(rawData);
+
+    if (!data.id) return;
+    if (data.id === socket.id) return;
+
+    let remote = remotePlayers.get(data.id);
+
+    if (!remote) {
+        remote = createRemoteAvatar(scene, data);
+        remotePlayers.set(data.id, remote);
+    }
+
+    remote.targetPosition.set(
+        data.x,
+        data.y,
+        data.z
+    );
+
+    remote.targetRotationY = (data.rotationY || 0) + Math.PI;
+
+    playRemoteAnimation(
+        remote,
+        data.animation || "Idle"
+    );
+}
+
 export function setupRemotePlayers(scene) {
-    socket.on("player-state", (data) => {
-        if (data.id === socket.id) return;
+    socket.on("server-state", (data) => {
+        const players = data.players || [];
 
-        let remote = remotePlayers.get(data.id);
+        const aliveIds = new Set();
 
-        if (!remote) {
-            remote = createRemoteAvatar(scene, data);
-            remotePlayers.set(data.id, remote);
+        players.forEach((playerData) => {
+            if (playerData.id) {
+                aliveIds.add(playerData.id);
+            }
+
+            updateRemoteFromServer(
+                scene,
+                playerData
+            );
+        });
+
+        for (const [id, remote] of remotePlayers.entries()) {
+            if (id === socket.id) continue;
+
+            if (!aliveIds.has(id)) {
+                scene.remove(remote.group);
+
+                if (remote.label?.material?.map) {
+                    remote.label.material.map.dispose();
+                }
+
+                if (remote.label?.material) {
+                    remote.label.material.dispose();
+                }
+
+                remotePlayers.delete(id);
+            }
         }
-
-        remote.targetPosition.set(data.x, data.y, data.z);
-        remote.targetRotationY = data.rotationY || 0;
-
-        playRemoteAnimation(remote, data.animation || "Idle");
     });
 
     socket.on("player-left", (data) => {
@@ -242,12 +322,12 @@ export function updateRemotePlayers(deltaTime) {
             0.25
         );
 
-        remote.group.rotation.y = THREE.MathUtils.lerp(
-            remote.group.rotation.y,
-            remote.targetRotationY,
-            0.25
-        );
-
+        remote.group.rotation.y =
+            THREE.MathUtils.lerp(
+                remote.group.rotation.y,
+                remote.targetRotationY + Math.PI,
+                0.25
+            );
         if (remote.mixer) {
             remote.mixer.update(deltaTime);
         }
@@ -258,3 +338,72 @@ export function getRemoteObjectById(id) {
     const remote = remotePlayers.get(id);
     return remote?.group || null;
 }
+
+function showChatBubbleAboveObject(object, text) {
+    if (!object) return;
+
+    let oldBubble = object.getObjectByName("chatBubble");
+
+    if (oldBubble) {
+        object.remove(oldBubble);
+    }
+
+    const canvas = document.createElement("canvas");
+    canvas.width = 512;
+    canvas.height = 160;
+
+    const ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "rgba(0,0,0,0.75)";
+    ctx.roundRect?.(20, 30, 472, 90, 24);
+    ctx.fill();
+
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "bold 32px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
+    ctx.fillText(
+        text.slice(0, 50),
+        256,
+        75
+    );
+
+    const texture = new THREE.CanvasTexture(canvas);
+
+    const material = new THREE.SpriteMaterial({
+        map: texture,
+        transparent: true,
+        depthTest: false
+    });
+
+    const bubble = new THREE.Sprite(material);
+    bubble.name = "chatBubble";
+    bubble.position.set(0, 4.2, 0);
+    bubble.scale.set(4.5, 1.4, 1);
+    bubble.renderOrder = 999;
+
+    object.add(bubble);
+
+    setTimeout(() => {
+        object.remove(bubble);
+        texture.dispose();
+        material.dispose();
+    }, 4000);
+}
+
+window.addEventListener("global-chat-popup", (event) => {
+    const data = event.detail;
+
+    if (!data) return;
+
+    const object =
+        data.playerId === socket.id
+            ? window.__localPlayerObject
+            : getRemoteObjectById(data.playerId);
+
+    showChatBubbleAboveObject(
+        object,
+        data.message
+    );
+});

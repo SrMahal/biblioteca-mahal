@@ -7,7 +7,8 @@ export function createLocalPlayer({
     scene,
     camera,
     colliders = [],
-    mobileInput = null
+    mobileInput = null,
+    getCameraYaw
 }) {
     const playerState =
         createPlayerState("local");
@@ -30,7 +31,8 @@ export function createLocalPlayer({
             playerModel,
             camera,
             playerPhysics,
-            mobileInput
+            mobileInput,
+            getCameraYaw
         });
 
     return {

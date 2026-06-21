@@ -14,31 +14,28 @@ export function createPlayerPhysics({
         playerHeight: 1.8,
         radius: 0.45,
 
-        groundCheckOffset: 0.2
+        groundCheckOffset: 0.25
     };
 
     const downRay = new THREE.Raycaster();
     const rayOrigin = new THREE.Vector3();
     const rayDirection = new THREE.Vector3(0, -1, 0);
 
-    const debugGeometry =
-        new THREE.BoxGeometry(
-            settings.radius * 2,
-            settings.playerHeight,
-            settings.radius * 2
-        );
+    const debugGeometry = new THREE.BoxGeometry(
+        settings.radius * 2,
+        settings.playerHeight,
+        settings.radius * 2
+    );
 
-    const debugMaterial =
-        new THREE.MeshBasicMaterial({
-            color: 0xff0000,
-            wireframe: true
-        });
+    const debugMaterial = new THREE.MeshBasicMaterial({
+        color: 0xff0000,
+        wireframe: true
+    });
 
-    const debugBox =
-        new THREE.Mesh(
-            debugGeometry,
-            debugMaterial
-        );
+    const debugBox = new THREE.Mesh(
+        debugGeometry,
+        debugMaterial
+    );
 
     playerModel.group.parent.add(debugBox);
 
@@ -62,30 +59,30 @@ export function createPlayerPhysics({
             playerState.position.z
         );
 
-        downRay.set(
-            rayOrigin,
-            rayDirection
+        downRay.set(rayOrigin, rayDirection);
+
+        downRay.far =
+            settings.playerHeight +
+            settings.groundCheckOffset;
+
+        const hits = downRay.intersectObjects(
+            colliders,
+            true
         );
 
-        downRay.far = 20;
+        if (hits.length > 0 && velocity.y <= 0) {
+            const hit = hits[0];
 
-        const hits =
-            downRay.intersectObjects(
-                colliders,
-                true
-            );
+            const expectedDistance =
+                settings.playerHeight +
+                settings.groundCheckOffset;
 
-        if (
-            hits.length > 0 &&
-            velocity.y <= 0
-        ) {
-            playerState.position.y =
-                hits[0].point.y;
-
-            velocity.y = 0;
-            isGrounded = true;
-
-            return;
+            if (hit.distance <= expectedDistance) {
+                playerState.position.y = hit.point.y;
+                velocity.y = 0;
+                isGrounded = true;
+                return;
+            }
         }
 
         isGrounded = false;
@@ -94,24 +91,27 @@ export function createPlayerPhysics({
     function resolveSideCollisions(previousPosition) {
         if (!previousPosition) return;
 
-        const playerBox =
-            new THREE.Box3().setFromCenterAndSize(
-                new THREE.Vector3(
-                    playerState.position.x,
-                    playerState.position.y + settings.playerHeight / 2,
-                    playerState.position.z
-                ),
-                new THREE.Vector3(
-                    settings.radius * 2,
-                    settings.playerHeight,
-                    settings.radius * 2
-                )
-            );
+        const playerBox = new THREE.Box3().setFromCenterAndSize(
+            new THREE.Vector3(
+                playerState.position.x,
+                playerState.position.y + settings.playerHeight / 2,
+                playerState.position.z
+            ),
+            new THREE.Vector3(
+                settings.radius * 2,
+                settings.playerHeight,
+                settings.radius * 2
+            )
+        );
 
         for (const collider of colliders) {
             if (!collider.geometry) continue;
 
-            if (collider.userData.type === "floor") {
+            if (
+                collider.userData.type === "floor" ||
+                collider.userData.isGround ||
+                collider.userData.type === "platform"
+            ) {
                 continue;
             }
 
@@ -121,65 +121,26 @@ export function createPlayerPhysics({
                 new THREE.Box3().setFromObject(collider);
 
             if (playerBox.intersectsBox(colliderBox)) {
-                const colliderTop =
-                    colliderBox.max.y;
-
-                const playerWasAbove =
-                    previousPosition.y >=
-                    colliderTop - 0.15;
-
-                const playerIsFalling =
-                    velocity.y <= 0;
-
-                if (
-                    playerWasAbove &&
-                    playerIsFalling
-                ) {
-                    continue;
-                }
-
-                playerState.position.x =
-                    previousPosition.x;
-
-                playerState.position.z =
-                    previousPosition.z;
-
+                playerState.position.x = previousPosition.x;
+                playerState.position.z = previousPosition.z;
                 return;
             }
         }
     }
 
-    function update(
-        deltaTime,
-        previousPosition = null
-    ) {
+    function update(deltaTime, previousPosition = null) {
         deltaTime = Math.min(deltaTime, 0.033);
 
-        if (!colliders.length) {
-            return;
-        }
+        if (!colliders.length) return;
 
-        if (playerState.position.y < -10) {
-            playerState.position.x = 0;
-            playerState.position.y = 5;
-            playerState.position.z = 5;
-            velocity.set(0, 0, 0);
-        }
-
-        velocity.y +=
-            settings.gravity * deltaTime;
-
-        playerState.position.y +=
-            velocity.y * deltaTime;
+        velocity.y += settings.gravity * deltaTime;
+        playerState.position.y += velocity.y * deltaTime;
 
         resolveGround();
 
-        resolveSideCollisions(
-            previousPosition
-        );
+        resolveSideCollisions(previousPosition);
 
-        const group =
-            playerModel.group ?? playerModel;
+        const group = playerModel.group ?? playerModel;
 
         group.position.set(
             playerState.position.x,
@@ -189,8 +150,7 @@ export function createPlayerPhysics({
 
         debugBox.position.set(
             playerState.position.x,
-            playerState.position.y +
-            settings.playerHeight / 2,
+            playerState.position.y + settings.playerHeight / 2,
             playerState.position.z
         );
     }

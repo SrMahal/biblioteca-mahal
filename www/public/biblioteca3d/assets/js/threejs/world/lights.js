@@ -3,10 +3,10 @@ import * as THREE from "/biblioteca3d/vendor/three/build/three.module.min.js";
 export function createWorldLights(scene) {
     createPointLight(scene, {
         x: 0,
-        y: 15,
+        y: 150,
         z: 0,
         color: 0xf0f0f0,
-        intensity: 200,
+        intensity: 1000,
         distance: 40,
         castShadow: false,
         shadowSize: 512
@@ -17,7 +17,7 @@ export function createWorldLights(scene) {
         y: 15,
         z: 15,
         color: 0xf0f0f0,
-        intensity: 200,
+        intensity: 500,
         distance: 40,
         castShadow: false,
         shadowSize: 512
@@ -25,7 +25,7 @@ export function createWorldLights(scene) {
 
     createPointLight(scene, {
         x: -10,
-        y: 5,
+        y: 50,
         z: -5,
         color: 0x4f46e5,
         intensity: 50,
