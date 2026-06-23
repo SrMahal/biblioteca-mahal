@@ -6,9 +6,11 @@ import {
     focusMessagesInput
 } from "./apps/messagesApp.js";
 
+import { createVoiceApp } from "./apps/voiceApp.js";
+
 export function createPhoneUI({
-    onOpen = () => {},
-    onClose = () => {}
+    onOpen = () => { },
+    onClose = () => { }
 } = {}) {
     let phone = document.getElementById("gamePhone");
 
@@ -57,7 +59,13 @@ export function createPhoneUI({
                     <img src="/biblioteca3d/assets/img/phone/mensagens.png" alt="Mensagens">
                     <span>Mensagens</span>
                 </div>
+
+                <div class="phone-app" data-app="voice">
+                    <img src="/biblioteca3d/assets/img/phone/microfone.png" alt="Voz">
+                    <span>Voz</span>
+                </div>
             </div>
+            
         `;
 
         content.querySelectorAll(".phone-app").forEach((app) => {
@@ -91,6 +99,12 @@ export function createPhoneUI({
                 <h3>Contatos</h3>
                 <p>Em breve: lista de amigos e jogadores online.</p>
             `;
+            return;
+        }
+
+        if (appName === "voice") {
+            title.textContent = "Voz";
+            content.appendChild(createVoiceApp());
             return;
         }
 

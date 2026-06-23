@@ -407,3 +407,54 @@ window.addEventListener("global-chat-popup", (event) => {
         data.message
     );
 });
+
+function showVoiceIcon(object, visible) {
+    if (!object) return;
+
+    let icon = object.getObjectByName("voiceIcon");
+
+    if (!visible) {
+        if (icon) {
+            object.remove(icon);
+            icon.material.map?.dispose();
+            icon.material.dispose();
+        }
+
+        return;
+    }
+
+    if (icon) return;
+
+    const texture = new THREE.TextureLoader().load(
+        "/biblioteca3d/assets/img/phone/microfone.png"
+    );
+
+    const material = new THREE.SpriteMaterial({
+        map: texture,
+        transparent: true,
+        depthTest: false
+    });
+
+    icon = new THREE.Sprite(material);
+    icon.name = "voiceIcon";
+    icon.position.set(0, 4.4, 0);
+    icon.scale.set(0.8, 0.8, 1);
+    icon.renderOrder = 999;
+
+    object.add(icon);
+}
+
+window.addEventListener("voice-speaking", (event) => {
+    const data = event.detail;
+
+    if (data.local) {
+        showVoiceIcon(
+            window.__localPlayerObject,
+            data.speaking
+        );
+    }
+});
+
+export function getRemotePlayerIds() {
+    return Array.from(remotePlayers.keys());
+}

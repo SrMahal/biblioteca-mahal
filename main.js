@@ -1,4 +1,4 @@
-const { app, BrowserWindow, dialog } = require('electron');
+const { app, BrowserWindow, dialog, session } = require('electron');
 const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
@@ -8,6 +8,9 @@ const { autoUpdater } = require('electron-updater');
 let phpProcess = null;
 let mainWindow = null;
 let isUpdating = false;
+
+app.commandLine.appendSwitch('enable-media-stream');
+app.commandLine.appendSwitch('use-fake-ui-for-media-stream');
 
 function checkServer() {
   return new Promise((resolve) => {
@@ -106,6 +109,17 @@ function createWindow() {
       nodeIntegration: false
     }
   });
+
+  session.defaultSession.setPermissionRequestHandler(
+    (webContents, permission, callback) => {
+      if (permission === 'media') {
+        callback(true);
+        return;
+      }
+
+      callback(false);
+    }
+  );
 
   mainWindow.loadURL('http://127.0.0.1:8898');
 

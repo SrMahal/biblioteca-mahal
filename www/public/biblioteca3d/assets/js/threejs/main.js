@@ -9,7 +9,8 @@ import {
 import {
     setupRemotePlayers,
     updateRemotePlayers,
-    getRemoteObjectById
+    getRemoteObjectById,
+    getRemotePlayerIds
 } from "./network/remotePlayers.js";
 
 import {
@@ -42,6 +43,9 @@ import { createPlayerCamera } from './player/playerCamera.js';
 import { getPlayerIdentity } from "./network/gameIdentity.js";
 
 import { setupPhone } from "./phone/phoneManager.js";
+
+import { setupAudioButton } from "./systems/audioButton.js";
+
 
 const scene = createScene();
 const renderer = createRenderer();
@@ -131,7 +135,7 @@ const boardControls = createControls({
 
 const playButton = document.getElementById("playButton");
 
-let voiceStarted = false;
+
 let isPlayerMode = false;
 let isReturningToBoard = false;
 
@@ -152,15 +156,6 @@ playButton.addEventListener("click", async () => {
     playButton.style.display = "block";
 
     showMobileControls();
-
-    if (!voiceStarted) {
-        await setupVoice({
-            camera,
-            getRemoteObjectById
-        });
-
-        voiceStarted = true;
-    }
 });
 
 function returnToBoardMode() {
@@ -250,6 +245,33 @@ setupResize({
 
 setupPopup();
 setupLoadingScreen();
+setupAudioButton();
+
+import {
+    registerAudio
+} from "./systems/audioManager.js";
+
+const radio = document.createElement("audio");
+
+radio.src =
+    "/biblioteca3d/assets/audio/radio.mp3";
+
+radio.loop = true;
+radio.preload = "auto";
+radio.volume = 1;
+
+document.body.appendChild(radio);
+
+registerAudio(radio);
+
+
+window.__voiceContext = {
+    camera,
+    getRemoteObjectById,
+    getRemotePlayerIds,
+    localPlayerObject: window.__localPlayerObject
+};
+
 setupPhone({
     onOpen: () => {
         playerCamera.setLookEnabled(false);

@@ -42,6 +42,10 @@
         <div class="menu-item" data-link="/missoes">🚀 Missões</div>
     </div>
 
+    <button id="audioToggleButton" class="audio-toggle-button">
+        🔊 Ativar som
+    </button>
+    <audio id="radioTestAudio" src="/biblioteca3d/assets/audio/radio.mp3" loop></audio>
     <div id="footerPopup">
 
         <img src="/biblioteca3d/assets/img/elementos/coruja.png" alt="Coruja" class="popupOwl">
