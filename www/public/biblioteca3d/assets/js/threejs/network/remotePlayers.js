@@ -244,6 +244,14 @@ function updateRemoteFromServer(scene, rawData) {
     if (!remote) {
         remote = createRemoteAvatar(scene, data);
         remotePlayers.set(data.id, remote);
+
+        window.dispatchEvent(
+            new CustomEvent("remote-player-added", {
+                detail: {
+                    id: data.id
+                }
+            })
+        );
     }
 
     remote.targetPosition.set(
@@ -325,7 +333,7 @@ export function updateRemotePlayers(deltaTime) {
         remote.group.rotation.y =
             THREE.MathUtils.lerp(
                 remote.group.rotation.y,
-                remote.targetRotationY + Math.PI,
+                remote.targetRotationY,
                 0.25
             );
         if (remote.mixer) {

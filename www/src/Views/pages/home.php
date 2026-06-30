@@ -75,19 +75,19 @@
         <div class="landing-grid">
             <div class="landing-card">
                 <div>
-                    <div class="chip">📦 Versão Legada</div>
-                    <h3>Biblioteca Antiga</h3>
+                    <div class="chip">📦 Baixe videos</div>
+                    <h3>Mahal Downloads</h3>
                     <div class="sub">Versão Antiga</div>
 
                     <ul>
-                        <li><span>📚</span> <span>Aulas antigas (arquivo histórico)</span></li>
-                        <li><span>🎯</span> <span>Missões arquivadas e trilhas clássicas</span></li>
-                        <li><span>📂</span> <span>Recursos básicos e referências</span></li>
+                        <li><span>📚</span> <span>Youtube</span></li>
+                        <li><span>🎯</span> <span>Pinterst</span></li>
+                        <li><span>📂</span> <span>outros</span></li>
                     </ul>
                 </div>
 
-                <a href="https://biblioteca-old.mahal.pro/" class="btn-primary full" target="_blank" rel="noreferrer">
-                    Acessar Legado
+                <a href="https://baixarvideos.mahal.pro/" class="btn-primary full" target="_blank" rel="noreferrer">
+                    Acessar
                 </a>
             </div>
 

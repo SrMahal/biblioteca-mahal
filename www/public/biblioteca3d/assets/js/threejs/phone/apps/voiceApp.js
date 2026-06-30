@@ -1,6 +1,6 @@
 import {
-    setupVoice,
-    stopVoice,
+    enableMicrophone,
+    disableMicrophone,
     isVoiceEnabled,
     unlockMobileAudio
 } from "../../network/voiceClient.js";
@@ -11,7 +11,7 @@ export function createVoiceApp() {
 
     app.innerHTML = `
         <div class="settings-card">
-            <h3>Chat de voz</h3>
+            <h3>Microfone</h3>
             <p>Ative ou desative seu microfone no mundo.</p>
 
             <div class="setting-row">
@@ -22,7 +22,7 @@ export function createVoiceApp() {
             </div>
 
             <button id="voiceToggleButton" class="phone-main-button">
-                ${isVoiceEnabled() ? "Desativar voz" : "Ativar voz"}
+                ${isVoiceEnabled() ? "Desativar microfone" : "Ativar microfone"}
             </button>
         </div>
     `;
@@ -31,44 +31,32 @@ export function createVoiceApp() {
     const button = app.querySelector("#voiceToggleButton");
 
     button.onclick = async () => {
-        console.log("Clique no botão de voz");
-
         try {
             if (isVoiceEnabled()) {
-                stopVoice();
+                disableMicrophone();
 
                 status.textContent = "Desativado";
-                button.textContent = "Ativar voz";
+                button.textContent = "Ativar microfone";
 
-                return;
-            }
-
-            if (!window.__voiceContext) {
-                console.error("window.__voiceContext não existe");
-                alert("Voice context não iniciado.");
                 return;
             }
 
             button.disabled = true;
             button.textContent = "Ativando...";
 
-            await unlockMobileAudio?.();
+            await unlockMobileAudio();
 
-            await setupVoice({
-                camera: window.__voiceContext.camera,
-                getRemoteObjectById: window.__voiceContext.getRemoteObjectById,
-                getRemotePlayerIds: window.__voiceContext.getRemotePlayerIds
-            });
+            await enableMicrophone();
 
             status.textContent = "Ativo";
-            button.textContent = "Desativar voz";
+            button.textContent = "Desativar microfone";
             button.disabled = false;
 
         } catch (error) {
-            console.error("Erro ao ativar voz:", error);
+            console.error("Erro ao ativar microfone:", error);
 
             status.textContent = "Erro";
-            button.textContent = "Ativar voz";
+            button.textContent = "Ativar microfone";
             button.disabled = false;
 
             alert("Erro ao ativar microfone: " + error.message);

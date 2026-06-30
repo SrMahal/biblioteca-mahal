@@ -1,88 +1,84 @@
 import { socket } from "./socketClient.js";
+
 import {
     registerAudio,
     unregisterAudio,
     isAudioEnabled
 } from "../systems/audioManager.js";
 
-let voiceEnabled = false;
-let localStream = null;
+/* =========================
+   STATE
+========================= */
 
+let voiceOutputEnabled = false;
+let microphoneEnabled = false;
+
+let localStream = null;
 let audioContext = null;
 let analyser = null;
 let speakingInterval = null;
 
-let getRemoteObjectByIdRef = null;
 let getRemotePlayerIdsRef = null;
 
 const peerConnections = new Map();
 const remoteAudios = new Map();
 
 const rtcConfig = {
-    iceServers: [
-        {
-            urls: "stun:stun.l.google.com:19302"
-        }
-    ]
+    iceServers: [{ urls: "stun:stun.l.google.com:19302" }]
 };
 
+/* =========================
+   MOBILE AUDIO UNLOCK
+========================= */
+
+export async function unlockMobileAudio() {
+    try {
+        audioContext =
+            audioContext ||
+            new (window.AudioContext || window.webkitAudioContext)();
+
+        if (audioContext.state === "suspended") {
+            await audioContext.resume();
+        }
+
+        console.log("🔓 Audio desbloqueado");
+        return true;
+    } catch (err) {
+        console.warn("Erro unlock áudio:", err);
+        return false;
+    }
+}
+
+/* =========================
+   PUBLIC API
+========================= */
+
 export function isVoiceEnabled() {
-    return voiceEnabled;
+    return microphoneEnabled;
 }
 
-export async function setupVoice({
-    camera,
-    getRemoteObjectById,
-    getRemotePlayerIds
-}) {
-    if (voiceEnabled) return;
-
-    getRemoteObjectByIdRef = getRemoteObjectById;
-    getRemotePlayerIdsRef = getRemotePlayerIds;
-
-    localStream =
-        await navigator.mediaDevices.getUserMedia({
-            audio: {
-                echoCancellation: true,
-                noiseSuppression: true,
-                autoGainControl: true
-            }
-        });
-
-    voiceEnabled = true;
-
-    startSpeakingDetection(localStream);
-
-    const remoteIds =
-        getRemotePlayerIdsRef?.() || [];
-
-    remoteIds.forEach((remoteId) => {
-        createOffer(remoteId);
-    });
-
-    console.log("Microfone ativado");
+export function isVoiceOutputEnabled() {
+    return voiceOutputEnabled;
 }
 
-export function stopVoice() {
-    voiceEnabled = false;
+export async function enableVoiceOutput({ getRemotePlayerIds } = {}) {
+    voiceOutputEnabled = true;
 
-    if (speakingInterval) {
-        clearInterval(speakingInterval);
-        speakingInterval = null;
+    if (getRemotePlayerIds) {
+        getRemotePlayerIdsRef = getRemotePlayerIds;
     }
 
-    if (audioContext) {
-        audioContext.close?.();
-        audioContext = null;
+    const ids = getRemotePlayerIdsRef?.() || [];
+
+    for (const id of ids) {
+        await createOffer(id);
     }
 
-    if (localStream) {
-        localStream.getTracks().forEach((track) => {
-            track.stop();
-        });
+    console.log("🔊 Voice output ON");
+}
 
-        localStream = null;
-    }
+export function disableVoiceOutput() {
+    voiceOutputEnabled = false;
 
     for (const peer of peerConnections.values()) {
         peer.close();
@@ -91,12 +87,59 @@ export function stopVoice() {
     peerConnections.clear();
 
     for (const audio of remoteAudios.values()) {
-        audio.pause();
-        audio.srcObject = null;
-        audio.remove();
+        unregisterAudio(audio);
+        audio.muted = true;
     }
 
     remoteAudios.clear();
+
+    console.log("🔇 Voice output OFF");
+}
+
+/* =========================
+   MICROPHONE
+========================= */
+
+export async function enableMicrophone() {
+    if (microphoneEnabled) return;
+
+    // reutiliza stream
+    if (localStream) {
+        localStream.getAudioTracks().forEach(t => (t.enabled = true));
+        microphoneEnabled = true;
+        console.log("🎤 Mic reativado");
+        return;
+    }
+
+    localStream = await navigator.mediaDevices.getUserMedia({
+        audio: {
+            echoCancellation: true,
+            noiseSuppression: true,
+            autoGainControl: true
+        }
+    });
+
+    microphoneEnabled = true;
+
+    startSpeakingDetection(localStream);
+
+    for (const peer of peerConnections.values()) {
+        addLocalTracksToPeer(peer);
+    }
+
+    for (const id of peerConnections.keys()) {
+        await createOffer(id);
+    }
+
+    console.log("🎤 Mic ON");
+}
+
+export function disableMicrophone() {
+    microphoneEnabled = false;
+
+    if (localStream) {
+        localStream.getAudioTracks().forEach(t => (t.enabled = false));
+    }
 
     window.dispatchEvent(
         new CustomEvent("voice-speaking", {
@@ -108,7 +151,25 @@ export function stopVoice() {
         })
     );
 
-    console.log("Microfone desativado");
+    console.log("🎤 Mic OFF (mutado)");
+}
+
+export async function setupVoice(options = {}) {
+    await unlockMobileAudio(); // 🔥 garante mobile
+    await enableVoiceOutput(options);
+    await enableMicrophone();
+}
+
+export function stopVoice() {
+    disableMicrophone();
+}
+
+/* =========================
+   PEER CONNECTION
+========================= */
+
+function shouldCreateOffer(targetId) {
+    return socket.id < targetId;
 }
 
 function createPeerConnection(targetId) {
@@ -120,11 +181,11 @@ function createPeerConnection(targetId) {
 
     peerConnections.set(targetId, peer);
 
-    if (localStream) {
-        localStream.getTracks().forEach((track) => {
-            peer.addTrack(track, localStream);
-        });
-    }
+    peer.addTransceiver("audio", {
+        direction: localStream ? "sendrecv" : "recvonly"
+    });
+
+    addLocalTracksToPeer(peer);
 
     peer.onicecandidate = (event) => {
         if (!event.candidate) return;
@@ -140,40 +201,36 @@ function createPeerConnection(targetId) {
 
         if (!audio) {
             audio = document.createElement("audio");
+
             audio.autoplay = true;
             audio.playsInline = true;
-            audio.controls = false;
+            audio.setAttribute("playsinline", "true");
+            audio.setAttribute("webkit-playsinline", "true");
+
             audio.muted = !isAudioEnabled();
-            audio.volume = 1;
             audio.style.display = "none";
 
             document.body.appendChild(audio);
-
             registerAudio(audio);
 
             remoteAudios.set(targetId, audio);
         }
 
-        audio.srcObject = event.streams[0];
+        if (audio.srcObject !== event.streams[0]) {
+            audio.srcObject = event.streams[0];
+        }
+
         audio.muted = !isAudioEnabled();
 
+        // 🔥 tentativa imediata (melhor pro mobile)
         if (isAudioEnabled()) {
-            audio.play().catch((error) => {
-                console.warn("audio.play bloqueado:", error);
-            });
+            audio.play().catch(() => {});
         }
     };
 
     peer.onconnectionstatechange = () => {
-        console.log(
-            "Voice connection",
-            targetId,
-            peer.connectionState
-        );
-
         if (
             peer.connectionState === "failed" ||
-            peer.connectionState === "disconnected" ||
             peer.connectionState === "closed"
         ) {
             cleanupPeer(targetId);
@@ -183,17 +240,32 @@ function createPeerConnection(targetId) {
     return peer;
 }
 
+function addLocalTracksToPeer(peer) {
+    if (!localStream) return;
+
+    const existing = peer.getSenders().map(s => s.track);
+
+    localStream.getTracks().forEach(track => {
+        if (!existing.includes(track)) {
+            peer.addTrack(track, localStream);
+        }
+    });
+}
+
+/* =========================
+   SIGNALING
+========================= */
+
 async function createOffer(targetId) {
-    if (!voiceEnabled) return;
-    if (!targetId) return;
-    if (targetId === socket.id) return;
+    if (!voiceOutputEnabled && !microphoneEnabled) return;
+    if (!targetId || targetId === socket.id) return;
+    if (!shouldCreateOffer(targetId)) return;
 
-    const peer =
-        createPeerConnection(targetId);
+    const peer = createPeerConnection(targetId);
 
-    const offer =
-        await peer.createOffer();
+    if (peer.signalingState !== "stable") return;
 
+    const offer = await peer.createOffer();
     await peer.setLocalDescription(offer);
 
     socket.emit("voice-offer", {
@@ -202,22 +274,21 @@ async function createOffer(targetId) {
     });
 }
 
-async function handleOffer({
-    fromId,
-    offer
-}) {
-    if (!voiceEnabled) return;
+async function handleOffer({ fromId, offer }) {
+    if (!voiceOutputEnabled && !microphoneEnabled) return;
 
-    const peer =
-        createPeerConnection(fromId);
+    const peer = createPeerConnection(fromId);
+
+    if (peer.signalingState !== "stable") {
+        cleanupPeer(fromId);
+        return handleOffer({ fromId, offer });
+    }
 
     await peer.setRemoteDescription(
         new RTCSessionDescription(offer)
     );
 
-    const answer =
-        await peer.createAnswer();
-
+    const answer = await peer.createAnswer();
     await peer.setLocalDescription(answer);
 
     socket.emit("voice-answer", {
@@ -226,96 +297,75 @@ async function handleOffer({
     });
 }
 
-async function handleAnswer({
-    fromId,
-    answer
-}) {
-    const peer =
-        peerConnections.get(fromId);
-
+async function handleAnswer({ fromId, answer }) {
+    const peer = peerConnections.get(fromId);
     if (!peer) return;
+
+    if (peer.signalingState !== "have-local-offer") return;
 
     await peer.setRemoteDescription(
         new RTCSessionDescription(answer)
     );
 }
 
-async function handleIceCandidate({
-    fromId,
-    candidate
-}) {
-    const peer =
-        peerConnections.get(fromId);
-
-    if (!peer) return;
-    if (!candidate) return;
+async function handleIceCandidate({ fromId, candidate }) {
+    const peer = peerConnections.get(fromId);
+    if (!peer || !candidate) return;
 
     try {
         await peer.addIceCandidate(
             new RTCIceCandidate(candidate)
         );
-    } catch (error) {
-        console.warn("Erro ICE:", error);
-    }
+    } catch {}
 }
 
+/* =========================
+   CLEANUP
+========================= */
+
 function cleanupPeer(targetId) {
-    const peer =
-        peerConnections.get(targetId);
+    const peer = peerConnections.get(targetId);
 
     if (peer) {
         peer.close();
         peerConnections.delete(targetId);
     }
 
-    const audio =
-        remoteAudios.get(targetId);
+    const audio = remoteAudios.get(targetId);
 
     if (audio) {
         unregisterAudio(audio);
-        audio.pause();
-        audio.srcObject = null;
-        audio.remove();
-
+        audio.muted = true;
         remoteAudios.delete(targetId);
     }
 }
 
+/* =========================
+   SPEAKING DETECTION
+========================= */
+
 function startSpeakingDetection(stream) {
+    if (speakingInterval) return;
+
     audioContext =
-        new AudioContext();
+        audioContext ||
+        new (window.AudioContext || window.webkitAudioContext)();
 
-    const source =
-        audioContext.createMediaStreamSource(stream);
-
-    analyser =
-        audioContext.createAnalyser();
+    const source = audioContext.createMediaStreamSource(stream);
+    analyser = audioContext.createAnalyser();
 
     analyser.fftSize = 512;
-
     source.connect(analyser);
 
-    const dataArray =
-        new Uint8Array(
-            analyser.frequencyBinCount
-        );
+    const data = new Uint8Array(analyser.frequencyBinCount);
 
     speakingInterval = setInterval(() => {
-        if (!analyser) return;
-
-        analyser.getByteFrequencyData(dataArray);
+        analyser.getByteFrequencyData(data);
 
         let sum = 0;
+        for (let i = 0; i < data.length; i++) sum += data[i];
 
-        for (let i = 0; i < dataArray.length; i++) {
-            sum += dataArray[i];
-        }
-
-        const average =
-            sum / dataArray.length;
-
-        const speaking =
-            average > 12;
+        const speaking = sum / data.length > 12;
 
         window.dispatchEvent(
             new CustomEvent("voice-speaking", {
@@ -327,49 +377,28 @@ function startSpeakingDetection(stream) {
             })
         );
 
-        socket.emit("voice-speaking", {
-            speaking
-        });
+        socket.emit("voice-speaking", { speaking });
     }, 120);
 }
 
-socket.on("voice-offer", (data) => {
-    handleOffer(data);
-});
+/* =========================
+   SOCKET EVENTS
+========================= */
 
-socket.on("voice-answer", (data) => {
-    handleAnswer(data);
-});
-
-socket.on("voice-ice-candidate", (data) => {
-    handleIceCandidate(data);
-});
+socket.on("voice-offer", handleOffer);
+socket.on("voice-answer", handleAnswer);
+socket.on("voice-ice-candidate", handleIceCandidate);
 
 socket.on("player-left", (data) => {
     cleanupPeer(data.id);
 });
 
-let audioUnlocked = false;
-let unlockAudioContext = null;
+window.addEventListener("remote-player-added", (event) => {
+    const id = event.detail?.id;
 
-export async function unlockMobileAudio() {
-    if (audioUnlocked) return true;
+    if (!id || id === socket.id) return;
 
-    try {
-        unlockAudioContext =
-            unlockAudioContext ||
-            new (window.AudioContext || window.webkitAudioContext)();
-
-        if (unlockAudioContext.state === "suspended") {
-            await unlockAudioContext.resume();
-        }
-
-        audioUnlocked = true;
-        console.log("Áudio desbloqueado");
-        return true;
-
-    } catch (error) {
-        console.warn("Falha ao desbloquear áudio:", error);
-        return false;
+    if (voiceOutputEnabled || microphoneEnabled) {
+        createOffer(id);
     }
-}
+});

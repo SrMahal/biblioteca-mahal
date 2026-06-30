@@ -106,13 +106,17 @@ function createWindow() {
     autoHideMenuBar: true,
     webPreferences: {
       contextIsolation: true,
-      nodeIntegration: false
+      nodeIntegration: false,
+      webSecurity: true
     }
   });
 
   session.defaultSession.setPermissionRequestHandler(
     (webContents, permission, callback) => {
-      if (permission === 'media') {
+      if (
+        permission === 'media' ||
+        permission === 'pointerLock'
+      ) {
         callback(true);
         return;
       }
@@ -277,7 +281,7 @@ app.whenReady().then(async () => {
 
 app.on('before-quit', () => {
   if (!isUpdating && phpProcess?.pid) {
-    killProcessTree(phpProcess.pid).catch(() => {});
+    killProcessTree(phpProcess.pid).catch(() => { });
   }
 });
 

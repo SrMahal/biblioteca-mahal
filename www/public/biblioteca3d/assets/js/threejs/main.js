@@ -13,9 +13,7 @@ import {
     getRemotePlayerIds
 } from "./network/remotePlayers.js";
 
-import {
-    setupVoice
-} from "./network/voiceClient.js";
+
 
 import { createScene } from './core/scene.js';
 import { createRenderer } from './core/renderer.js';
@@ -73,9 +71,7 @@ let playerCamera = null;
 const localPlayer = createLocalPlayer({
     scene,
     camera,
-    colliders,
     mobileInput,
-
     getCameraYaw: () => {
         return playerCamera
             ? playerCamera.getYaw()

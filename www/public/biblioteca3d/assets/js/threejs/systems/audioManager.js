@@ -22,7 +22,7 @@ export async function enableAudio() {
         audio.muted = false;
         audio.volume = 1;
 
-        audio.play?.().catch(() => {});
+        audio.play?.().catch(() => { });
     }
 
     document.body.classList.add("audio-enabled");
@@ -43,11 +43,11 @@ export function disableAudio() {
     console.log("Som desativado");
 }
 
-export function toggleAudio() {
+export async function toggleAudio() {
     if (audioEnabled) {
         disableAudio();
     } else {
-        enableAudio();
+        await enableAudio();
     }
 }
 
@@ -59,7 +59,7 @@ export function registerAudio(audio) {
     audio.muted = !audioEnabled;
 
     if (audioEnabled) {
-        audio.play?.().catch(() => {});
+        audio.play?.().catch(() => { });
     }
 }
 
