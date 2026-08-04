@@ -16,7 +16,7 @@ class HomeController
 
     public function index()
     {
-        require __DIR__ . '/../Views/pages/landing.php';
+        require __DIR__ . '/../Views/pages/home/home-v1.php';
     }
 
     public function home()

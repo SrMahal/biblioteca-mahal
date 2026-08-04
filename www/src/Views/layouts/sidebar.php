@@ -12,14 +12,16 @@ $appVersion = getenv('APP_VERSION') ?: 'dev';
     </div>
 
     <nav>
-        <a href="/home" class="<?= $page == 'home' ? 'active' : '' ?>">🏠 Início</a>
-        <a href="/cursos" class="<?= $page === 'cursos' ? 'active' : '' ?>">📚 Biblioteca</a>
-        <a href="/missoes" class="<?= $page == 'missoes' ? 'active' : '' ?>">🚀 Missões</a>
-        <a href="/game-biblio" class="<?= $page == 'game-biblio' ? 'active' : '' ?>">🚀 The Game</a>
-        <a href="/perfil" class="<?= $page == 'perfil' ? 'active' : '' ?>">⚙️ Minha Conta</a>
+        <a href="/home" class="<?= $page == 'home' ? 'active' : '' ?>">Home</a>
+        <a href="/cursos" class="<?= $page === 'cursos' ? 'active' : '' ?>">Biblioteca</a>
+        <a href="/missoes" class="<?= $page == 'missoes' ? 'active' : '' ?>">Missões</a>
+        <a href="/game-biblio" class="<?= $page == 'game-biblio' ? 'active' : '' ?>"> The Game</a>
+        <a href="/perfil" class="<?= $page == 'perfil' ? 'active' : '' ?>"> Minha Conta</a>
     </nav>
-    <div class="sidebar-version">
-        Versão <?= htmlspecialchars($appVersion) ?>
+    <div>
+        <div class="sidebar-version">
+            Versão Alpha • <?= htmlspecialchars($appVersion) ?>
+        </div>
     </div>
 
 </aside>

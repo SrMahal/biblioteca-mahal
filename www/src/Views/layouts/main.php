@@ -25,11 +25,14 @@ $assetVersion = static function (string $publicPath): string {
         <link rel="stylesheet" href="<?= htmlspecialchars($cssFile, ENT_QUOTES, 'UTF-8') ?><?= str_contains($cssFile, '?') ? '&' : '?' ?>v=<?= $assetVersion($cssFile) ?>">
     <?php endforeach; ?>
 
+    <?php include 'assets/pag/home/components/head.php'; ?>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
     <script>
         window.MAHAL_API_BASE = window.location.origin;
@@ -50,18 +53,19 @@ $assetVersion = static function (string $publicPath): string {
                 <button class="btn-sidebar-toggle" id="sidebarToggle" type="button" aria-label="Abrir menu">
                     ☰ Menu
                 </button>
-                <button onclick="logout()" class="btn-logout">🚪 Sair</button>
+                <button onclick="logout()" class="btn-logout"> Sair </button>
+                <button onclick="logout()" class="btn-logout"> ✕ </button>
             </header>
 
             <?php require __DIR__ . '/header.php'; ?>
 
             <div class="content-body">
                 <?php require $viewPath; ?>
+                <footer class="footer">
+                    <p>&copy; <?= date('Y') ?> @Mahal.exe - Todos os direitos reservados.</p>
+                </footer>
             </div>
 
-            <footer class="footer">
-                <p>&copy; <?= date('Y') ?> Studio Mahal - Todos os direitos reservados.</p>
-            </footer>
         </main>
     </div>
 

@@ -43,36 +43,21 @@ if (!is_dir($tmpDir) && !mkdir($tmpDir, 0777, true) && !is_dir($tmpDir)) {
 $catalogo = [
     [
         'id' => 'curso-php',
-        'titulo' => 'Curso de PHP',
+        'titulo' => 'Farm A.I',
         'categoria' => 'Programação',
-        'descricao' => 'Curso exemplo para testar o instalador local.',
-        'download_url' => 'http://biblioteca.mahal.pro/curso-php.zip',
-        'pasta_destino' => 'Curso de PHP'
-    ],
-    [
-        'id' => 'curso-linux',
-        'titulo' => 'Curso de Linux',
-        'categoria' => 'Infraestrutura',
-        'descricao' => 'Curso exemplo para testar o instalador local.',
-        'download_url' => 'https://SEU-LINK-AQUI/curso-linux.zip',
-        'pasta_destino' => 'Curso de Linux'
+        'descricao' => 'Comece seu novo projeto lucrativo ainda hoje!',
+        'download_url' => 'http://biblioteca.mahal.pro/produto/cursos/curso-orenacer/parte1.zip',
+        'pasta_destino' => 'Curso de ficar rico'
     ],
     [
         'id' => 'logica-programação',
         'titulo' => 'Lógica de programação I',
         'categoria' => 'Segurança',
         'descricao' => 'Lógica de programação I Os primeiros programas com Javascript e HTML.',
-        'download_url' => 'http://biblioteca.mahal.pro/logica- programacao.zip',
+        'download_url' => 'http://biblioteca.mahal.pro/produto/cursos/curso-orenacer/parte2.zip',
         'pasta_destino' => 'Curso de Cyber Security'
     ],
-    [
-        'id' => 'N8N',
-        'titulo' => 'Fluxos e automações',
-        'categoria' => 'Segurança',
-        'descricao' => 'Curso exemplo para testar o instalador local.',
-        'download_url' => 'https://SEU-LINK-AQUI/curso-cyber.zip',
-        'pasta_destino' => 'Curso de Cyber Security'
-    ],
+
 ];
 
 function findCourseById(array $catalogo, string $id): ?array

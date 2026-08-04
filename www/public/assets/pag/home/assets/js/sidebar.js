@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function setButtonState(open) {
     // Texto + acessibilidade
-    btn.innerHTML = open ? '✕' : '☰';
+    btn.innerHTML = open ? '✕ Fechar' : '☰ Menu';
     btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
   }
 
