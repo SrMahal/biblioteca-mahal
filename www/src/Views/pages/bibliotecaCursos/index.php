@@ -6,6 +6,7 @@
             <code><?= htmlspecialchars($coursesLabel ?? 'cursos/') ?></code>.
         </p>
         <a href="/extensoes/add-curso/download.php" target="_blank">Adicionar Cursos</a>
+        
     </div>
 
     <?php if (empty($courses)): ?>

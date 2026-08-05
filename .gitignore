@@ -2,4 +2,7 @@
 node_modules/
 dist/
 www/storage/logs/
+www/storage/downloads/
+www/storage/downloads/
+*.zip
 *.log

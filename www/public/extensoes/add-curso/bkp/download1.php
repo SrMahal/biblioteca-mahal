@@ -5,9 +5,6 @@ declare(strict_types=1);
 ini_set('display_errors', '1');
 error_reporting(E_ALL);
 
-set_time_limit(0);
-ini_set('max_execution_time', '0');
-
 $documentRoot = $_SERVER['DOCUMENT_ROOT'] ?? '';
 
 if ($documentRoot === '' || !is_dir($documentRoot)) {
@@ -49,15 +46,15 @@ $catalogo = [
         'titulo' => 'Farm A.I',
         'categoria' => 'Programação',
         'descricao' => 'Comece seu novo projeto lucrativo ainda hoje!',
-        'download_url' => 'http://biblioteca.mahal.pro/teste.zip',
+        'download_url' => 'http://biblioteca.mahal.pro/produto/cursos/curso-orenacer/Ocomeco.zip',
         'pasta_destino' => 'Curso de ficar rico'
     ],
     [
         'id' => 'logica-programação',
-        'titulo' => 'Lógica de programação I',
+        'titulo' => 'Lógica de programação I',
         'categoria' => 'Segurança',
-        'descricao' => 'Lógica de programação I Os primeiros programas com Javascript e HTML.',
-        'download_url' => 'http://biblioteca.mahal.pro/produto/cursos/curso-orenacer/parte1.zip',
+        'descricao' => 'Lógica de programação I Os primeiros programas com Javascript e HTML.',
+        'download_url' => 'http://biblioteca.mahal.pro/produto/cursos/curso-orenacer/parte2.zip',
         'pasta_destino' => 'Curso de Cyber Security'
     ],
 
@@ -73,7 +70,7 @@ function findCourseById(array $catalogo, string $id): ?array
     return null;
 }
 
-function downloadFile(string $url, string $destino, ?string $progressFile = null): void
+function downloadFile(string $url, string $destino): void
 {
     $fp = fopen($destino, 'wb');
     if ($fp === false) {
@@ -88,17 +85,6 @@ function downloadFile(string $url, string $destino, ?string $progressFile = null
         CURLOPT_TIMEOUT => 0,
         CURLOPT_CONNECTTIMEOUT => 20,
         CURLOPT_USERAGENT => 'BibliotecaMahalDownloader/1.0',
-        CURLOPT_NOPROGRESS => false,
-        CURLOPT_XFERINFOFUNCTION => function ($resource, $downloadSize, $downloaded, $uploadSize, $uploaded) use ($progressFile) {
-            if ($progressFile !== null && $downloadSize > 0) {
-                $percent = (int) floor(($downloaded / $downloadSize) * 100);
-                @file_put_contents($progressFile, json_encode([
-                    'status' => 'downloading',
-                    'percent' => $percent,
-                ]));
-            }
-            return 0;
-        },
     ]);
 
     $ok = curl_exec($ch);
@@ -169,39 +155,16 @@ function extractZipSecure(string $zipPath, string $destino): void
             continue;
         }
 
-        // Stream a entrada em vez de carregá-la inteira na memória
-        $streamIn = $zip->getStream($entryName);
-        if ($streamIn === false) {
+        $contents = $zip->getFromIndex($i);
+        if ($contents === false) {
             $zip->close();
-            throw new RuntimeException('Falha ao abrir stream do arquivo no ZIP: ' . $entryName);
+            throw new RuntimeException('Falha ao extrair arquivo do ZIP.');
         }
 
-        $streamOut = fopen($targetPath, 'wb');
-        if ($streamOut === false) {
-            fclose($streamIn);
+        if (file_put_contents($targetPath, $contents) === false) {
             $zip->close();
-            throw new RuntimeException('Falha ao criar arquivo de destino: ' . $targetPath);
+            throw new RuntimeException('Falha ao salvar arquivo extraído.');
         }
-
-        // Copia em blocos de 1MB — uso de memória fica constante independente do tamanho do arquivo
-        while (!feof($streamIn)) {
-            $chunk = fread($streamIn, 1024 * 1024);
-            if ($chunk === false) {
-                fclose($streamIn);
-                fclose($streamOut);
-                $zip->close();
-                throw new RuntimeException('Falha ao ler dados do ZIP: ' . $entryName);
-            }
-            if (fwrite($streamOut, $chunk) === false) {
-                fclose($streamIn);
-                fclose($streamOut);
-                $zip->close();
-                throw new RuntimeException('Falha ao gravar dados extraídos: ' . $entryName);
-            }
-        }
-
-        fclose($streamIn);
-        fclose($streamOut);
     }
 
     $zip->close();
@@ -268,17 +231,11 @@ function moveExtractedContent(string $extractDir, string $destinoFinal): void
     }
 }
 
-function isInstalled(string $cursosDir, string $folderName): bool
-{
-    return is_dir($cursosDir . DIRECTORY_SEPARATOR . $folderName);
-}
-
 $statusMsg = null;
 $statusType = 'success';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cursoId = trim((string)($_POST['curso_id'] ?? ''));
-    $progressFile = $tmpDir . DIRECTORY_SEPARATOR . 'progress-' . $cursoId . '.json';
 
     try {
         if ($cursoId === '') {
@@ -306,27 +263,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         rrmdir($extractDir);
         rrmdir($destinoFinal);
 
-        @file_put_contents($progressFile, json_encode(['status' => 'downloading', 'percent' => 0]));
-
-        downloadFile($downloadUrl, $zipPath, $progressFile);
-
-        @file_put_contents($progressFile, json_encode(['status' => 'extracting', 'percent' => 100]));
-
+        downloadFile($downloadUrl, $zipPath);
         extractZipSecure($zipPath, $extractDir);
         moveExtractedContent($extractDir, $destinoFinal);
 
         @unlink($zipPath);
         rrmdir($extractDir);
 
-        @file_put_contents($progressFile, json_encode(['status' => 'done', 'percent' => 100]));
-
         $statusMsg = 'Curso instalado com sucesso em: ' . $destinoFinal;
         $statusType = 'success';
     } catch (Throwable $e) {
-        @file_put_contents($progressFile, json_encode(['status' => 'error', 'percent' => 0, 'message' => $e->getMessage()]));
         $statusMsg = $e->getMessage();
         $statusType = 'error';
     }
+}
+
+function isInstalled(string $cursosDir, string $folderName): bool
+{
+    return is_dir($cursosDir . DIRECTORY_SEPARATOR . $folderName);
 }
 ?>
 <!DOCTYPE html>
@@ -447,32 +401,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             opacity: .6;
             cursor: not-allowed;
         }
-
-        .progress-wrap {
-            margin-top: 12px;
-            display: none;
-        }
-
-        .progress-bar {
-            background: rgba(255, 255, 255, .1);
-            border-radius: 999px;
-            height: 10px;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            background: #2f80ed;
-            height: 100%;
-            width: 0%;
-            transition: width .3s ease;
-        }
-
-        .progress-label {
-            display: block;
-            margin-top: 6px;
-            font-size: 12px;
-            color: #b8b8b8;
-        }
     </style>
 </head>
 
@@ -503,72 +431,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <?= $instalado ? 'Instalado' : 'Disponível' ?>
                     </div>
 
-                    <form class="download-form" method="POST" data-curso-id="<?= htmlspecialchars((string)$curso['id']) ?>">
+                    <form method="POST">
                         <input type="hidden" name="curso_id" value="<?= htmlspecialchars((string)$curso['id']) ?>">
                         <button type="submit">
                             <?= $instalado ? 'Reinstalar' : 'Baixar' ?>
                         </button>
-                        <div class="progress-wrap">
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
-                            </div>
-                            <span class="progress-label">0%</span>
-                        </div>
                     </form>
                 </div>
             <?php endforeach; ?>
         </div>
     </div>
-
-    <script>
-        document.querySelectorAll('.download-form').forEach(form => {
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                const cursoId = form.dataset.cursoId;
-                const button = form.querySelector('button');
-                const progressWrap = form.querySelector('.progress-wrap');
-                const progressFill = form.querySelector('.progress-fill');
-                const progressLabel = form.querySelector('.progress-label');
-
-                button.disabled = true;
-                progressWrap.style.display = 'block';
-
-                fetch(window.location.href, {
-                    method: 'POST',
-                    body: new FormData(form)
-                }).catch(() => {
-                    progressLabel.textContent = 'Erro de conexão.';
-                    button.disabled = false;
-                });
-
-                const poll = setInterval(() => {
-                    fetch('progress.php?curso_id=' + encodeURIComponent(cursoId))
-                        .then(r => r.json())
-                        .then(data => {
-                            const percent = data.percent || 0;
-                            let label = percent + '%';
-
-                            if (data.status === 'extracting') {
-                                label = 'Extraindo...';
-                            } else if (data.status === 'done') {
-                                label = 'Concluído!';
-                                clearInterval(poll);
-                                setTimeout(() => window.location.reload(), 800);
-                            } else if (data.status === 'error') {
-                                label = 'Erro: ' + (data.message || 'falha desconhecida');
-                                clearInterval(poll);
-                                button.disabled = false;
-                            }
-
-                            progressFill.style.width = percent + '%';
-                            progressLabel.textContent = label;
-                        })
-                        .catch(() => {});
-                }, 1000);
-            });
-        });
-    </script>
 </body>
 
 </html>

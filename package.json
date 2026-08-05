@@ -1,6 +1,6 @@
 {
   "name": "biblioteca-mahal",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "Biblioteca Mahal",
   "main": "main.js",
   "author": "Mahal",
@@ -47,7 +47,7 @@
     "publish": [
       {
         "provider": "generic",
-        "url": "https://biblioteca.mahal.pro/update"
+        "url": "https://biblioteca.mahal.pro/produto/update"
       }
     ],
     "win": {
