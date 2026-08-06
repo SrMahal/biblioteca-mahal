@@ -4,7 +4,7 @@
 
 
     <div class="app-container">
-        <main class="main-content">
+        <main class="app-home">
             <?php include 'assets/pag/home/components/hero-main.php'; ?>
 
             <?php include 'assets/pag/home/components/apps.php'; ?>
